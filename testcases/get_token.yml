@@ -1,0 +1,9 @@
+-
+  name: 获取接口鉴权的token
+  requests:
+    method: get
+    url: http://172.24.100.75:10006/expose/website/newLoginByCenter
+    data:
+      Accept: application/json, text/plain, */*
+      accessToken:
+  assert: None

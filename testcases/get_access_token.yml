@@ -1,0 +1,14 @@
+-
+  name: 登录接口,登录成功后获取access_token
+  requests:
+    url: http://172.24.100.107:14000/auth/oauth/token?grant_type=mobile&source=PORTAL_CONFIG
+    method: post
+    data:
+      mobile: SMSCUST%4017754754412
+      code: 230516
+    headers:
+      enterCode: TLSK
+      Authorization: Basic dG9uZ0xpYW46dG9uZ0xpYW4=
+      Content-Type: application/x-www-form-urlencoded
+      Host: 172.24.100.107:14000
+  assert: None

@@ -6,68 +6,63 @@
 @description: 接口测试自动化测试脚本
 @time: 2023/9/25 14:25
 """
+import json
 
 import requests
-
+import pytest
 from common.config import ConfigParser
 from common.gmssl_util import GmSsl
+from common.requests_util import RequestsUtil
+from common.yaml_util import YamlUtil
 
 
 class TestInterface:
+    @pytest.mark.parametrize('caseinfo',YamlUtil().read_testcase_yaml('get_access_token.yml'))
+    def test_get_access_token(self,caseinfo):
 
-    access_token="",
-    session=requests.session()
-
-
-    def test_login(self):
-        url='http://172.24.100.107:14000/auth/oauth/token?grant_type=mobile&source=PORTAL_CONFIG'
-        data={
-            'mobile':'SMSCUST%4017754754412',
-            'code':'230516'
-        }
-        headers={
-            "enterCode":"TLSK",
-            "Authorization":"Basic dG9uZ0xpYW46dG9uZ0xpYW4=",
-            "Content-Type":"application/x-www-form-urlencoded",
-            "Host":"172.24.100.107:14000",
-        }
-
-        rep=requests.request('post',url=url,data=data,headers=headers)
-        TestInterface.access_token=rep.json()['access_token']
+        url=caseinfo['requests']['url']
+        data=caseinfo['requests']['data']
+        headers=caseinfo['requests']['headers']
+        method=caseinfo['requests']['method']
+        result=RequestsUtil().send_request(method,url,data=data,headers = headers)
+        result=json.loads(result)
+        YamlUtil().write_yaml({'access_token':result['access_token']})
+        print(result)
+        assert 'access_token' in result
 
 
-
-    def test_newLoginByCenter(self):
-        url="http://172.24.100.75:10006/expose/website/newLoginByCenter"
-        data={
-            "Accept":"application/json, text/plain, */*",
-            "accessToken":TestInterface.access_token
-        }
-        rep=requests.request("get",url=url,params=data)
-        GmSsl().get_token(rep.json()['data'])
-
-
-    def test_get_traders(self):
-        url="http://172.24.100.75:10006/expose/website/traders"
-        headers={
-            "Host":"172.24.100.75:10006",
-            "Cookie": "Token="+ConfigParser().cget('interfacetoken','token','interface_config')
-        }
-        rep=requests.request("get",url=url,headers=headers)
-        print(rep.status_code)
-        print(rep.json())
+    @pytest.mark.parametrize('caseinfo',YamlUtil().read_testcase_yaml('get_token.yml'))
+    def test_get_token(self,caseinfo):
+        url=caseinfo['requests']['url']
+        caseinfo['requests']['data']['accessToken'] = YamlUtil().read_yaml('access_token')
+        data=caseinfo['requests']['data']
+        method = caseinfo['requests']['method']
+        result = RequestsUtil().send_request(method,url,params=data)
+        result=json.loads(result)
+        GmSsl().set_token(result['data'])
+        assert '登录成功' == result['msg']
 
 
-    def test_getmenus(self):
-        url="http://172.24.100.75:10006/expose/website/getMenus"
-        headers={
-            "Host": "172.24.100.75:10006",
-            "Cookie": "Token=" + ConfigParser().cget('interfacetoken', 'token', 'interface_config'),
-            "Token": ConfigParser().cget('interfacetoken','token','interface_config')
-        }
-        rep=requests.request("get",url=url,headers=headers)
-        print(rep.json())
+    @pytest.mark.parametrize('caseinfo',YamlUtil().read_testcase_yaml('get_traders.yml'))
+    def test_get_traders(self,caseinfo):
+        url = caseinfo['requests']['url']
+        caseinfo['requests']['headers']['Cookie'] = "Token="+YamlUtil().read_yaml('token')
+        headers = caseinfo['requests']['headers']
+        method = caseinfo['requests']['method']
+        result = RequestsUtil().send_request(method,url,headers=headers)
+        result=json.loads(result)
+        assert 'TN2023030800027204' == result['data'][0]['traderNo']
 
+    @pytest.mark.parametrize('caseinfo',YamlUtil().read_testcase_yaml('get_menus.yml'))
+    def test_get_menus(self,caseinfo):
+        url=caseinfo['requests']['url']
+        method = caseinfo['requests']['method']
+        caseinfo['requests']['headers']['Cookie'] = "Token=" + YamlUtil().read_yaml('token')
+        caseinfo['requests']['headers']['Token'] = YamlUtil().read_yaml('token')
+        headers=caseinfo['requests']['headers']
+        result=RequestsUtil().send_request(method,url,headers=headers)
+        result=json.loads(result)
+        assert '操作成功' == result['msg']
 
 if __name__ == '__main__':
-    TestInterface()
+    pytest.main()
