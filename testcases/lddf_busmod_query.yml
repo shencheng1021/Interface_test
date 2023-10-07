@@ -1,0 +1,11 @@
+-
+  name: 获取可用的业务模式编号
+  requests:
+    method: post
+    url: http://172.24.100.75:9203/expose/lddf/busmod/query
+    headers:
+      sign:
+      channelNo: '19902'
+    data:
+      busiLiceNo: 91510100MA69MUBX8Q
+  validate: None

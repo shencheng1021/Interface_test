@@ -1,0 +1,56 @@
+-
+  name: 联动代发经办发起
+  requests:
+    method: post
+    url: http://172.24.100.75:9203/expose/lddf/apply
+    headers:
+      sign:
+      channelNo: '19902'
+    data:
+      busiLiceNo: 91510100MA69MUBX8Q
+      busMod: "00001"
+      totalAmt: 5.55
+      transCnt: 5
+      agreementCode: AB0980
+      agreementType: BYSA
+      currency: "10"
+      bbkCode:
+      acct:
+      authAcct:
+      transRemark: 联动代发测试
+      msgContentType: "9"
+      expectDate:
+      expectTime: "235959"
+      detail:
+        - receiptAcct: "62148311501315112"
+          receiptAcctName: 吴极客
+          transAmt: 2.44
+          transRemark: 第一笔联动支付
+          sysFlag: Y
+        - receiptAcct: "6214835982629402"
+          receiptAcctName: 冯建杨
+          transAmt: 1
+          transRemark: 第二笔联动支付
+          sysFlag: Y
+        - receiptAcct: "1241255345345345"
+          receiptAcctName: 他行户1
+          transAmt: 0.11
+          transRemark: 第三笔联动支付
+          sysFlag: N
+          depositBank: "102100099996"
+          depositBankAddr: 北京市
+        - receiptAcct: "421455345345345"
+          receiptAcctName: 他行户2
+          transAmt: 1.3
+          transRemark: 第四笔联动支付
+          sysFlag: N
+          depositBank: "102100099996"
+          depositBankAddr: 北京市
+        - receiptAcct: "74124455345345345"
+          receiptAcctName: 他行户2
+          transAmt: 0.7
+          transRemark: 第五笔联动支付
+          sysFlag: N
+          depositBank: "102100099996"
+          depositBankAddr: 北京市
+  validate: None

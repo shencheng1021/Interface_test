@@ -20,3 +20,4 @@ def con_database():
 @pytest.fixture(scope='session',autouse=True)
 def clear_extract_yaml():
     YamlUtil().clear_yaml()
+

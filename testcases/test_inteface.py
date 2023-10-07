@@ -17,6 +17,7 @@ from common.yaml_util import YamlUtil
 
 
 class TestInterface:
+
     @pytest.mark.parametrize('caseinfo',YamlUtil().read_testcase_yaml('get_access_token.yml'))
     def test_get_access_token(self,caseinfo):
 
@@ -27,8 +28,13 @@ class TestInterface:
         result=RequestsUtil().send_request(method,url,data=data,headers = headers)
         result=json.loads(result)
         YamlUtil().write_yaml({'access_token':result['access_token']})
-        print(result)
         assert 'access_token' in result
+        assert 'token_type' in result
+        assert 'expires_in' in result
+        assert 'scope' in result
+        assert result['loginEnterCode'] == 'TLSK'
+        assert 'license' in result
+
 
 
     @pytest.mark.parametrize('caseinfo',YamlUtil().read_testcase_yaml('get_token.yml'))

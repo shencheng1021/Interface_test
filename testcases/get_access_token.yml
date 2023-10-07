@@ -11,4 +11,20 @@
       Authorization: Basic dG9uZ0xpYW46dG9uZ0xpYW4=
       Content-Type: application/x-www-form-urlencoded
       Host: 172.24.100.107:14000
-  assert: None
+  assert:
+    access_token: 6cfeeb06-7ab1-48ff-ab88-6284f1bf89f6
+    token_type: bearer
+    refresh_token: e1156e0e-f53f-4e86-bf36-cdca849e1385
+    expires_in: 7199
+    scope: server
+    loginEnterCode: TLSK
+    license: made by panda
+    cnName: 砼联数字科技有限
+    phone: "17754754412"
+    active: true
+    id: 33521
+    avatar: null
+    type: "2"
+    client_id: tongLian
+    email: null
+    username: "17754754412"

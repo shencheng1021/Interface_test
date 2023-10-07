@@ -1,0 +1,13 @@
+-
+  name: 联动代发经办明细查询
+  requests:
+    method: post
+    url: http://172.24.100.75:9203/expose/lddf/applyDetailInfo/query
+    headers:
+      sign:
+      channelNo: '19902'
+    data:
+      busiLiceNo: 91510100MA69MUBX8Q
+      txnNo:
+      reqCode:
+  validate: None

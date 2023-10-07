@@ -6,4 +6,4 @@
     headers:
       Host: 172.24.100.75:10006
       Cookie:
-  assert: None
+  validate: None
