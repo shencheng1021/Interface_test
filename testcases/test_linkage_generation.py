@@ -115,11 +115,9 @@ class Test_Lddf:
         headers = caseinfo['requests']['headers']
         result = RequestsUtil().send_request(method, url, headers=headers, json=data)
         result = json.loads(result)
-        print(result['data'])
         i=len(result['data'])
         flag=False
         for i in range(0,i):
-            print(result['data'][i]['txnNo']+'***'+YamlUtil().read_yaml('txnNo'))
             if result['data'][i]['txnNo'] == YamlUtil().read_yaml('txnNo'):
                 YamlUtil().write_yaml({'reqCode':result['data'][i]['reqCode']})
                 flag = True

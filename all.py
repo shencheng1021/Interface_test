@@ -14,4 +14,4 @@ from common.config import ConfigParser
 
 if __name__ == '__main__':
     pytest.main()
-    #os.system('allure generate temp -o reports')
+    os.system('allure generate temp -o reports --clean')
