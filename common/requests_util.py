@@ -18,7 +18,7 @@ class RequestsUtil:
 
     @allure.step("初始化request方法")
     def send_request(self,method,url,**kwargs):
-        rep=RequestsUtil().session.request(method,url=url,**kwargs)
+        rep=RequestsUtil.session.request(method,url=url,**kwargs)
         return rep.text
 
 
