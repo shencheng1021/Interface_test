@@ -6,7 +6,7 @@
 @description: 联动代发产品相关接口自动化测试
 @time: 2023/10/07 11:05
 """
-import json
+
 import time
 
 import pytest
@@ -21,7 +21,7 @@ import allure
 class Test_Lddf:
 
     @allure.title("获取可用的业务模式编号")
-    @pytest.mark.parametrize('caseinfo',YamlUtil().read_testcase_yaml('lddf_busmod_query.yml'))
+    @pytest.mark.parametrize('caseinfo', YamlUtil().read_testcase_yaml('lddf_busmod_query.yml'))
     def test_busmod_query_01(self,caseinfo):
         '''
         description:获取可用的业务模式编号
@@ -34,7 +34,7 @@ class Test_Lddf:
         assert result['data'][0]['supplierCode'] == 'TN2022011200000607'
 
     @allure.title("查询可经办业务的账号")
-    @pytest.mark.parametrize('caseinfo',YamlUtil().read_testcase_yaml('lddf_busmod_acctQuery.yml'))
+    @pytest.mark.parametrize('caseinfo', YamlUtil().read_testcase_yaml('lddf_busmod_acctQuery.yml'))
     def test_busmod_acctQuery_02(self,caseinfo):
         '''
         description:查询可经办业务的账号
@@ -48,7 +48,7 @@ class Test_Lddf:
         assert result['data'][0]['bankAcctName'] == '企业网银新20161077'
 
     @allure.title("查询授权账号列表")
-    @pytest.mark.parametrize('caseinfo',YamlUtil().read_testcase_yaml('lddf_busmod_authAcctQuery.yml'))
+    @pytest.mark.parametrize('caseinfo', YamlUtil().read_testcase_yaml('lddf_busmod_authAcctQuery.yml'))
     def test_busmod_authAcctQuery_03(self,caseinfo):
         '''
         description:查询授权账号(搅拌站关联的物流公司账号)列表
@@ -63,7 +63,7 @@ class Test_Lddf:
         assert result['data'][0]['authAcct'] == '755915678710606'
 
     @allure.title("查询搅拌站与物流已签订的协议信息")
-    @pytest.mark.parametrize('caseinfo',YamlUtil().read_testcase_yaml('lddf_busmod_agreementQuery.yml'))
+    @pytest.mark.parametrize('caseinfo', YamlUtil().read_testcase_yaml('lddf_busmod_agreementQuery.yml'))
     def test_busmod_agreementQuery_04(self,caseinfo):
         '''
         description:查询搅拌站与物流已签订的协议信息
@@ -78,7 +78,7 @@ class Test_Lddf:
         assert result['data'][0]['supplierCode'] == 'TN2022011200000607'
 
     @allure.title("联动代发经办发起")
-    @pytest.mark.parametrize('caseinfo',YamlUtil().read_testcase_yaml('lddf_apply.yml'))
+    @pytest.mark.parametrize('caseinfo', YamlUtil().read_testcase_yaml('lddf_apply.yml'))
     def test_apply_05(self,caseinfo):
         '''
         description:联动代发经办发起
@@ -97,7 +97,7 @@ class Test_Lddf:
         assert 'reqStat' in result['data']
 
     @allure.title("联动代发经办状态查询")
-    @pytest.mark.parametrize('caseinfo',YamlUtil().read_testcase_yaml('lddf_applyInfo_query.yml'))
+    @pytest.mark.parametrize('caseinfo', YamlUtil().read_testcase_yaml('lddf_applyInfo_query.yml'))
     def test_applyInfo_query_06(self,caseinfo):
         '''
         description:联动代发经办状态查询
@@ -115,7 +115,7 @@ class Test_Lddf:
         assert flag == True
 
     @allure.title("联动代发经办明细查询")
-    @pytest.mark.parametrize('caseinfo',YamlUtil().read_testcase_yaml('lddf_applyDetailInfo_query.yml'))
+    @pytest.mark.parametrize('caseinfo', YamlUtil().read_testcase_yaml('lddf_applyDetailInfo_query.yml'))
     def test_applyDetailInfo_query_07(self,caseinfo):
         '''
         description:联动代发经办明细查询

@@ -29,7 +29,7 @@ class YamlUtil:
 
     #读取测试用例
     def read_testcase_yaml(self,filename):
-        with open(os.path.dirname(__file__).split('common')[0]+'/testcases/'+filename,mode='r',encoding='utf-8') as file:
+        with open(os.path.dirname(__file__).split('common')[0]+'/data/'+filename,mode='r',encoding='utf-8') as file:
             value=yaml.load(stream=file,Loader=yaml.FullLoader)
             return value
 

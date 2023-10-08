@@ -21,7 +21,7 @@ import allure
 class TestInterface:
 
     @allure.title("获取access_token")
-    @pytest.mark.parametrize('caseinfo',YamlUtil().read_testcase_yaml('get_access_token.yml'))
+    @pytest.mark.parametrize('caseinfo', YamlUtil().read_testcase_yaml('get_access_token.yml'))
     def test_get_access_token(self,caseinfo):
 
         url=caseinfo['requests']['url']
@@ -40,7 +40,7 @@ class TestInterface:
         assert 'license' in result
 
     @allure.title("登录接口，获取接口返回的token")
-    @pytest.mark.parametrize('caseinfo',YamlUtil().read_testcase_yaml('get_token.yml'))
+    @pytest.mark.parametrize('caseinfo', YamlUtil().read_testcase_yaml('get_token.yml'))
     def test_get_token(self,caseinfo):
         url=caseinfo['requests']['url']
         caseinfo['requests']['data']['accessToken'] = YamlUtil().read_yaml('access_token')
@@ -53,7 +53,7 @@ class TestInterface:
         assert '登录成功' == result['msg']
 
     @allure.title("查询账户关联的企业列表")
-    @pytest.mark.parametrize('caseinfo',YamlUtil().read_testcase_yaml('get_traders.yml'))
+    @pytest.mark.parametrize('caseinfo', YamlUtil().read_testcase_yaml('get_traders.yml'))
     def test_get_traders(self,caseinfo):
         url = caseinfo['requests']['url']
         caseinfo['requests']['headers']['Cookie'] = "Token="+YamlUtil().read_yaml('token')
@@ -65,7 +65,7 @@ class TestInterface:
         assert 'TN2023030800027204' == result['data'][0]['traderNo']
 
     @allure.title("查询当前账户商户中心菜单权限")
-    @pytest.mark.parametrize('caseinfo',YamlUtil().read_testcase_yaml('get_menus.yml'))
+    @pytest.mark.parametrize('caseinfo', YamlUtil().read_testcase_yaml('get_menus.yml'))
     def test_get_menus(self,caseinfo):
         url=caseinfo['requests']['url']
         method = caseinfo['requests']['method']
