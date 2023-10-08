@@ -1,26 +1,26 @@
 "Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"passed","Sun Oct 08 17:38:23 CST 2023","Sun Oct 08 17:38:23 CST 2023","28","testcases","test_inteface","TestInterface","","","查询当前账户商户中心菜单权限",""
-"passed","Sun Oct 08 17:38:29 CST 2023","Sun Oct 08 17:38:30 CST 2023","214","testcases","test_linkage_generation","Test_Lddf","","","联动代发经办明细查询","
-        description:联动代发经办明细查询
-        "
-"passed","Sun Oct 08 17:38:24 CST 2023","Sun Oct 08 17:38:25 CST 2023","730","testcases","test_linkage_generation","Test_Lddf","","","联动代发经办发起","
-        description:联动代发经办发起
-        "
-"passed","Sun Oct 08 17:38:25 CST 2023","Sun Oct 08 17:38:29 CST 2023","4654","testcases","test_linkage_generation","Test_Lddf","","","联动代发经办状态查询","
+"passed","Sun Oct 08 19:33:45 CST 2023","Sun Oct 08 19:33:49 CST 2023","4623","testcases","test_linkage_generation","Test_Lddf","","","联动代发经办状态查询","
         description:联动代发经办状态查询
         "
-"passed","Sun Oct 08 17:38:24 CST 2023","Sun Oct 08 17:38:24 CST 2023","153","testcases","test_linkage_generation","Test_Lddf","","","查询授权账号列表","
+"passed","Sun Oct 08 19:33:43 CST 2023","Sun Oct 08 19:33:43 CST 2023","243","testcases","test_linkage_generation","Test_Lddf","","","查询授权账号列表","
         description:查询授权账号(搅拌站关联的物流公司账号)列表
         "
-"passed","Sun Oct 08 17:38:23 CST 2023","Sun Oct 08 17:38:23 CST 2023","36","testcases","test_inteface","TestInterface","","","查询账户关联的企业列表",""
-"passed","Sun Oct 08 17:38:23 CST 2023","Sun Oct 08 17:38:23 CST 2023","86","testcases","test_inteface","TestInterface","","","登录接口，获取接口返回的token",""
-"passed","Sun Oct 08 17:38:23 CST 2023","Sun Oct 08 17:38:24 CST 2023","264","testcases","test_linkage_generation","Test_Lddf","","","查询可经办业务的账号","
-        description:查询可经办业务的账号
-        "
-"passed","Sun Oct 08 17:38:24 CST 2023","Sun Oct 08 17:38:24 CST 2023","233","testcases","test_linkage_generation","Test_Lddf","","","查询搅拌站与物流已签订的协议信息","
+"passed","Sun Oct 08 19:33:43 CST 2023","Sun Oct 08 19:33:44 CST 2023","226","testcases","test_linkage_generation","Test_Lddf","","","查询搅拌站与物流已签订的协议信息","
         description:查询搅拌站与物流已签订的协议信息
         "
-"passed","Sun Oct 08 17:38:23 CST 2023","Sun Oct 08 17:38:23 CST 2023","28","testcases","test_linkage_generation","Test_Lddf","","","获取可用的业务模式编号","
+"passed","Sun Oct 08 19:33:42 CST 2023","Sun Oct 08 19:33:42 CST 2023","35","testcases","test_inteface","TestInterface","","","查询账户关联的企业列表",""
+"passed","Sun Oct 08 19:33:42 CST 2023","Sun Oct 08 19:33:42 CST 2023","28","testcases","test_linkage_generation","Test_Lddf","","","获取可用的业务模式编号","
         description:获取可用的业务模式编号
         "
-"passed","Sun Oct 08 17:38:23 CST 2023","Sun Oct 08 17:38:23 CST 2023","67","testcases","test_inteface","TestInterface","","","获取access_token",""
+"passed","Sun Oct 08 19:33:42 CST 2023","Sun Oct 08 19:33:42 CST 2023","27","testcases","test_inteface","TestInterface","","","查询当前账户商户中心菜单权限",""
+"passed","Sun Oct 08 19:33:42 CST 2023","Sun Oct 08 19:33:43 CST 2023","819","testcases","test_linkage_generation","Test_Lddf","","","查询可经办业务的账号","
+        description:查询可经办业务的账号
+        "
+"passed","Sun Oct 08 19:33:42 CST 2023","Sun Oct 08 19:33:42 CST 2023","79","testcases","test_inteface","TestInterface","","","登录接口，获取接口返回的token",""
+"passed","Sun Oct 08 19:33:42 CST 2023","Sun Oct 08 19:33:42 CST 2023","66","testcases","test_inteface","TestInterface","","","获取access_token",""
+"passed","Sun Oct 08 19:33:49 CST 2023","Sun Oct 08 19:33:49 CST 2023","176","testcases","test_linkage_generation","Test_Lddf","","","联动代发经办明细查询","
+        description:联动代发经办明细查询
+        "
+"passed","Sun Oct 08 19:33:44 CST 2023","Sun Oct 08 19:33:45 CST 2023","941","testcases","test_linkage_generation","Test_Lddf","","","联动代发经办发起","
+        description:联动代发经办发起
+        "

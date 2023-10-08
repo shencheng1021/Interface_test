@@ -1,0 +1,9 @@
+-
+  name: 查询绑定的企业列表
+  requests:
+    method: get
+    url: http://172.24.100.75:10006/expose/website/traders
+    headers:
+      Host: 172.24.100.75:10006
+      Cookie:
+  validate: None
