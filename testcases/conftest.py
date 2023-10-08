@@ -9,14 +9,10 @@
 import pytest
 
 from common.yaml_util import YamlUtil
+import allure
 
 
-@pytest.fixture(scope='function')
-def con_database():
-    print('连接数据库')
-    yield  'wwww'
-    print("关闭")
-
+@allure.step("初始化extract_yaml文件")
 @pytest.fixture(scope='session',autouse=True)
 def clear_extract_yaml():
     YamlUtil().clear_yaml()

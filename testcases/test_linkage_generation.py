@@ -11,50 +11,43 @@ import time
 
 import pytest
 
-from common.get_sign_util import GetSignUtil
+
 from common.requests_util import RequestsUtil
 from common.yaml_util import YamlUtil
+import allure
 
-
+@allure.epic("接口测试")
+@allure.feature("联动代发产品接口测试")
 class Test_Lddf:
 
+    @allure.title("获取可用的业务模式编号")
     @pytest.mark.parametrize('caseinfo',YamlUtil().read_testcase_yaml('lddf_busmod_query.yml'))
     def test_busmod_query_01(self,caseinfo):
         '''
         description:获取可用的业务模式编号
         '''
-        data = caseinfo['requests']['data']
-        sign=GetSignUtil().get_sign(data)
-        caseinfo['requests']['headers']['sign']=sign
-        url=caseinfo['requests']['url']
-        method=caseinfo['requests']['method']
-        headers=caseinfo['requests']['headers']
-        result=RequestsUtil().send_request(method,url,headers=headers,json=data)
-        result=json.loads(result)
+        print(caseinfo)
+        result=RequestsUtil().lddf_request(caseinfo)
         YamlUtil().write_yaml({'busMod': result['data'][0]['busMod']})
         print(result)
         assert result['data'][0]['busMod'] == '00001'
         assert result['data'][0]['supplierCode'] == 'TN2022011200000607'
 
+    @allure.title("查询可经办业务的账号")
     @pytest.mark.parametrize('caseinfo',YamlUtil().read_testcase_yaml('lddf_busmod_acctQuery.yml'))
     def test_busmod_acctQuery_02(self,caseinfo):
         '''
         description:查询可经办业务的账号
         '''
         caseinfo['requests']['data']['busMod']=YamlUtil().read_yaml('busMod')
-        data = caseinfo['requests']['data']
-        sign = GetSignUtil().get_sign(data)
-        caseinfo['requests']['headers']['sign'] = sign
-        url = caseinfo['requests']['url']
-        method = caseinfo['requests']['method']
-        headers = caseinfo['requests']['headers']
-        result = RequestsUtil().send_request(method, url, headers=headers, json=data)
-        result = json.loads(result)
+        result=RequestsUtil().lddf_request(caseinfo)
+        print(result)
         YamlUtil().write_yaml({'bbkCode':result['data'][0]['bbkCode'],'acct':result['data'][0]['bankAcct']})
         assert result['data'][0]['bbkCode'] == '75'
         assert result['data'][0]['bankAcct'] == '755915678710501'
         assert result['data'][0]['bankAcctName'] == '企业网银新20161077'
 
+    @allure.title("查询授权账号列表")
     @pytest.mark.parametrize('caseinfo',YamlUtil().read_testcase_yaml('lddf_busmod_authAcctQuery.yml'))
     def test_busmod_authAcctQuery_03(self,caseinfo):
         '''
@@ -62,19 +55,14 @@ class Test_Lddf:
         '''
         caseinfo['requests']['data']['bbkCode'] = YamlUtil().read_yaml('bbkCode')
         caseinfo['requests']['data']['acct'] = YamlUtil().read_yaml('acct')
-        data = caseinfo['requests']['data']
-        sign = GetSignUtil().get_sign(data)
-        caseinfo['requests']['headers']['sign'] = sign
-        url = caseinfo['requests']['url']
-        method = caseinfo['requests']['method']
-        headers = caseinfo['requests']['headers']
-        result = RequestsUtil().send_request(method, url, headers=headers, json=data)
-        result = json.loads(result)
+        result = RequestsUtil().lddf_request(caseinfo)
         YamlUtil().write_yaml({'authAcct':result['data'][0]['authAcct']})
+        print(result)
         assert result['msg'] == '操作成功'
         assert result['code'] == 200
         assert result['data'][0]['authAcct'] == '755915678710606'
 
+    @allure.title("查询搅拌站与物流已签订的协议信息")
     @pytest.mark.parametrize('caseinfo',YamlUtil().read_testcase_yaml('lddf_busmod_agreementQuery.yml'))
     def test_busmod_agreementQuery_04(self,caseinfo):
         '''
@@ -83,20 +71,13 @@ class Test_Lddf:
         caseinfo['requests']['data']['bbkCode'] = YamlUtil().read_yaml('bbkCode')
         caseinfo['requests']['data']['acct'] = YamlUtil().read_yaml('acct')
         caseinfo['requests']['data']['authAcct'] = YamlUtil().read_yaml('authAcct')
-        data=caseinfo['requests']['data']
-        sign=GetSignUtil().get_sign(data)
-        caseinfo['requests']['headers']['sign'] = sign
-        method=caseinfo['requests']['method']
-        url=caseinfo['requests']['url']
-        headers=caseinfo['requests']['headers']
-        result=RequestsUtil().send_request(method,url,headers=headers,json=data)
-        result=json.loads(result)
+        result = RequestsUtil().lddf_request(caseinfo)
+        print(result)
         assert result['msg'] == "操作成功"
         assert result['code'] == 200
         assert result['data'][0]['supplierCode'] == 'TN2022011200000607'
 
-
-
+    @allure.title("联动代发经办发起")
     @pytest.mark.parametrize('caseinfo',YamlUtil().read_testcase_yaml('lddf_apply.yml'))
     def test_apply_05(self,caseinfo):
         '''
@@ -106,22 +87,16 @@ class Test_Lddf:
         caseinfo['requests']['data']['acct'] = YamlUtil().read_yaml('acct')
         caseinfo['requests']['data']['authAcct'] = YamlUtil().read_yaml('authAcct')
         caseinfo['requests']['data']['expectDate'] = time.strftime('%Y%m%d',time.localtime(time.time()))
-        data = caseinfo['requests']['data']
-        sign = GetSignUtil().get_sign(data)
-        caseinfo['requests']['headers']['sign'] = sign
-        url = caseinfo['requests']['url']
-        method = caseinfo['requests']['method']
-        headers = caseinfo['requests']['headers']
-        result = RequestsUtil().send_request(method, url, headers=headers, json=data)
-        result = json.loads(result)
+        result = RequestsUtil().lddf_request(caseinfo)
         YamlUtil().write_yaml({'txnNo': result['data']['txnNo']})
-        print(result['data']['txnNo'])
+        print(result)
         assert result['msg'] == '经办发起完成'
         assert result['code'] == 200
         assert 'txnNo' in result['data']
         assert 'reqCode' in result['data']
         assert 'reqStat' in result['data']
 
+    @allure.title("联动代发经办状态查询")
     @pytest.mark.parametrize('caseinfo',YamlUtil().read_testcase_yaml('lddf_applyInfo_query.yml'))
     def test_applyInfo_query_06(self,caseinfo):
         '''
@@ -129,14 +104,8 @@ class Test_Lddf:
         '''
         caseinfo['requests']['data']['startDate'] = time.strftime('%Y%m%d',time.localtime(time.time()))
         caseinfo['requests']['data']['endDate'] = time.strftime('%Y%m%d', time.localtime(time.time()))
-        data=caseinfo['requests']['data']
-        sign = GetSignUtil().get_sign(data)
-        caseinfo['requests']['headers']['sign'] = sign
-        url = caseinfo['requests']['url']
-        method = caseinfo['requests']['method']
-        headers = caseinfo['requests']['headers']
-        result = RequestsUtil().send_request(method, url, headers=headers, json=data)
-        result = json.loads(result)
+        result = RequestsUtil().lddf_request(caseinfo)
+        print(result)
         i=len(result['data'])
         flag=False
         for i in range(0,i):
@@ -145,6 +114,7 @@ class Test_Lddf:
                 flag = True
         assert flag == True
 
+    @allure.title("联动代发经办明细查询")
     @pytest.mark.parametrize('caseinfo',YamlUtil().read_testcase_yaml('lddf_applyDetailInfo_query.yml'))
     def test_applyDetailInfo_query_07(self,caseinfo):
         '''
@@ -152,14 +122,8 @@ class Test_Lddf:
         '''
         caseinfo['requests']['data']['reqCode'] = YamlUtil().read_yaml('reqCode')
         caseinfo['requests']['data']['txnNo'] = YamlUtil().read_yaml('txnNo')
-        data = caseinfo['requests']['data']
-        sign = GetSignUtil().get_sign(data)
-        caseinfo['requests']['headers']['sign'] = sign
-        url = caseinfo['requests']['url']
-        method = caseinfo['requests']['method']
-        headers = caseinfo['requests']['headers']
-        result = RequestsUtil().send_request(method, url, headers=headers, json=data)
-        result = json.loads(result)
+        result = RequestsUtil().lddf_request(caseinfo)
+        print(result)
         assert result['msg'] == '查询完成'
         assert result['code'] == 200
         assert result['data'][0]['txnNo'] == YamlUtil().read_yaml('txnNo')

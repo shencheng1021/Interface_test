@@ -10,10 +10,11 @@
 import requests
 from common.config import ConfigParser
 from common.yaml_util import YamlUtil
-
+import allure
 
 class GmSsl:
 
+    @allure.step("对接口返回的密文进行解密")
     def gmssh_decode(self,data):
         url = "http://172.24.100.74:9921/decrypt"
         headers = {
@@ -24,6 +25,7 @@ class GmSsl:
         rep = requests.request("post", url=url,data=data, headers=headers)
         return rep.json()
 
+    @allure.step("获取解密报文中的token，并将token保存到指定yaml文件中")
     def set_token(self,data):
         head=GmSsl().gmssh_decode(data)
         token=head['token']
