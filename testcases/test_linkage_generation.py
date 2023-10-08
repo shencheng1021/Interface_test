@@ -19,7 +19,7 @@ from common.yaml_util import YamlUtil
 class Test_Lddf:
 
     @pytest.mark.parametrize('caseinfo',YamlUtil().read_testcase_yaml('lddf_busmod_query.yml'))
-    def test_busmod_query(self,caseinfo):
+    def test_busmod_query_01(self,caseinfo):
         '''
         description:获取可用的业务模式编号
         '''
@@ -37,7 +37,7 @@ class Test_Lddf:
         assert result['data'][0]['supplierCode'] == 'TN2022011200000607'
 
     @pytest.mark.parametrize('caseinfo',YamlUtil().read_testcase_yaml('lddf_busmod_acctQuery.yml'))
-    def test_busmod_acctQuery(self,caseinfo):
+    def test_busmod_acctQuery_02(self,caseinfo):
         '''
         description:查询可经办业务的账号
         '''
@@ -56,7 +56,7 @@ class Test_Lddf:
         assert result['data'][0]['bankAcctName'] == '企业网银新20161077'
 
     @pytest.mark.parametrize('caseinfo',YamlUtil().read_testcase_yaml('lddf_busmod_authAcctQuery.yml'))
-    def test_busmod_authAcctQuery(self,caseinfo):
+    def test_busmod_authAcctQuery_03(self,caseinfo):
         '''
         description:查询授权账号(搅拌站关联的物流公司账号)列表
         '''
@@ -75,8 +75,30 @@ class Test_Lddf:
         assert result['code'] == 200
         assert result['data'][0]['authAcct'] == '755915678710606'
 
+    @pytest.mark.parametrize('caseinfo',YamlUtil().read_testcase_yaml('lddf_busmod_agreementQuery.yml'))
+    def test_busmod_agreementQuery_04(self,caseinfo):
+        '''
+        description:查询搅拌站与物流已签订的协议信息
+        '''
+        caseinfo['requests']['data']['bbkCode'] = YamlUtil().read_yaml('bbkCode')
+        caseinfo['requests']['data']['acct'] = YamlUtil().read_yaml('acct')
+        caseinfo['requests']['data']['authAcct'] = YamlUtil().read_yaml('authAcct')
+        data=caseinfo['requests']['data']
+        sign=GetSignUtil().get_sign(data)
+        caseinfo['requests']['headers']['sign'] = sign
+        method=caseinfo['requests']['method']
+        url=caseinfo['requests']['url']
+        headers=caseinfo['requests']['headers']
+        result=RequestsUtil().send_request(method,url,headers=headers,json=data)
+        result=json.loads(result)
+        assert result['msg'] == "操作成功"
+        assert result['code'] == 200
+        assert result['data'][0]['supplierCode'] == 'TN2022011200000607'
+
+
+
     @pytest.mark.parametrize('caseinfo',YamlUtil().read_testcase_yaml('lddf_apply.yml'))
-    def test_apply(self,caseinfo):
+    def test_apply_05(self,caseinfo):
         '''
         description:联动代发经办发起
         '''
@@ -101,7 +123,7 @@ class Test_Lddf:
         assert 'reqStat' in result['data']
 
     @pytest.mark.parametrize('caseinfo',YamlUtil().read_testcase_yaml('lddf_applyInfo_query.yml'))
-    def test_applyInfo_query(self,caseinfo):
+    def test_applyInfo_query_06(self,caseinfo):
         '''
         description:联动代发经办状态查询
         '''
@@ -124,7 +146,7 @@ class Test_Lddf:
         assert flag == True
 
     @pytest.mark.parametrize('caseinfo',YamlUtil().read_testcase_yaml('lddf_applyDetailInfo_query.yml'))
-    def test_applyDetailInfo_query(self,caseinfo):
+    def test_applyDetailInfo_query_07(self,caseinfo):
         '''
         description:联动代发经办明细查询
         '''
