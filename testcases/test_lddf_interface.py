@@ -29,7 +29,7 @@ class Test_Lddf:
         result=RequestsUtil().lddf_request(caseinfo)
         YamlUtil().write_yaml({'busMod': result['data'][0]['busMod']})
         AssertUtil().assertEqual('00001',result['data'][0]['busMod'])
-        AssertUtil().assertEqual('TN2022011200000606', result['data'][0]['supplierCode'])
+        AssertUtil().assertEqual('TN2022011200000607', result['data'][0]['supplierCode'])
         #assert result['data'][0]['busMod'] == '00001'
         #assert result['data'][0]['supplierCode'] == 'TN2022011200000607'
 
