@@ -22,6 +22,12 @@ def clear_extract_yaml():
     log.logger.info("清除extract_yaml文件内容")
     YamlUtil().clear_yaml()
 
+@pytest.fixture(scope='function',autouse=True)
+def test_case_run():
+    log.logger.info('************************starting run test cases************************')
+    yield
+    log.logger.info('************************test case run completed************************')
+
 
 
 

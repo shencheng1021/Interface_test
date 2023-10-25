@@ -136,3 +136,1328 @@
 2023-10-25 14:09:07,953 - common.requests_util - INFO - 请求结果状态码：[200]
 2023-10-25 14:09:07,953 - common.requests_util - INFO - 响应结果：{"msg":"操作成功","code":200,"data":[{"code":"perCenter","name":"首页","url":"/financing","sortNo":100,"coreFlag":0,"actionCodes":["VIEW"]},{"code":"enterManage","name":"企业信息管理","url":"/financing","sortNo":200,"coreFlag":0,"actionCodes":["VIEW"]},{"code":"supplierManage","name":"供应商管理","url":"/financing","sortNo":300,"coreFlag":0,"actionCodes":["VIEW"]},{"code":"tradeInfo","name":"交易信息","url":"/financing","sortNo":400,"coreFlag":0,"actionCodes":["VIEW"]},{"code":"financingInfo","name":"融资信息","url":"/financing","sortNo":500,"coreFlag":0,"actionCodes":["VIEW"]},{"code":"certiManage","name":"凭证管理","url":"/financing","sortNo":700,"coreFlag":0,"actionCodes":["VIEW"]},{"code":"productManage","name":"产品管理","url":"/financing","sortNo":800,"coreFlag":0,"actionCodes":["VIEW"]},{"code":"concretePay","name":"砼联支付","url":"/financing","sortNo":900,"coreFlag":0,"actionCodes":["VIEW"]},{"code":"authManage","name":"权限设置","url":"/financing","sortNo":1000,"coreFlag":0,"actionCodes":["VIEW"]}]}
 2023-10-25 14:09:07,954 - base.base_util - INFO - ************************test case run completed************************
+2023-10-25 14:21:21,908 - common.yaml_util - INFO - 读取get_access_token.yml文件中测试用例数据成功
+2023-10-25 14:21:21,909 - common.yaml_util - INFO - 读取get_token.yml文件中测试用例数据成功
+2023-10-25 14:21:21,911 - common.yaml_util - INFO - 读取get_traders.yml文件中测试用例数据成功
+2023-10-25 14:21:21,912 - common.yaml_util - INFO - 读取get_menus.yml文件中测试用例数据成功
+2023-10-25 14:21:21,932 - common.yaml_util - INFO - 读取lddf_busmod_query.yml文件中测试用例数据成功
+2023-10-25 14:21:21,934 - common.yaml_util - INFO - 读取lddf_busmod_acctQuery.yml文件中测试用例数据成功
+2023-10-25 14:21:21,936 - common.yaml_util - INFO - 读取lddf_busmod_authAcctQuery.yml文件中测试用例数据成功
+2023-10-25 14:21:21,938 - common.yaml_util - INFO - 读取lddf_busmod_agreementQuery.yml文件中测试用例数据成功
+2023-10-25 14:21:21,944 - common.yaml_util - INFO - 读取lddf_apply.yml文件中测试用例数据成功
+2023-10-25 14:21:21,946 - common.yaml_util - INFO - 读取lddf_applyInfo_query.yml文件中测试用例数据成功
+2023-10-25 14:21:21,947 - common.yaml_util - INFO - 读取lddf_applyDetailInfo_query.yml文件中测试用例数据成功
+2023-10-25 14:21:22,027 - testcases.conftest - INFO - 清除extract_yaml文件内容
+2023-10-25 14:21:22,027 - common.yaml_util - INFO - 清除extract.yml文件内容成功
+2023-10-25 14:21:22,028 - base.base_util - INFO - ************************starting run test cases************************
+2023-10-25 14:21:22,029 - testcases.test_interface - INFO - 请求头：{'enterCode': 'TLSK', 'Authorization': 'Basic dG9uZ0xpYW46dG9uZ0xpYW4=', 'Content-Type': 'application/x-www-form-urlencoded', 'Host': '172.24.100.107:14000'}
+2023-10-25 14:21:22,029 - testcases.test_interface - INFO - 请求数据：{'mobile': 'SMSCUST%4017754754412', 'code': 230516}
+2023-10-25 14:21:22,030 - common.requests_util - INFO - 请求地址:http://172.24.100.107:14000/auth/oauth/token?grant_type=mobile&source=PORTAL_CONFIG
+2023-10-25 14:21:22,030 - common.requests_util - INFO - 请求方式:post
+2023-10-25 14:21:22,100 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 14:21:22,100 - common.requests_util - INFO - 响应结果：{"access_token":"ee68a919-0a62-427c-8e35-fce958704f11","token_type":"bearer","refresh_token":"49e2befd-e16d-4d1f-98c5-e3e35460bef2","expires_in":7199,"scope":"server","loginEnterCode":"TLSK","license":"made by panda","cnName":"砼联数字科技有限","phone":"17754754412","active":true,"id":33521,"avatar":null,"type":"2","client_id":"tongLian","email":null,"username":"17754754412"}
+2023-10-25 14:21:22,100 - common.yaml_util - INFO - 写入extract.yml文件内容: {'access_token': 'ee68a919-0a62-427c-8e35-fce958704f11'}
+2023-10-25 14:21:22,101 - common.yaml_util - INFO - 写入extract.yml文件成功
+2023-10-25 14:21:22,102 - base.base_util - INFO - ************************test case run completed************************
+2023-10-25 14:21:22,105 - base.base_util - INFO - ************************starting run test cases************************
+2023-10-25 14:21:22,106 - common.yaml_util - INFO - 读取extract.yml文件中key为: access_token 的数据
+2023-10-25 14:21:22,107 - common.yaml_util - INFO - extract.yml文件key值为：access_token 的值为 ee68a919-0a62-427c-8e35-fce958704f11 
+2023-10-25 14:21:22,107 - testcases.test_interface - INFO - 请求数据：{'Accept': 'application/json, text/plain, */*', 'accessToken': 'ee68a919-0a62-427c-8e35-fce958704f11'}
+2023-10-25 14:21:22,107 - common.requests_util - INFO - 请求地址:http://172.24.100.75:10006/expose/website/newLoginByCenter
+2023-10-25 14:21:22,107 - common.requests_util - INFO - 请求方式:get
+2023-10-25 14:21:22,165 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 14:21:22,165 - common.requests_util - INFO - 响应结果：{"msg":"登录成功","code":200,"data":"{\"head\":{\"dgtlEnvlp\":\"04aaf85fbe76c9efe2d986a075033fd98fabd1b3f402ef7dd401e1fb33f1e91dbb4bd0a38c62ee3fe400dbcb17e535cb01b79beab7c4842448866fc6b6417147eeff3356423eb93880a7af07519db58b1620e22bca7448f1b54c80965781edb42255f76d2216ee29e6b2a3376d5f867e77877934b800296450feeb650667facfe3\",\"sign\":\"08aab076db77127865402b4278b079a45726e2de8995c648973e77f4b0abf57b\"},\"body\":\"fe7ffc937025e94e49b70a800a9e12376a17075f62f0a17d0680a6fdbd34388d1ab7dcc42f2f7901cacd6adaa57215a718d58063690b153714a0fdccd4b35093242249532898df4fbcacf8ff073af5ad2889ad4f8d5bd07dc6164b9b59d4f1ba3b7092c6558af9377d31c4e3bf68c3755632eafcda6747f52b9b8a3971e5fe5c6d29bbc6dc930d6a452821ea9ced04249debb76a4c7eb7ab280f830000e37abb43d9abeb6ab88af3f63ffb1acda5e510e478c41e372c2c2c13fff0dfd50ba354eec540b7154fdee18a43f8c4444985c9061ae85c2e60fb6b8f51e7c4faa46070b3905444054151a77fdce317e222a36e2c2d3762ecd223301b9e7691ae12b4e2941050136464d6b663ccf88951378486c1c32423347303dcf05e7e0b7581f623\"}"}
+2023-10-25 14:21:22,182 - common.yaml_util - INFO - 写入extract.yml文件内容: {'token': 'eyJ1c2VySWQiOiIxNzc1NDc1NDQxMiIsInRva2VuIjoiOGEzY2FmYTVhODA5NGVmMjlkZTM5MTZlYzVjOWM4OWIifQ=='}
+2023-10-25 14:21:22,183 - common.yaml_util - INFO - 写入extract.yml文件成功
+2023-10-25 14:21:22,184 - base.base_util - INFO - ************************test case run completed************************
+2023-10-25 14:21:22,187 - base.base_util - INFO - ************************starting run test cases************************
+2023-10-25 14:21:22,188 - common.yaml_util - INFO - 读取extract.yml文件中key为: token 的数据
+2023-10-25 14:21:22,189 - common.yaml_util - INFO - extract.yml文件key值为：token 的值为 eyJ1c2VySWQiOiIxNzc1NDc1NDQxMiIsInRva2VuIjoiOGEzY2FmYTVhODA5NGVmMjlkZTM5MTZlYzVjOWM4OWIifQ== 
+2023-10-25 14:21:22,189 - testcases.test_interface - INFO - 请求头：{'Host': '172.24.100.75:10006', 'Cookie': 'Token=eyJ1c2VySWQiOiIxNzc1NDc1NDQxMiIsInRva2VuIjoiOGEzY2FmYTVhODA5NGVmMjlkZTM5MTZlYzVjOWM4OWIifQ=='}
+2023-10-25 14:21:22,189 - common.requests_util - INFO - 请求地址:http://172.24.100.75:10006/expose/website/traders
+2023-10-25 14:21:22,189 - common.requests_util - INFO - 请求方式:get
+2023-10-25 14:21:22,230 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 14:21:22,230 - common.requests_util - INFO - 响应结果：{"msg":"查询成功","code":200,"data":[{"traderNo":"TN2023030800027204","name":"砼联数字科技有限"},{"traderNo":"TN2023042100031602","name":"gdfgsd双方的"}]}
+2023-10-25 14:21:22,232 - base.base_util - INFO - ************************test case run completed************************
+2023-10-25 14:21:22,235 - base.base_util - INFO - ************************starting run test cases************************
+2023-10-25 14:21:22,235 - common.yaml_util - INFO - 读取extract.yml文件中key为: token 的数据
+2023-10-25 14:21:22,236 - common.yaml_util - INFO - extract.yml文件key值为：token 的值为 eyJ1c2VySWQiOiIxNzc1NDc1NDQxMiIsInRva2VuIjoiOGEzY2FmYTVhODA5NGVmMjlkZTM5MTZlYzVjOWM4OWIifQ== 
+2023-10-25 14:21:22,236 - common.yaml_util - INFO - 读取extract.yml文件中key为: token 的数据
+2023-10-25 14:21:22,237 - common.yaml_util - INFO - extract.yml文件key值为：token 的值为 eyJ1c2VySWQiOiIxNzc1NDc1NDQxMiIsInRva2VuIjoiOGEzY2FmYTVhODA5NGVmMjlkZTM5MTZlYzVjOWM4OWIifQ== 
+2023-10-25 14:21:22,237 - testcases.test_interface - INFO - 请求头：{'Host': '172.24.100.75:10006', 'Cookie': 'Token=eyJ1c2VySWQiOiIxNzc1NDc1NDQxMiIsInRva2VuIjoiOGEzY2FmYTVhODA5NGVmMjlkZTM5MTZlYzVjOWM4OWIifQ==', 'Token': 'eyJ1c2VySWQiOiIxNzc1NDc1NDQxMiIsInRva2VuIjoiOGEzY2FmYTVhODA5NGVmMjlkZTM5MTZlYzVjOWM4OWIifQ=='}
+2023-10-25 14:21:22,238 - common.requests_util - INFO - 请求地址:http://172.24.100.75:10006/expose/website/getMenus
+2023-10-25 14:21:22,238 - common.requests_util - INFO - 请求方式:get
+2023-10-25 14:21:22,267 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 14:21:22,267 - common.requests_util - INFO - 响应结果：{"msg":"操作成功","code":200,"data":[{"code":"perCenter","name":"首页","url":"/financing","sortNo":100,"coreFlag":0,"actionCodes":["VIEW"]},{"code":"enterManage","name":"企业信息管理","url":"/financing","sortNo":200,"coreFlag":0,"actionCodes":["VIEW"]},{"code":"supplierManage","name":"供应商管理","url":"/financing","sortNo":300,"coreFlag":0,"actionCodes":["VIEW"]},{"code":"tradeInfo","name":"交易信息","url":"/financing","sortNo":400,"coreFlag":0,"actionCodes":["VIEW"]},{"code":"financingInfo","name":"融资信息","url":"/financing","sortNo":500,"coreFlag":0,"actionCodes":["VIEW"]},{"code":"certiManage","name":"凭证管理","url":"/financing","sortNo":700,"coreFlag":0,"actionCodes":["VIEW"]},{"code":"productManage","name":"产品管理","url":"/financing","sortNo":800,"coreFlag":0,"actionCodes":["VIEW"]},{"code":"concretePay","name":"砼联支付","url":"/financing","sortNo":900,"coreFlag":0,"actionCodes":["VIEW"]},{"code":"authManage","name":"权限设置","url":"/financing","sortNo":1000,"coreFlag":0,"actionCodes":["VIEW"]}]}
+2023-10-25 14:21:22,268 - base.base_util - INFO - ************************test case run completed************************
+2023-10-25 14:21:22,272 - base.base_util - INFO - ************************starting run test cases************************
+2023-10-25 14:21:22,273 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/encrypt
+2023-10-25 14:21:22,273 - common.requests_util - INFO - 请求方式:post
+2023-10-25 14:21:22,298 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 14:21:22,298 - common.requests_util - INFO - 响应结果：{"msg":"ZTA2MDZiMTY3ZjAxNjA3ZmJlNDAzNTU0M2M1NjQ1Mzk0ZTUyYTIxYzE0NDhlNzhiM2M1YjRiMmM4ZmVhMjg3Zg==","code":200,"data":null}
+2023-10-25 14:21:22,298 - common.requests_util - INFO - sign值：ZTA2MDZiMTY3ZjAxNjA3ZmJlNDAzNTU0M2M1NjQ1Mzk0ZTUyYTIxYzE0NDhlNzhiM2M1YjRiMmM4ZmVhMjg3Zg==
+2023-10-25 14:21:22,298 - common.requests_util - INFO - 请求头:{'sign': 'ZTA2MDZiMTY3ZjAxNjA3ZmJlNDAzNTU0M2M1NjQ1Mzk0ZTUyYTIxYzE0NDhlNzhiM2M1YjRiMmM4ZmVhMjg3Zg==', 'channelNo': '19902'}
+2023-10-25 14:21:22,298 - common.requests_util - INFO - data:{'busiLiceNo': '91510100MA69MUBX8Q'}
+2023-10-25 14:21:22,298 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/busmod/query
+2023-10-25 14:21:22,299 - common.requests_util - INFO - 请求方式:post
+2023-10-25 14:21:22,349 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 14:21:22,349 - common.requests_util - INFO - 响应结果：{"msg":"操作成功","code":200,"data":[{"id":102,"supplierCode":"TN2022011200000607","busMod":"00001","remark":null,"createTime":"2023-09-26 16:07:53","updateTime":"2023-09-26 16:07:53","createUserId":"xiongxl","updateUserId":"xiongxl"}]}
+2023-10-25 14:21:22,350 - common.yaml_util - INFO - 写入extract.yml文件内容: {'busMod': '00001'}
+2023-10-25 14:21:22,350 - common.yaml_util - INFO - 写入extract.yml文件成功
+2023-10-25 14:21:22,352 - base.base_util - INFO - ************************test case run completed************************
+2023-10-25 14:21:22,355 - base.base_util - INFO - ************************starting run test cases************************
+2023-10-25 14:21:22,356 - common.yaml_util - INFO - 读取extract.yml文件中key为: busMod 的数据
+2023-10-25 14:21:22,357 - common.yaml_util - INFO - extract.yml文件key值为：busMod 的值为 00001 
+2023-10-25 14:21:22,357 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/encrypt
+2023-10-25 14:21:22,357 - common.requests_util - INFO - 请求方式:post
+2023-10-25 14:21:22,379 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 14:21:22,379 - common.requests_util - INFO - 响应结果：{"msg":"MmM0YTVlYzkyZWI3NmE4NjYwNWRkYjJiZWIxMmQyZmI3MGYzOWNjZjM4YmJlZjEzOTNlOTM5M2NmMDljNDk2OA==","code":200,"data":null}
+2023-10-25 14:21:22,379 - common.requests_util - INFO - sign值：MmM0YTVlYzkyZWI3NmE4NjYwNWRkYjJiZWIxMmQyZmI3MGYzOWNjZjM4YmJlZjEzOTNlOTM5M2NmMDljNDk2OA==
+2023-10-25 14:21:22,379 - common.requests_util - INFO - 请求头:{'sign': 'MmM0YTVlYzkyZWI3NmE4NjYwNWRkYjJiZWIxMmQyZmI3MGYzOWNjZjM4YmJlZjEzOTNlOTM5M2NmMDljNDk2OA==', 'channelNo': '19902'}
+2023-10-25 14:21:22,379 - common.requests_util - INFO - data:{'busiLiceNo': '91510100MA69MUBX8Q', 'busMod': '00001'}
+2023-10-25 14:21:22,380 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/busmod/acctQuery
+2023-10-25 14:21:22,380 - common.requests_util - INFO - 请求方式:post
+2023-10-25 14:21:23,249 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 14:21:23,250 - common.requests_util - INFO - 响应结果：{"msg":"操作成功","code":200,"data":[{"id":0,"supplierCode":"TN2022011200000607","busMod":"00001","bbkCode":"75","bankAcct":"755915678710501","bankAcctName":"企业网银新20161077","currency":"10","acctStat":null,"createTime":null,"updateTime":null}]}
+2023-10-25 14:21:23,250 - common.yaml_util - INFO - 写入extract.yml文件内容: {'bbkCode': '75', 'acct': '755915678710501'}
+2023-10-25 14:21:23,251 - common.yaml_util - INFO - 写入extract.yml文件成功
+2023-10-25 14:21:23,252 - base.base_util - INFO - ************************test case run completed************************
+2023-10-25 14:21:23,255 - base.base_util - INFO - ************************starting run test cases************************
+2023-10-25 14:21:23,256 - common.yaml_util - INFO - 读取extract.yml文件中key为: bbkCode 的数据
+2023-10-25 14:21:23,257 - common.yaml_util - INFO - extract.yml文件key值为：bbkCode 的值为 75 
+2023-10-25 14:21:23,257 - common.yaml_util - INFO - 读取extract.yml文件中key为: acct 的数据
+2023-10-25 14:21:23,258 - common.yaml_util - INFO - extract.yml文件key值为：acct 的值为 755915678710501 
+2023-10-25 14:21:23,258 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/encrypt
+2023-10-25 14:21:23,258 - common.requests_util - INFO - 请求方式:post
+2023-10-25 14:21:23,264 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 14:21:23,264 - common.requests_util - INFO - 响应结果：{"msg":"ZTg1NDc1MGQwYjZjZTI4ZjljNzBiYmQ5ZDMxNTFhZjhkZWM5MzU3NzMyMjQ3ZThkMTNkOWM4OTllNjMwNjU4OQ==","code":200,"data":null}
+2023-10-25 14:21:23,264 - common.requests_util - INFO - sign值：ZTg1NDc1MGQwYjZjZTI4ZjljNzBiYmQ5ZDMxNTFhZjhkZWM5MzU3NzMyMjQ3ZThkMTNkOWM4OTllNjMwNjU4OQ==
+2023-10-25 14:21:23,264 - common.requests_util - INFO - 请求头:{'sign': 'ZTg1NDc1MGQwYjZjZTI4ZjljNzBiYmQ5ZDMxNTFhZjhkZWM5MzU3NzMyMjQ3ZThkMTNkOWM4OTllNjMwNjU4OQ==', 'channelNo': '19902'}
+2023-10-25 14:21:23,265 - common.requests_util - INFO - data:{'busiLiceNo': '91510100MA69MUBX8Q', 'bbkCode': '75', 'acct': '755915678710501', 'authType': 1}
+2023-10-25 14:21:23,265 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/busmod/authAcctQuery
+2023-10-25 14:21:23,265 - common.requests_util - INFO - 请求方式:post
+2023-10-25 14:21:23,954 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 14:21:23,954 - common.requests_util - INFO - 响应结果：{"msg":"操作成功","code":200,"data":[{"id":0,"supplierCode":"TN2022011200000607","bbkCode":"75","bankAcct":"755915678710501","authType":1,"authAcct":"755915678710606","authAcctName":"企业网银新20161077","currency":"10","startValtyDate":"20211210","endValtyDate":"99991231","acctStat":"A","lddfMod":"2","createTime":null,"updateTime":null}]}
+2023-10-25 14:21:23,955 - common.yaml_util - INFO - 写入extract.yml文件内容: {'authAcct': '755915678710606'}
+2023-10-25 14:21:23,955 - common.yaml_util - INFO - 写入extract.yml文件成功
+2023-10-25 14:21:23,957 - base.base_util - INFO - ************************test case run completed************************
+2023-10-25 14:21:23,960 - base.base_util - INFO - ************************starting run test cases************************
+2023-10-25 14:21:23,961 - common.yaml_util - INFO - 读取extract.yml文件中key为: bbkCode 的数据
+2023-10-25 14:21:23,962 - common.yaml_util - INFO - extract.yml文件key值为：bbkCode 的值为 75 
+2023-10-25 14:21:23,962 - common.yaml_util - INFO - 读取extract.yml文件中key为: acct 的数据
+2023-10-25 14:21:23,963 - common.yaml_util - INFO - extract.yml文件key值为：acct 的值为 755915678710501 
+2023-10-25 14:21:23,963 - common.yaml_util - INFO - 读取extract.yml文件中key为: authAcct 的数据
+2023-10-25 14:21:23,964 - common.yaml_util - INFO - extract.yml文件key值为：authAcct 的值为 755915678710606 
+2023-10-25 14:21:23,965 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/encrypt
+2023-10-25 14:21:23,965 - common.requests_util - INFO - 请求方式:post
+2023-10-25 14:21:23,971 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 14:21:23,971 - common.requests_util - INFO - 响应结果：{"msg":"NmMzYWE3OTAyNDY5MjAzNGEyNjNlNTdhMjM2MzQ2OThkYjIwZjU2ODAyYWI4YzA2MTdjZjgwNDU3OGE1ZDEzNQ==","code":200,"data":null}
+2023-10-25 14:21:23,971 - common.requests_util - INFO - sign值：NmMzYWE3OTAyNDY5MjAzNGEyNjNlNTdhMjM2MzQ2OThkYjIwZjU2ODAyYWI4YzA2MTdjZjgwNDU3OGE1ZDEzNQ==
+2023-10-25 14:21:23,971 - common.requests_util - INFO - 请求头:{'sign': 'NmMzYWE3OTAyNDY5MjAzNGEyNjNlNTdhMjM2MzQ2OThkYjIwZjU2ODAyYWI4YzA2MTdjZjgwNDU3OGE1ZDEzNQ==', 'channelNo': '19902'}
+2023-10-25 14:21:23,971 - common.requests_util - INFO - data:{'busiLiceNo': '91510100MA69MUBX8Q', 'bbkCode': '75', 'acct': '755915678710501', 'authAcct': '755915678710606'}
+2023-10-25 14:21:23,972 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/busmod/agreementQuery
+2023-10-25 14:21:23,972 - common.requests_util - INFO - 请求方式:post
+2023-10-25 14:21:24,300 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 14:21:24,301 - common.requests_util - INFO - 响应结果：{"msg":"操作成功","code":200,"data":[{"id":0,"supplierCode":"TN2022011200000607","bbkCode":"75","bankAcct":"755915678710501","authAcct":"755915678710606","agreementCode":"AB0980","agreementType":"BYSA","productCode":"AGPAY001","agreementStat":"A","currency":"10","agreementInstitution":"755512","startValtyDate":"20230104","endValtyDate":"20240105","signDate":"20200102","createTime":null,"updateTime":null},{"id":0,"supplierCode":"TN2022011200000607","bbkCode":"75","bankAcct":"755915678710501","authAcct":"755915678710606","agreementCode":"AB0982","agreementType":"BYBK","productCode":"AGPAY999","agreementStat":"A","currency":"10","agreementInstitution":"755512","startValtyDate":"20230104","endValtyDate":"20240105","signDate":"20200102","createTime":null,"updateTime":null},{"id":0,"supplierCode":"TN2022011200000607","bbkCode":"75","bankAcct":"755915678710501","authAcct":"755915678710606","agreementCode":"AB0984","agreementType":"BYTF","productCode":"AGPAY019","agreementStat":"A","currency":"10","agreementInstitution":"755512","startValtyDate":"20230104","endValtyDate":"20240105","signDate":"20200102","createTime":null,"updateTime":null}]}
+2023-10-25 14:21:24,302 - base.base_util - INFO - ************************test case run completed************************
+2023-10-25 14:21:24,306 - base.base_util - INFO - ************************starting run test cases************************
+2023-10-25 14:21:24,306 - common.yaml_util - INFO - 读取extract.yml文件中key为: bbkCode 的数据
+2023-10-25 14:21:24,308 - common.yaml_util - INFO - extract.yml文件key值为：bbkCode 的值为 75 
+2023-10-25 14:21:24,308 - common.yaml_util - INFO - 读取extract.yml文件中key为: acct 的数据
+2023-10-25 14:21:24,309 - common.yaml_util - INFO - extract.yml文件key值为：acct 的值为 755915678710501 
+2023-10-25 14:21:24,309 - common.yaml_util - INFO - 读取extract.yml文件中key为: authAcct 的数据
+2023-10-25 14:21:24,310 - common.yaml_util - INFO - extract.yml文件key值为：authAcct 的值为 755915678710606 
+2023-10-25 14:21:24,311 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/encrypt
+2023-10-25 14:21:24,311 - common.requests_util - INFO - 请求方式:post
+2023-10-25 14:21:24,317 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 14:21:24,317 - common.requests_util - INFO - 响应结果：{"msg":"OWU3Y2FhMTk4NDVkNDA2OGVmYWYxZjU4NzRkYmEwMjcxMzgzM2JkN2UzZDBlYjk1NjBjZTEyZGEzZjU0ODIwOA==","code":200,"data":null}
+2023-10-25 14:21:24,317 - common.requests_util - INFO - sign值：OWU3Y2FhMTk4NDVkNDA2OGVmYWYxZjU4NzRkYmEwMjcxMzgzM2JkN2UzZDBlYjk1NjBjZTEyZGEzZjU0ODIwOA==
+2023-10-25 14:21:24,318 - common.requests_util - INFO - 请求头:{'sign': 'OWU3Y2FhMTk4NDVkNDA2OGVmYWYxZjU4NzRkYmEwMjcxMzgzM2JkN2UzZDBlYjk1NjBjZTEyZGEzZjU0ODIwOA==', 'channelNo': '19902'}
+2023-10-25 14:21:24,318 - common.requests_util - INFO - data:{'busiLiceNo': '91510100MA69MUBX8Q', 'busMod': '00001', 'totalAmt': 5.55, 'transCnt': 5, 'agreementCode': 'AB0980', 'agreementType': 'BYSA', 'currency': '10', 'bbkCode': '75', 'acct': '755915678710501', 'authAcct': '755915678710606', 'transRemark': '联动代发测试', 'msgContentType': '9', 'expectDate': '20231025', 'expectTime': '235959', 'detail': [{'receiptAcct': '62148311501315112', 'receiptAcctName': '吴极客', 'transAmt': 2.44, 'transRemark': '第一笔联动支付', 'sysFlag': 'Y'}, {'receiptAcct': '6214835982629402', 'receiptAcctName': '冯建杨', 'transAmt': 1, 'transRemark': '第二笔联动支付', 'sysFlag': 'Y'}, {'receiptAcct': '1241255345345345', 'receiptAcctName': '他行户1', 'transAmt': 0.11, 'transRemark': '第三笔联动支付', 'sysFlag': 'N', 'depositBank': '102100099996', 'depositBankAddr': '北京市'}, {'receiptAcct': '421455345345345', 'receiptAcctName': '他行户2', 'transAmt': 1.3, 'transRemark': '第四笔联动支付', 'sysFlag': 'N', 'depositBank': '102100099996', 'depositBankAddr': '北京市'}, {'receiptAcct': '74124455345345345', 'receiptAcctName': '他行户2', 'transAmt': 0.7, 'transRemark': '第五笔联动支付', 'sysFlag': 'N', 'depositBank': '102100099996', 'depositBankAddr': '北京市'}]}
+2023-10-25 14:21:24,318 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/apply
+2023-10-25 14:21:24,318 - common.requests_util - INFO - 请求方式:post
+2023-10-25 14:21:25,027 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 14:21:25,028 - common.requests_util - INFO - 响应结果：{"msg":"经办发起完成","code":200,"data":{"txnNo":"TLSK20231025142125401000000980","reqCode":"B150095212","reqStat":"NTE"}}
+2023-10-25 14:21:25,028 - common.yaml_util - INFO - 写入extract.yml文件内容: {'txnNo': 'TLSK20231025142125401000000980'}
+2023-10-25 14:21:25,028 - common.yaml_util - INFO - 写入extract.yml文件成功
+2023-10-25 14:21:25,030 - base.base_util - INFO - ************************test case run completed************************
+2023-10-25 14:21:25,033 - base.base_util - INFO - ************************starting run test cases************************
+2023-10-25 14:21:25,034 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/encrypt
+2023-10-25 14:21:25,034 - common.requests_util - INFO - 请求方式:post
+2023-10-25 14:21:25,040 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 14:21:25,040 - common.requests_util - INFO - 响应结果：{"msg":"Nzk1MzI3NWYwOTM0MGY2MjM4ZDhiNzcwM2E3NWYwMmZmNzViMmRhZjQ1ZTQ3ZGRlYjliZmNjNDRkYjBjYmRlOA==","code":200,"data":null}
+2023-10-25 14:21:25,041 - common.requests_util - INFO - sign值：Nzk1MzI3NWYwOTM0MGY2MjM4ZDhiNzcwM2E3NWYwMmZmNzViMmRhZjQ1ZTQ3ZGRlYjliZmNjNDRkYjBjYmRlOA==
+2023-10-25 14:21:25,041 - common.requests_util - INFO - 请求头:{'sign': 'Nzk1MzI3NWYwOTM0MGY2MjM4ZDhiNzcwM2E3NWYwMmZmNzViMmRhZjQ1ZTQ3ZGRlYjliZmNjNDRkYjBjYmRlOA==', 'channelNo': '19902'}
+2023-10-25 14:21:25,041 - common.requests_util - INFO - data:{'busiLiceNo': '91510100MA69MUBX8Q', 'dateType': 'A', 'startDate': '20231025', 'endDate': '20231025'}
+2023-10-25 14:21:25,041 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/applyInfo/query
+2023-10-25 14:21:25,041 - common.requests_util - INFO - 请求方式:post
+2023-10-25 14:21:25,440 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 14:21:25,440 - common.requests_util - INFO - 响应结果：{"msg":"查询完成","code":200,"data":[{"id":0,"txnNo":"TLSK20231025091847481000000976","supplierCode":"TN2022011200000607","busCode":"N39010","busMod":"00001","totalAmt":5.55,"transCnt":5,"successAmt":0.00,"successCnt":0,"agreementCode":"AB0980","agreementType":"BYSA","currency":"10","currencyType":null,"bbkCode":null,"bankAcct":"755915678710501","authAcct":"755915678710606","transRemark":"联动代发测试","msgContentType":"9","expectDate":"20231025","expectTime":"235959","operateDate":"20231025","nlaFlag":"N","reqCode":"B150095181","reqStat":"NTE","reqFlag":null,"errorCode":null,"errorMsg":null,"rtbFlag":null,"createTime":null,"updateTime":null,"createUserId":null,"updateUserId":null},{"id":0,"txnNo":"TLSK20231025091004136000000975","supplierCode":"TN2022011200000607","busCode":"N39010","busMod":"00001","totalAmt":5.55,"transCnt":5,"successAmt":0.00,"successCnt":0,"agreementCode":"AB0980","agreementType":"BYSA","currency":"10","currencyType":null,"bbkCode":null,"bankAcct":"755915678710501","authAcct":"755915678710606","transRemark":"联动代发测试","msgContentType":"9","expectDate":"20231025","expectTime":"235959","operateDate":"20231025","nlaFlag":"N","reqCode":"B150095184","reqStat":"NTE","reqFlag":null,"errorCode":null,"errorMsg":null,"rtbFlag":null,"createTime":null,"updateTime":null,"createUserId":null,"updateUserId":null},{"id":0,"txnNo":"TLSK20231025093503815000000977","supplierCode":"TN2022011200000607","busCode":"N39010","busMod":"00001","totalAmt":5.55,"transCnt":5,"successAmt":0.00,"successCnt":0,"agreementCode":"AB0980","agreementType":"BYSA","currency":"10","currencyType":null,"bbkCode":null,"bankAcct":"755915678710501","authAcct":"755915678710606","transRemark":"联动代发测试","msgContentType":"9","expectDate":"20231025","expectTime":"235959","operateDate":"20231025","nlaFlag":"N","reqCode":"B150095186","reqStat":"NTE","reqFlag":null,"errorCode":null,"errorMsg":null,"rtbFlag":null,"createTime":null,"updateTime":null,"createUserId":null,"updateUserId":null},{"id":0,"txnNo":"TLSK20231025095023937000000978","supplierCode":"TN2022011200000607","busCode":"N39010","busMod":"00001","totalAmt":5.55,"transCnt":5,"successAmt":0.00,"successCnt":0,"agreementCode":"AB0980","agreementType":"BYSA","currency":"10","currencyType":null,"bbkCode":null,"bankAcct":"755915678710501","authAcct":"755915678710606","transRemark":"联动代发测试","msgContentType":"9","expectDate":"20231025","expectTime":"235959","operateDate":"20231025","nlaFlag":"N","reqCode":"B150095187","reqStat":"NTE","reqFlag":null,"errorCode":null,"errorMsg":null,"rtbFlag":null,"createTime":null,"updateTime":null,"createUserId":null,"updateUserId":null},{"id":0,"txnNo":"TLSK20231025142125401000000980","supplierCode":"TN2022011200000607","busCode":"N39010","busMod":"00001","totalAmt":5.55,"transCnt":5,"successAmt":0.00,"successCnt":0,"agreementCode":"AB0980","agreementType":"BYSA","currency":"10","currencyType":null,"bbkCode":null,"bankAcct":"755915678710501","authAcct":"755915678710606","transRemark":"联动代发测试","msgContentType":"9","expectDate":"20231025","expectTime":"235959","operateDate":"20231025","nlaFlag":"N","reqCode":"B150095212","reqStat":"NTE","reqFlag":null,"errorCode":null,"errorMsg":null,"rtbFlag":null,"createTime":null,"updateTime":null,"createUserId":null,"updateUserId":null}]}
+2023-10-25 14:21:25,441 - common.yaml_util - INFO - 读取extract.yml文件中key为: txnNo 的数据
+2023-10-25 14:21:25,442 - common.yaml_util - INFO - extract.yml文件key值为：txnNo 的值为 TLSK20231025142125401000000980 
+2023-10-25 14:21:25,442 - common.yaml_util - INFO - 读取extract.yml文件中key为: txnNo 的数据
+2023-10-25 14:21:25,444 - common.yaml_util - INFO - extract.yml文件key值为：txnNo 的值为 TLSK20231025142125401000000980 
+2023-10-25 14:21:25,444 - common.yaml_util - INFO - 读取extract.yml文件中key为: txnNo 的数据
+2023-10-25 14:21:25,445 - common.yaml_util - INFO - extract.yml文件key值为：txnNo 的值为 TLSK20231025142125401000000980 
+2023-10-25 14:21:25,445 - common.yaml_util - INFO - 读取extract.yml文件中key为: txnNo 的数据
+2023-10-25 14:21:25,446 - common.yaml_util - INFO - extract.yml文件key值为：txnNo 的值为 TLSK20231025142125401000000980 
+2023-10-25 14:21:25,446 - common.yaml_util - INFO - 读取extract.yml文件中key为: txnNo 的数据
+2023-10-25 14:21:25,448 - common.yaml_util - INFO - extract.yml文件key值为：txnNo 的值为 TLSK20231025142125401000000980 
+2023-10-25 14:21:25,448 - common.yaml_util - INFO - 写入extract.yml文件内容: {'reqCode': 'B150095212'}
+2023-10-25 14:21:25,448 - common.yaml_util - INFO - 写入extract.yml文件成功
+2023-10-25 14:21:25,450 - base.base_util - INFO - ************************test case run completed************************
+2023-10-25 14:21:25,453 - base.base_util - INFO - ************************starting run test cases************************
+2023-10-25 14:21:25,454 - common.yaml_util - INFO - 读取extract.yml文件中key为: reqCode 的数据
+2023-10-25 14:21:25,455 - common.yaml_util - INFO - extract.yml文件key值为：reqCode 的值为 B150095212 
+2023-10-25 14:21:25,455 - common.yaml_util - INFO - 读取extract.yml文件中key为: txnNo 的数据
+2023-10-25 14:21:25,457 - common.yaml_util - INFO - extract.yml文件key值为：txnNo 的值为 TLSK20231025142125401000000980 
+2023-10-25 14:21:25,457 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/encrypt
+2023-10-25 14:21:25,457 - common.requests_util - INFO - 请求方式:post
+2023-10-25 14:21:25,463 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 14:21:25,463 - common.requests_util - INFO - 响应结果：{"msg":"NDRiMzEyMzU3NmQzY2ZiYTNjODM1OTJhODNlY2M5NGE0ZjIzMGFmMTkyNjdmMGQ0MDdiNzFkNGJhNDVmYjk0Zg==","code":200,"data":null}
+2023-10-25 14:21:25,463 - common.requests_util - INFO - sign值：NDRiMzEyMzU3NmQzY2ZiYTNjODM1OTJhODNlY2M5NGE0ZjIzMGFmMTkyNjdmMGQ0MDdiNzFkNGJhNDVmYjk0Zg==
+2023-10-25 14:21:25,463 - common.requests_util - INFO - 请求头:{'sign': 'NDRiMzEyMzU3NmQzY2ZiYTNjODM1OTJhODNlY2M5NGE0ZjIzMGFmMTkyNjdmMGQ0MDdiNzFkNGJhNDVmYjk0Zg==', 'channelNo': '19902'}
+2023-10-25 14:21:25,463 - common.requests_util - INFO - data:{'busiLiceNo': '91510100MA69MUBX8Q', 'txnNo': 'TLSK20231025142125401000000980', 'reqCode': 'B150095212'}
+2023-10-25 14:21:25,463 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/applyDetailInfo/query
+2023-10-25 14:21:25,464 - common.requests_util - INFO - 请求方式:post
+2023-10-25 14:21:25,651 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 14:21:25,651 - common.requests_util - INFO - 响应结果：{"msg":"查询完成","code":200,"data":[{"id":0,"txnNo":"TLSK20231025142125401000000980","transCode":"1","receiptAcct":"62148311501315112","receiptAcctName":"吴极客","transAmt":2.44,"transDate":null,"transRemark":"第一笔联动支付","sysFlag":null,"depositBank":"招商银行","depositBankAddr":null,"transStat":"A","errorCode":null,"errorMsg":null,"createTime":null,"updateTime":null},{"id":0,"txnNo":"TLSK20231025142125401000000980","transCode":"2","receiptAcct":"6214835982629402","receiptAcctName":"冯建杨","transAmt":1.00,"transDate":null,"transRemark":"第二笔联动支付","sysFlag":null,"depositBank":"招商银行","depositBankAddr":null,"transStat":"A","errorCode":null,"errorMsg":null,"createTime":null,"updateTime":null},{"id":0,"txnNo":"TLSK20231025142125401000000980","transCode":"3","receiptAcct":"1241255345345345","receiptAcctName":"他行户1","transAmt":0.11,"transDate":null,"transRemark":"第三笔联动支付","sysFlag":null,"depositBank":"102100099996","depositBankAddr":"北京市","transStat":"A","errorCode":null,"errorMsg":null,"createTime":null,"updateTime":null},{"id":0,"txnNo":"TLSK20231025142125401000000980","transCode":"4","receiptAcct":"421455345345345","receiptAcctName":"他行户2","transAmt":1.30,"transDate":null,"transRemark":"第四笔联动支付","sysFlag":null,"depositBank":"102100099996","depositBankAddr":"北京市","transStat":"A","errorCode":null,"errorMsg":null,"createTime":null,"updateTime":null},{"id":0,"txnNo":"TLSK20231025142125401000000980","transCode":"5","receiptAcct":"74124455345345345","receiptAcctName":"他行户2","transAmt":0.70,"transDate":null,"transRemark":"第五笔联动支付","sysFlag":null,"depositBank":"102100099996","depositBankAddr":"北京市","transStat":"A","errorCode":null,"errorMsg":null,"createTime":null,"updateTime":null}]}
+2023-10-25 14:21:25,651 - common.yaml_util - INFO - 读取extract.yml文件中key为: txnNo 的数据
+2023-10-25 14:21:25,652 - common.yaml_util - INFO - extract.yml文件key值为：txnNo 的值为 TLSK20231025142125401000000980 
+2023-10-25 14:21:25,654 - base.base_util - INFO - ************************test case run completed************************
+2023-10-25 15:43:41,580 - common.yaml_util - INFO - 读取get_access_token.yml文件中测试用例数据成功
+2023-10-25 15:43:41,581 - common.yaml_util - INFO - 读取get_token.yml文件中测试用例数据成功
+2023-10-25 15:43:41,583 - common.yaml_util - INFO - 读取get_traders.yml文件中测试用例数据成功
+2023-10-25 15:43:41,584 - common.yaml_util - INFO - 读取get_menus.yml文件中测试用例数据成功
+2023-10-25 15:43:41,666 - testcases.conftest - INFO - 清除extract_yaml文件内容
+2023-10-25 15:43:41,666 - common.yaml_util - INFO - 清除extract.yml文件内容成功
+2023-10-25 15:43:41,667 - base.base_util - INFO - ************************starting run test cases************************
+2023-10-25 15:43:41,669 - testcases.test_interface - INFO - 请求头：{'enterCode': 'TLSK', 'Authorization': 'Basic dG9uZ0xpYW46dG9uZ0xpYW4=', 'Content-Type': 'application/x-www-form-urlencoded', 'Host': '172.24.100.107:14000'}
+2023-10-25 15:43:41,669 - testcases.test_interface - INFO - 请求数据：{'mobile': 'SMSCUST%4017754754412', 'code': 230516}
+2023-10-25 15:43:41,669 - common.requests_util - INFO - 请求地址:http://172.24.100.107:14000/auth/oauth/token?grant_type=mobile&source=PORTAL_CONFIG
+2023-10-25 15:43:41,670 - common.requests_util - INFO - 请求方式:post
+2023-10-25 15:43:41,738 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 15:43:41,739 - common.requests_util - INFO - 响应结果：{"access_token":"ee68a919-0a62-427c-8e35-fce958704f11","token_type":"bearer","refresh_token":"49e2befd-e16d-4d1f-98c5-e3e35460bef2","expires_in":7199,"scope":"server","loginEnterCode":"TLSK","license":"made by panda","cnName":"砼联数字科技有限","phone":"17754754412","active":true,"id":33521,"avatar":null,"type":"2","client_id":"tongLian","email":null,"username":"17754754412"}
+2023-10-25 15:43:41,739 - common.yaml_util - INFO - 写入extract.yml文件内容: {'access_token': 'ee68a919-0a62-427c-8e35-fce958704f11'}
+2023-10-25 15:43:41,740 - common.yaml_util - INFO - 写入extract.yml文件成功
+2023-10-25 15:43:41,740 - common.assert_util - INFO - 断言成功！
+2023-10-25 15:43:41,741 - base.base_util - INFO - ************************test case run completed************************
+2023-10-25 15:45:38,241 - common.yaml_util - INFO - 读取get_access_token.yml文件中测试用例数据成功
+2023-10-25 15:45:38,243 - common.yaml_util - INFO - 读取get_token.yml文件中测试用例数据成功
+2023-10-25 15:45:38,245 - common.yaml_util - INFO - 读取get_traders.yml文件中测试用例数据成功
+2023-10-25 15:45:38,253 - common.yaml_util - INFO - 读取get_menus.yml文件中测试用例数据成功
+2023-10-25 15:45:38,357 - testcases.conftest - INFO - 清除extract_yaml文件内容
+2023-10-25 15:45:38,357 - common.yaml_util - INFO - 清除extract.yml文件内容成功
+2023-10-25 15:45:38,358 - base.base_util - INFO - ************************starting run test cases************************
+2023-10-25 15:45:38,359 - testcases.test_interface - INFO - 请求头：{'enterCode': 'TLSK', 'Authorization': 'Basic dG9uZ0xpYW46dG9uZ0xpYW4=', 'Content-Type': 'application/x-www-form-urlencoded', 'Host': '172.24.100.107:14000'}
+2023-10-25 15:45:38,360 - testcases.test_interface - INFO - 请求数据：{'mobile': 'SMSCUST%4017754754412', 'code': 230516}
+2023-10-25 15:45:38,360 - common.requests_util - INFO - 请求地址:http://172.24.100.107:14000/auth/oauth/token?grant_type=mobile&source=PORTAL_CONFIG
+2023-10-25 15:45:38,360 - common.requests_util - INFO - 请求方式:post
+2023-10-25 15:45:38,442 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 15:45:38,442 - common.requests_util - INFO - 响应结果：{"access_token":"ee68a919-0a62-427c-8e35-fce958704f11","token_type":"bearer","refresh_token":"49e2befd-e16d-4d1f-98c5-e3e35460bef2","expires_in":7199,"scope":"server","loginEnterCode":"TLSK","license":"made by panda","cnName":"砼联数字科技有限","phone":"17754754412","active":true,"id":33521,"avatar":null,"type":"2","client_id":"tongLian","email":null,"username":"17754754412"}
+2023-10-25 15:45:38,442 - common.yaml_util - INFO - 写入extract.yml文件内容: {'access_token': 'ee68a919-0a62-427c-8e35-fce958704f11'}
+2023-10-25 15:45:38,443 - common.yaml_util - INFO - 写入extract.yml文件成功
+2023-10-25 15:45:38,443 - common.assert_util - INFO - 断言成功！预期结果：access_token in 实际结果：{'access_token': 'ee68a919-0a62-427c-8e35-fce958704f11', 'token_type': 'bearer', 'refresh_token': '49e2befd-e16d-4d1f-98c5-e3e35460bef2', 'expires_in': 7199, 'scope': 'server', 'loginEnterCode': 'TLSK', 'license': 'made by panda', 'cnName': '砼联数字科技有限', 'phone': '17754754412', 'active': True, 'id': 33521, 'avatar': None, 'type': '2', 'client_id': 'tongLian', 'email': None, 'username': '17754754412'}
+2023-10-25 15:45:38,566 - base.base_util - INFO - ************************test case run completed************************
+2023-10-25 15:45:38,569 - base.base_util - INFO - ************************starting run test cases************************
+2023-10-25 15:45:38,570 - testcases.test_interface - INFO - 请求头：{'enterCode': 'TLSK', 'Authorization': 'Basic dG9uZ0xpYW46dG9uZ0xpYW4=', 'Content-Type': 'application/x-www-form-urlencoded', 'Host': '172.24.100.107:14000'}
+2023-10-25 15:45:38,570 - testcases.test_interface - INFO - 请求数据：{'mobile': 'SMSCUST%4017754754412', 'code': 230516}
+2023-10-25 15:45:38,570 - common.requests_util - INFO - 请求地址:http://172.24.100.107:14000/auth/oauth/token?grant_type=mobile&source=PORTAL_CONFIG
+2023-10-25 15:45:38,570 - common.requests_util - INFO - 请求方式:post
+2023-10-25 15:45:38,624 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 15:45:38,625 - common.requests_util - INFO - 响应结果：{"access_token":"ee68a919-0a62-427c-8e35-fce958704f11","token_type":"bearer","refresh_token":"49e2befd-e16d-4d1f-98c5-e3e35460bef2","expires_in":7199,"scope":"server","loginEnterCode":"TLSK","license":"made by panda","cnName":"砼联数字科技有限","phone":"17754754412","active":true,"id":33521,"avatar":null,"type":"2","client_id":"tongLian","email":null,"username":"17754754412"}
+2023-10-25 15:45:38,625 - common.yaml_util - INFO - 写入extract.yml文件内容: {'access_token': 'ee68a919-0a62-427c-8e35-fce958704f11'}
+2023-10-25 15:45:38,626 - common.yaml_util - INFO - 写入extract.yml文件成功
+2023-10-25 15:45:38,626 - common.assert_util - INFO - 断言成功！预期结果：access_token in 实际结果：{'access_token': 'ee68a919-0a62-427c-8e35-fce958704f11', 'token_type': 'bearer', 'refresh_token': '49e2befd-e16d-4d1f-98c5-e3e35460bef2', 'expires_in': 7199, 'scope': 'server', 'loginEnterCode': 'TLSK', 'license': 'made by panda', 'cnName': '砼联数字科技有限', 'phone': '17754754412', 'active': True, 'id': 33521, 'avatar': None, 'type': '2', 'client_id': 'tongLian', 'email': None, 'username': '17754754412'}
+2023-10-25 15:45:38,632 - base.base_util - INFO - ************************test case run completed************************
+2023-10-25 15:45:38,635 - base.base_util - INFO - ************************starting run test cases************************
+2023-10-25 15:45:38,636 - testcases.test_interface - INFO - 请求头：{'enterCode': 'TLSK', 'Authorization': 'Basic dG9uZ0xpYW46dG9uZ0xpYW4=', 'Content-Type': 'application/x-www-form-urlencoded', 'Host': '172.24.100.107:14000'}
+2023-10-25 15:45:38,636 - testcases.test_interface - INFO - 请求数据：{'mobile': 'SMSCUST%4017754754412', 'code': 230516}
+2023-10-25 15:45:38,637 - common.requests_util - INFO - 请求地址:http://172.24.100.107:14000/auth/oauth/token?grant_type=mobile&source=PORTAL_CONFIG
+2023-10-25 15:45:38,637 - common.requests_util - INFO - 请求方式:post
+2023-10-25 15:45:38,686 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 15:45:38,687 - common.requests_util - INFO - 响应结果：{"access_token":"ee68a919-0a62-427c-8e35-fce958704f11","token_type":"bearer","refresh_token":"49e2befd-e16d-4d1f-98c5-e3e35460bef2","expires_in":7199,"scope":"server","loginEnterCode":"TLSK","license":"made by panda","cnName":"砼联数字科技有限","phone":"17754754412","active":true,"id":33521,"avatar":null,"type":"2","client_id":"tongLian","email":null,"username":"17754754412"}
+2023-10-25 15:45:38,687 - common.yaml_util - INFO - 写入extract.yml文件内容: {'access_token': 'ee68a919-0a62-427c-8e35-fce958704f11'}
+2023-10-25 15:45:38,688 - common.yaml_util - INFO - 写入extract.yml文件成功
+2023-10-25 15:45:38,688 - common.assert_util - INFO - 断言成功！预期结果：access_token in 实际结果：{'access_token': 'ee68a919-0a62-427c-8e35-fce958704f11', 'token_type': 'bearer', 'refresh_token': '49e2befd-e16d-4d1f-98c5-e3e35460bef2', 'expires_in': 7199, 'scope': 'server', 'loginEnterCode': 'TLSK', 'license': 'made by panda', 'cnName': '砼联数字科技有限', 'phone': '17754754412', 'active': True, 'id': 33521, 'avatar': None, 'type': '2', 'client_id': 'tongLian', 'email': None, 'username': '17754754412'}
+2023-10-25 15:45:38,693 - base.base_util - INFO - ************************test case run completed************************
+2023-10-25 15:46:03,125 - common.yaml_util - INFO - 读取get_access_token.yml文件中测试用例数据成功
+2023-10-25 15:46:03,127 - common.yaml_util - INFO - 读取get_token.yml文件中测试用例数据成功
+2023-10-25 15:46:03,128 - common.yaml_util - INFO - 读取get_traders.yml文件中测试用例数据成功
+2023-10-25 15:46:03,129 - common.yaml_util - INFO - 读取get_menus.yml文件中测试用例数据成功
+2023-10-25 15:46:03,206 - testcases.conftest - INFO - 清除extract_yaml文件内容
+2023-10-25 15:46:03,207 - common.yaml_util - INFO - 清除extract.yml文件内容成功
+2023-10-25 15:46:03,207 - base.base_util - INFO - ************************starting run test cases************************
+2023-10-25 15:46:03,208 - testcases.test_interface - INFO - 请求头：{'enterCode': 'TLSK', 'Authorization': 'Basic dG9uZ0xpYW46dG9uZ0xpYW4=', 'Content-Type': 'application/x-www-form-urlencoded', 'Host': '172.24.100.107:14000'}
+2023-10-25 15:46:03,209 - testcases.test_interface - INFO - 请求数据：{'mobile': 'SMSCUST%4017754754412', 'code': 230516}
+2023-10-25 15:46:03,209 - common.requests_util - INFO - 请求地址:http://172.24.100.107:14000/auth/oauth/token?grant_type=mobile&source=PORTAL_CONFIG
+2023-10-25 15:46:03,209 - common.requests_util - INFO - 请求方式:post
+2023-10-25 15:46:03,267 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 15:46:03,267 - common.requests_util - INFO - 响应结果：{"access_token":"ee68a919-0a62-427c-8e35-fce958704f11","token_type":"bearer","refresh_token":"49e2befd-e16d-4d1f-98c5-e3e35460bef2","expires_in":7199,"scope":"server","loginEnterCode":"TLSK","license":"made by panda","cnName":"砼联数字科技有限","phone":"17754754412","active":true,"id":33521,"avatar":null,"type":"2","client_id":"tongLian","email":null,"username":"17754754412"}
+2023-10-25 15:46:03,267 - common.yaml_util - INFO - 写入extract.yml文件内容: {'access_token': 'ee68a919-0a62-427c-8e35-fce958704f11'}
+2023-10-25 15:46:03,268 - common.yaml_util - INFO - 写入extract.yml文件成功
+2023-10-25 15:46:03,268 - common.assert_util - INFO - 断言成功！预期结果：access_token in 实际结果：{'access_token': 'ee68a919-0a62-427c-8e35-fce958704f11', 'token_type': 'bearer', 'refresh_token': '49e2befd-e16d-4d1f-98c5-e3e35460bef2', 'expires_in': 7199, 'scope': 'server', 'loginEnterCode': 'TLSK', 'license': 'made by panda', 'cnName': '砼联数字科技有限', 'phone': '17754754412', 'active': True, 'id': 33521, 'avatar': None, 'type': '2', 'client_id': 'tongLian', 'email': None, 'username': '17754754412'}
+2023-10-25 15:46:03,269 - common.assert_util - INFO - 断言成功！预期结果：TLSK,实际结果：TLSK
+2023-10-25 15:46:03,270 - base.base_util - INFO - ************************test case run completed************************
+2023-10-25 15:49:51,889 - common.yaml_util - INFO - 读取get_access_token.yml文件中测试用例数据成功
+2023-10-25 15:49:51,891 - common.yaml_util - INFO - 读取get_token.yml文件中测试用例数据成功
+2023-10-25 15:49:51,892 - common.yaml_util - INFO - 读取get_traders.yml文件中测试用例数据成功
+2023-10-25 15:49:51,893 - common.yaml_util - INFO - 读取get_menus.yml文件中测试用例数据成功
+2023-10-25 15:49:51,972 - testcases.conftest - INFO - 清除extract_yaml文件内容
+2023-10-25 15:49:51,973 - common.yaml_util - INFO - 清除extract.yml文件内容成功
+2023-10-25 15:49:51,973 - testcases.conftest - INFO - ************************starting run test cases************************
+2023-10-25 15:49:51,975 - testcases.test_interface - INFO - 请求头：{'enterCode': 'TLSK', 'Authorization': 'Basic dG9uZ0xpYW46dG9uZ0xpYW4=', 'Content-Type': 'application/x-www-form-urlencoded', 'Host': '172.24.100.107:14000'}
+2023-10-25 15:49:51,975 - testcases.test_interface - INFO - 请求数据：{'mobile': 'SMSCUST%4017754754412', 'code': 230516}
+2023-10-25 15:49:51,976 - common.requests_util - INFO - 请求地址:http://172.24.100.107:14000/auth/oauth/token?grant_type=mobile&source=PORTAL_CONFIG
+2023-10-25 15:49:51,976 - common.requests_util - INFO - 请求方式:post
+2023-10-25 15:49:52,102 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 15:49:52,102 - common.requests_util - INFO - 响应结果：{"access_token":"ee68a919-0a62-427c-8e35-fce958704f11","token_type":"bearer","refresh_token":"49e2befd-e16d-4d1f-98c5-e3e35460bef2","expires_in":7199,"scope":"server","loginEnterCode":"TLSK","license":"made by panda","cnName":"砼联数字科技有限","phone":"17754754412","active":true,"id":33521,"avatar":null,"type":"2","client_id":"tongLian","email":null,"username":"17754754412"}
+2023-10-25 15:49:52,102 - common.yaml_util - INFO - 写入extract.yml文件内容: {'access_token': 'ee68a919-0a62-427c-8e35-fce958704f11'}
+2023-10-25 15:49:52,103 - common.yaml_util - INFO - 写入extract.yml文件成功
+2023-10-25 15:49:52,103 - common.assert_util - INFO - 断言成功！预期结果：access_token in 实际结果：{'access_token': 'ee68a919-0a62-427c-8e35-fce958704f11', 'token_type': 'bearer', 'refresh_token': '49e2befd-e16d-4d1f-98c5-e3e35460bef2', 'expires_in': 7199, 'scope': 'server', 'loginEnterCode': 'TLSK', 'license': 'made by panda', 'cnName': '砼联数字科技有限', 'phone': '17754754412', 'active': True, 'id': 33521, 'avatar': None, 'type': '2', 'client_id': 'tongLian', 'email': None, 'username': '17754754412'}
+2023-10-25 15:49:52,103 - common.assert_util - INFO - 断言成功！预期结果：TLSK,实际结果：TLSK
+2023-10-25 15:49:52,105 - testcases.conftest - INFO - ************************test case run completed************************
+2023-10-25 16:12:09,149 - common.yaml_util - INFO - 读取get_access_token.yml文件中测试用例数据成功
+2023-10-25 16:12:09,151 - common.yaml_util - INFO - 读取get_token.yml文件中测试用例数据成功
+2023-10-25 16:12:09,153 - common.yaml_util - INFO - 读取get_traders.yml文件中测试用例数据成功
+2023-10-25 16:12:09,154 - common.yaml_util - INFO - 读取get_menus.yml文件中测试用例数据成功
+2023-10-25 16:12:09,235 - testcases.conftest - INFO - 清除extract_yaml文件内容
+2023-10-25 16:12:09,236 - common.yaml_util - INFO - 清除extract.yml文件内容成功
+2023-10-25 16:12:09,236 - testcases.conftest - INFO - ************************starting run test cases************************
+2023-10-25 16:12:09,239 - testcases.test_interface - INFO - 请求头：{'enterCode': 'TLSK', 'Authorization': 'Basic dG9uZ0xpYW46dG9uZ0xpYW4=', 'Content-Type': 'application/x-www-form-urlencoded', 'Host': '172.24.100.107:14000'}
+2023-10-25 16:12:09,239 - testcases.test_interface - INFO - 请求数据：{'mobile': 'SMSCUST%4017754754412', 'code': 230516}
+2023-10-25 16:12:09,240 - common.requests_util - INFO - 请求地址:http://172.24.100.107:14000/auth/oauth/token?grant_type=mobile&source=PORTAL_CONFIG
+2023-10-25 16:12:09,240 - common.requests_util - INFO - 请求方式:post
+2023-10-25 16:12:09,315 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 16:12:09,316 - common.requests_util - INFO - 响应结果：{"access_token":"ee68a919-0a62-427c-8e35-fce958704f11","token_type":"bearer","refresh_token":"49e2befd-e16d-4d1f-98c5-e3e35460bef2","expires_in":7199,"scope":"server","loginEnterCode":"TLSK","license":"made by panda","cnName":"砼联数字科技有限","phone":"17754754412","active":true,"id":33521,"avatar":null,"type":"2","client_id":"tongLian","email":null,"username":"17754754412"}
+2023-10-25 16:12:09,316 - common.yaml_util - INFO - 写入extract.yml文件内容: {'access_token': 'ee68a919-0a62-427c-8e35-fce958704f11'}
+2023-10-25 16:12:09,317 - common.yaml_util - INFO - 写入extract.yml文件成功
+2023-10-25 16:12:09,317 - common.assert_util - INFO - 断言成功！预期结果：access_token in 实际结果：{'access_token': 'ee68a919-0a62-427c-8e35-fce958704f11', 'token_type': 'bearer', 'refresh_token': '49e2befd-e16d-4d1f-98c5-e3e35460bef2', 'expires_in': 7199, 'scope': 'server', 'loginEnterCode': 'TLSK', 'license': 'made by panda', 'cnName': '砼联数字科技有限', 'phone': '17754754412', 'active': True, 'id': 33521, 'avatar': None, 'type': '2', 'client_id': 'tongLian', 'email': None, 'username': '17754754412'}
+2023-10-25 16:12:09,317 - common.assert_util - INFO - 断言成功！预期结果：TLSK,实际结果：TLSK
+2023-10-25 16:12:09,318 - testcases.conftest - INFO - ************************test case run completed************************
+2023-10-25 16:12:09,322 - testcases.conftest - INFO - ************************starting run test cases************************
+2023-10-25 16:12:09,322 - common.yaml_util - INFO - 读取extract.yml文件中key为: access_token 的数据
+2023-10-25 16:12:09,323 - common.yaml_util - INFO - extract.yml文件key值为：access_token 的值为 ee68a919-0a62-427c-8e35-fce958704f11 
+2023-10-25 16:12:09,323 - testcases.test_interface - INFO - 请求数据：{'Accept': 'application/json, text/plain, */*', 'accessToken': 'ee68a919-0a62-427c-8e35-fce958704f11'}
+2023-10-25 16:12:09,323 - common.requests_util - INFO - 请求地址:http://172.24.100.75:10006/expose/website/newLoginByCenter
+2023-10-25 16:12:09,324 - common.requests_util - INFO - 请求方式:get
+2023-10-25 16:12:09,380 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 16:12:09,380 - common.requests_util - INFO - 响应结果：{"msg":"登录成功","code":200,"data":"{\"head\":{\"dgtlEnvlp\":\"045f4543aff2ccd4f7600789a88012e45ed7a6579e4bfbb8bb60bbe3972bee6cff50b305e203fc6ad2701428d6c1d43733971513201c21edb1bf104b0448054cdbed93a8d50a9fd59e767a7543190f54d7183c0e33fb2ec7254401de31203e21ed82df134e6441c0867c4397c4b89329ab7afea928fbdfe2e89e54fc0924aac765\",\"sign\":\"cc5a829ead29b847b9bdd9c445bd60034033a8ed2c1bea8233f282db66e7ed95\"},\"body\":\"ef21a9cdbf37d0b0a98ad8db3b1faff6f24cea32c359da6fc19eaee4d59619121fe27a5be35f4abbeda57760cbb828e8098c6d8bb06ca2a4794dcd2c9369b2583c621059972510f8f6edcdd979d96cd8d59d7b558be646979b899c56aa1ad6873d669b3a02b6b004d62f878c36709cee0cb178330ab88663ef9022a3b3e02ba099ddb9b9723f966fc9811cae996c55873339ca6edbe3b76f164d8872b0152d0dc46c4e2de30df72ce5c3e4927c3c0c551855831096bf03aa83372ec97a10679be7a3ce5b425be374b94e8c8d9ea261a0f829259a64f8fda4c7c8f666ed6e2aa059caa81f52b25accc99d367d9bd155c3a92ff857f8613261e8c3d3a07124adf1951fed3d7b84f41a96b836c845f8f475b369a39a3f3c8ecce380d0d2dd56f896\"}"}
+2023-10-25 16:12:09,398 - common.yaml_util - INFO - 写入extract.yml文件内容: {'token': 'eyJ1c2VySWQiOiIxNzc1NDc1NDQxMiIsInRva2VuIjoiMTljM2YyYWVjNjdhNGUzYmJiOGFmMjgyYTJmZjkwOGMifQ=='}
+2023-10-25 16:12:09,399 - common.yaml_util - INFO - 写入extract.yml文件成功
+2023-10-25 16:12:09,399 - common.assert_util - INFO - 断言成功！预期结果：登录成功,实际结果：登录成功
+2023-10-25 16:12:09,401 - testcases.conftest - INFO - ************************test case run completed************************
+2023-10-25 16:12:09,404 - testcases.conftest - INFO - ************************starting run test cases************************
+2023-10-25 16:12:09,405 - common.yaml_util - INFO - 读取extract.yml文件中key为: token 的数据
+2023-10-25 16:12:09,406 - common.yaml_util - INFO - extract.yml文件key值为：token 的值为 eyJ1c2VySWQiOiIxNzc1NDc1NDQxMiIsInRva2VuIjoiMTljM2YyYWVjNjdhNGUzYmJiOGFmMjgyYTJmZjkwOGMifQ== 
+2023-10-25 16:12:09,406 - testcases.test_interface - INFO - 请求头：{'Host': '172.24.100.75:10006', 'Cookie': 'Token=eyJ1c2VySWQiOiIxNzc1NDc1NDQxMiIsInRva2VuIjoiMTljM2YyYWVjNjdhNGUzYmJiOGFmMjgyYTJmZjkwOGMifQ=='}
+2023-10-25 16:12:09,406 - common.requests_util - INFO - 请求地址:http://172.24.100.75:10006/expose/website/traders
+2023-10-25 16:12:09,406 - common.requests_util - INFO - 请求方式:get
+2023-10-25 16:12:09,447 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 16:12:09,447 - common.requests_util - INFO - 响应结果：{"msg":"查询成功","code":200,"data":[{"traderNo":"TN2023030800027204","name":"砼联数字科技有限"},{"traderNo":"TN2023042100031602","name":"gdfgsd双方的"}]}
+2023-10-25 16:12:09,447 - common.assert_util - INFO - 断言成功！预期结果：TN2023030800027204,实际结果：TN2023030800027204
+2023-10-25 16:12:09,448 - testcases.conftest - INFO - ************************test case run completed************************
+2023-10-25 16:12:09,452 - testcases.conftest - INFO - ************************starting run test cases************************
+2023-10-25 16:12:09,453 - common.yaml_util - INFO - 读取extract.yml文件中key为: token 的数据
+2023-10-25 16:12:09,454 - common.yaml_util - INFO - extract.yml文件key值为：token 的值为 eyJ1c2VySWQiOiIxNzc1NDc1NDQxMiIsInRva2VuIjoiMTljM2YyYWVjNjdhNGUzYmJiOGFmMjgyYTJmZjkwOGMifQ== 
+2023-10-25 16:12:09,455 - common.yaml_util - INFO - 读取extract.yml文件中key为: token 的数据
+2023-10-25 16:12:09,455 - common.yaml_util - INFO - extract.yml文件key值为：token 的值为 eyJ1c2VySWQiOiIxNzc1NDc1NDQxMiIsInRva2VuIjoiMTljM2YyYWVjNjdhNGUzYmJiOGFmMjgyYTJmZjkwOGMifQ== 
+2023-10-25 16:12:09,455 - testcases.test_interface - INFO - 请求头：{'Host': '172.24.100.75:10006', 'Cookie': 'Token=eyJ1c2VySWQiOiIxNzc1NDc1NDQxMiIsInRva2VuIjoiMTljM2YyYWVjNjdhNGUzYmJiOGFmMjgyYTJmZjkwOGMifQ==', 'Token': 'eyJ1c2VySWQiOiIxNzc1NDc1NDQxMiIsInRva2VuIjoiMTljM2YyYWVjNjdhNGUzYmJiOGFmMjgyYTJmZjkwOGMifQ=='}
+2023-10-25 16:12:09,456 - common.requests_util - INFO - 请求地址:http://172.24.100.75:10006/expose/website/getMenus
+2023-10-25 16:12:09,456 - common.requests_util - INFO - 请求方式:get
+2023-10-25 16:12:09,484 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 16:12:09,485 - common.requests_util - INFO - 响应结果：{"msg":"操作成功","code":200,"data":[{"code":"perCenter","name":"首页","url":"/financing","sortNo":100,"coreFlag":0,"actionCodes":["VIEW"]},{"code":"enterManage","name":"企业信息管理","url":"/financing","sortNo":200,"coreFlag":0,"actionCodes":["VIEW"]},{"code":"supplierManage","name":"供应商管理","url":"/financing","sortNo":300,"coreFlag":0,"actionCodes":["VIEW"]},{"code":"tradeInfo","name":"交易信息","url":"/financing","sortNo":400,"coreFlag":0,"actionCodes":["VIEW"]},{"code":"financingInfo","name":"融资信息","url":"/financing","sortNo":500,"coreFlag":0,"actionCodes":["VIEW"]},{"code":"certiManage","name":"凭证管理","url":"/financing","sortNo":700,"coreFlag":0,"actionCodes":["VIEW"]},{"code":"productManage","name":"产品管理","url":"/financing","sortNo":800,"coreFlag":0,"actionCodes":["VIEW"]},{"code":"concretePay","name":"砼联支付","url":"/financing","sortNo":900,"coreFlag":0,"actionCodes":["VIEW"]},{"code":"authManage","name":"权限设置","url":"/financing","sortNo":1000,"coreFlag":0,"actionCodes":["VIEW"]}]}
+2023-10-25 16:12:09,485 - common.assert_util - INFO - 断言成功！预期结果：操作成功,实际结果：操作成功
+2023-10-25 16:12:09,486 - testcases.conftest - INFO - ************************test case run completed************************
+2023-10-25 16:16:32,879 - common.yaml_util - INFO - 读取get_access_token.yml文件中测试用例数据成功
+2023-10-25 16:16:32,880 - common.yaml_util - INFO - 读取get_token.yml文件中测试用例数据成功
+2023-10-25 16:16:32,881 - common.yaml_util - INFO - 读取get_traders.yml文件中测试用例数据成功
+2023-10-25 16:16:32,883 - common.yaml_util - INFO - 读取get_menus.yml文件中测试用例数据成功
+2023-10-25 16:16:32,960 - testcases.conftest - INFO - 清除extract_yaml文件内容
+2023-10-25 16:16:32,961 - common.yaml_util - INFO - 清除extract.yml文件内容成功
+2023-10-25 16:16:32,961 - testcases.conftest - INFO - ************************starting run test cases************************
+2023-10-25 16:16:32,963 - testcases.test_interface - INFO - 请求头：{'enterCode': 'TLSK', 'Authorization': 'Basic dG9uZ0xpYW46dG9uZ0xpYW4=', 'Content-Type': 'application/x-www-form-urlencoded', 'Host': '172.24.100.107:14000'}
+2023-10-25 16:16:32,963 - testcases.test_interface - INFO - 请求数据：{'mobile': 'SMSCUST%4017754754412', 'code': 230516}
+2023-10-25 16:16:32,963 - common.requests_util - INFO - 请求地址:http://172.24.100.107:14000/auth/oauth/token?grant_type=mobile&source=PORTAL_CONFIG
+2023-10-25 16:16:32,964 - common.requests_util - INFO - 请求方式:post
+2023-10-25 16:16:33,283 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 16:16:33,284 - common.requests_util - INFO - 响应结果：{"access_token":"ee68a919-0a62-427c-8e35-fce958704f11","token_type":"bearer","refresh_token":"49e2befd-e16d-4d1f-98c5-e3e35460bef2","expires_in":7199,"scope":"server","loginEnterCode":"TLSK","license":"made by panda","cnName":"砼联数字科技有限","phone":"17754754412","active":true,"id":33521,"avatar":null,"type":"2","client_id":"tongLian","email":null,"username":"17754754412"}
+2023-10-25 16:16:33,284 - common.yaml_util - INFO - 写入extract.yml文件内容: {'access_token': 'ee68a919-0a62-427c-8e35-fce958704f11'}
+2023-10-25 16:16:33,285 - common.yaml_util - INFO - 写入extract.yml文件成功
+2023-10-25 16:16:33,285 - common.assert_util - INFO - 断言成功！预期结果：access_token in 实际结果：{'access_token': 'ee68a919-0a62-427c-8e35-fce958704f11', 'token_type': 'bearer', 'refresh_token': '49e2befd-e16d-4d1f-98c5-e3e35460bef2', 'expires_in': 7199, 'scope': 'server', 'loginEnterCode': 'TLSK', 'license': 'made by panda', 'cnName': '砼联数字科技有限', 'phone': '17754754412', 'active': True, 'id': 33521, 'avatar': None, 'type': '2', 'client_id': 'tongLian', 'email': None, 'username': '17754754412'}
+2023-10-25 16:16:33,285 - common.assert_util - INFO - 断言成功！预期结果：TLSK,实际结果：TLSK
+2023-10-25 16:16:33,286 - testcases.conftest - INFO - ************************test case run completed************************
+2023-10-25 16:16:33,291 - testcases.conftest - INFO - ************************starting run test cases************************
+2023-10-25 16:16:33,292 - common.yaml_util - INFO - 读取extract.yml文件中key为: access_token 的数据
+2023-10-25 16:16:33,292 - common.yaml_util - INFO - extract.yml文件key值为：access_token 的值为 ee68a919-0a62-427c-8e35-fce958704f11 
+2023-10-25 16:16:33,293 - testcases.test_interface - INFO - 请求数据：{'Accept': 'application/json, text/plain, */*', 'accessToken': 'ee68a919-0a62-427c-8e35-fce958704f11'}
+2023-10-25 16:16:33,293 - common.requests_util - INFO - 请求地址:http://172.24.100.75:10006/expose/website/newLoginByCenter
+2023-10-25 16:16:33,293 - common.requests_util - INFO - 请求方式:get
+2023-10-25 16:16:33,350 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 16:16:33,350 - common.requests_util - INFO - 响应结果：{"msg":"登录成功","code":200,"data":"{\"head\":{\"dgtlEnvlp\":\"04dd24264348146a3b0bb6c1d26c008382b24c53ae13d7845f23a40d0ee3b734d71f0308ea76f8349ab0a1a7488aec33028c108f9dff90c8ee9febe596eb42fd3fd4e6b7b966ca9f034148527cacfc2ba6d65296d7d8f90fd7d4844c558a0bd7e3bd172d69e01c97aa7a0240f5ce53a0830124639f02d65df043038fb6f13829cd\",\"sign\":\"7b304aaacee208e1774398f1511339d3390f1e87d33a4b1c578da96ea4b96417\"},\"body\":\"6de23c3724d1ff002800cb3db80726f3d9d03458b41bb96d4f424d4ff7357b6954e443c281e178dfdac80f29f73c52e6e4eab987796aebc23dd9b1f295b7a02f05d6aa048bb57d24fe9adc547075dfa637c1cc46050a7ea913a7e6c2c5616d88f796460090139afda7d56e7c5434ae8f78f54670396b8c6932b8fe725c45872b64eade1bdcf4fbe096418f29f2172751b6868bcd36e9c042ff0191110444b5ca8e0b93975d27336364946c7fd6612e231c7f173bfe88f4cfc2f190c1840db7cdd6abec0fe9dd051aff12f848df52d4d2e23dda6a289abc4340a615b1bb6bc4fcd0fb324839a9ff78f45055ccbd0d80bfb92d066799e493b3bf37bdd8d1041b5f68f688220ac6612c782c487319bb8a82a29a5e760501fd569b9a2dcabf8be230\"}"}
+2023-10-25 16:16:33,369 - common.yaml_util - INFO - 写入extract.yml文件内容: {'token': 'eyJ1c2VySWQiOiIxNzc1NDc1NDQxMiIsInRva2VuIjoiYzdmYTI2MWUwNzY3NGIyZGJiODdkNDUwYmMyNTdlMGEifQ=='}
+2023-10-25 16:16:33,370 - common.yaml_util - INFO - 写入extract.yml文件成功
+2023-10-25 16:16:33,370 - common.assert_util - INFO - 断言成功！预期结果：登录成功,实际结果：登录成功
+2023-10-25 16:16:33,371 - testcases.conftest - INFO - ************************test case run completed************************
+2023-10-25 16:16:33,375 - testcases.conftest - INFO - ************************starting run test cases************************
+2023-10-25 16:16:33,376 - common.yaml_util - INFO - 读取extract.yml文件中key为: token 的数据
+2023-10-25 16:16:33,376 - common.yaml_util - INFO - extract.yml文件key值为：token 的值为 eyJ1c2VySWQiOiIxNzc1NDc1NDQxMiIsInRva2VuIjoiYzdmYTI2MWUwNzY3NGIyZGJiODdkNDUwYmMyNTdlMGEifQ== 
+2023-10-25 16:16:33,377 - testcases.test_interface - INFO - 请求头：{'Host': '172.24.100.75:10006', 'Cookie': 'Token=eyJ1c2VySWQiOiIxNzc1NDc1NDQxMiIsInRva2VuIjoiYzdmYTI2MWUwNzY3NGIyZGJiODdkNDUwYmMyNTdlMGEifQ=='}
+2023-10-25 16:16:33,377 - common.requests_util - INFO - 请求地址:http://172.24.100.75:10006/expose/website/traders
+2023-10-25 16:16:33,377 - common.requests_util - INFO - 请求方式:get
+2023-10-25 16:16:33,416 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 16:16:33,416 - common.requests_util - INFO - 响应结果：{"msg":"查询成功","code":200,"data":[{"traderNo":"TN2023030800027204","name":"砼联数字科技有限"},{"traderNo":"TN2023042100031602","name":"gdfgsd双方的"}]}
+2023-10-25 16:16:33,417 - common.assert_util - INFO - 断言成功！预期结果：TN2023030800027204,实际结果：TN2023030800027204
+2023-10-25 16:16:33,418 - testcases.conftest - INFO - ************************test case run completed************************
+2023-10-25 16:16:33,421 - testcases.conftest - INFO - ************************starting run test cases************************
+2023-10-25 16:16:33,422 - common.yaml_util - INFO - 读取extract.yml文件中key为: token 的数据
+2023-10-25 16:16:33,423 - common.yaml_util - INFO - extract.yml文件key值为：token 的值为 eyJ1c2VySWQiOiIxNzc1NDc1NDQxMiIsInRva2VuIjoiYzdmYTI2MWUwNzY3NGIyZGJiODdkNDUwYmMyNTdlMGEifQ== 
+2023-10-25 16:16:33,423 - testcases.test_interface - INFO - 请求头：{'Host': '172.24.100.75:10006', 'Cookie': 'Token=eyJ1c2VySWQiOiIxNzc1NDc1NDQxMiIsInRva2VuIjoiYzdmYTI2MWUwNzY3NGIyZGJiODdkNDUwYmMyNTdlMGEifQ==', 'Token': 'eyJ1c2VySWQiOiIxNzc1NDc1NDQxMiIsInRva2VuIjoiYzdmYTI2MWUwNzY3NGIyZGJiODdkNDUwYmMyNTdlMGEifQ=='}
+2023-10-25 16:16:33,423 - common.requests_util - INFO - 请求地址:http://172.24.100.75:10006/expose/website/getMenus
+2023-10-25 16:16:33,423 - common.requests_util - INFO - 请求方式:get
+2023-10-25 16:16:33,449 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 16:16:33,449 - common.requests_util - INFO - 响应结果：{"msg":"操作成功","code":200,"data":[{"code":"perCenter","name":"首页","url":"/financing","sortNo":100,"coreFlag":0,"actionCodes":["VIEW"]},{"code":"enterManage","name":"企业信息管理","url":"/financing","sortNo":200,"coreFlag":0,"actionCodes":["VIEW"]},{"code":"supplierManage","name":"供应商管理","url":"/financing","sortNo":300,"coreFlag":0,"actionCodes":["VIEW"]},{"code":"tradeInfo","name":"交易信息","url":"/financing","sortNo":400,"coreFlag":0,"actionCodes":["VIEW"]},{"code":"financingInfo","name":"融资信息","url":"/financing","sortNo":500,"coreFlag":0,"actionCodes":["VIEW"]},{"code":"certiManage","name":"凭证管理","url":"/financing","sortNo":700,"coreFlag":0,"actionCodes":["VIEW"]},{"code":"productManage","name":"产品管理","url":"/financing","sortNo":800,"coreFlag":0,"actionCodes":["VIEW"]},{"code":"concretePay","name":"砼联支付","url":"/financing","sortNo":900,"coreFlag":0,"actionCodes":["VIEW"]},{"code":"authManage","name":"权限设置","url":"/financing","sortNo":1000,"coreFlag":0,"actionCodes":["VIEW"]}]}
+2023-10-25 16:16:33,449 - common.assert_util - INFO - 断言成功！预期结果：操作成功,实际结果：操作成功
+2023-10-25 16:16:33,451 - testcases.conftest - INFO - ************************test case run completed************************
+2023-10-25 16:49:07,152 - common.yaml_util - INFO - 读取lddf_busmod_query.yml文件中测试用例数据成功
+2023-10-25 16:49:07,154 - common.yaml_util - INFO - 读取lddf_busmod_acctQuery.yml文件中测试用例数据成功
+2023-10-25 16:49:07,156 - common.yaml_util - INFO - 读取lddf_busmod_authAcctQuery.yml文件中测试用例数据成功
+2023-10-25 16:49:07,158 - common.yaml_util - INFO - 读取lddf_busmod_agreementQuery.yml文件中测试用例数据成功
+2023-10-25 16:49:07,164 - common.yaml_util - INFO - 读取lddf_apply.yml文件中测试用例数据成功
+2023-10-25 16:49:07,166 - common.yaml_util - INFO - 读取lddf_applyInfo_query.yml文件中测试用例数据成功
+2023-10-25 16:49:07,168 - common.yaml_util - INFO - 读取lddf_applyDetailInfo_query.yml文件中测试用例数据成功
+2023-10-25 16:49:07,251 - testcases.conftest - INFO - 清除extract_yaml文件内容
+2023-10-25 16:49:07,252 - common.yaml_util - INFO - 清除extract.yml文件内容成功
+2023-10-25 16:49:07,252 - testcases.conftest - INFO - ************************starting run test cases************************
+2023-10-25 16:49:07,255 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/encrypt
+2023-10-25 16:49:07,255 - common.requests_util - INFO - 请求方式:post
+2023-10-25 16:49:07,271 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 16:49:07,272 - common.requests_util - INFO - 响应结果：{"msg":"ZTA2MDZiMTY3ZjAxNjA3ZmJlNDAzNTU0M2M1NjQ1Mzk0ZTUyYTIxYzE0NDhlNzhiM2M1YjRiMmM4ZmVhMjg3Zg==","code":200,"data":null}
+2023-10-25 16:49:07,272 - common.requests_util - INFO - sign值：ZTA2MDZiMTY3ZjAxNjA3ZmJlNDAzNTU0M2M1NjQ1Mzk0ZTUyYTIxYzE0NDhlNzhiM2M1YjRiMmM4ZmVhMjg3Zg==
+2023-10-25 16:49:07,272 - common.requests_util - INFO - 请求头:{'sign': 'ZTA2MDZiMTY3ZjAxNjA3ZmJlNDAzNTU0M2M1NjQ1Mzk0ZTUyYTIxYzE0NDhlNzhiM2M1YjRiMmM4ZmVhMjg3Zg==', 'channelNo': '19902'}
+2023-10-25 16:49:07,272 - common.requests_util - INFO - data:{'busiLiceNo': '91510100MA69MUBX8Q'}
+2023-10-25 16:49:07,272 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/busmod/query
+2023-10-25 16:49:07,273 - common.requests_util - INFO - 请求方式:post
+2023-10-25 16:49:07,289 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 16:49:07,290 - common.requests_util - INFO - 响应结果：{"msg":"操作成功","code":200,"data":[{"id":102,"supplierCode":"TN2022011200000607","busMod":"00001","remark":null,"createTime":"2023-09-26 16:07:53","updateTime":"2023-09-26 16:07:53","createUserId":"xiongxl","updateUserId":"xiongxl"}]}
+2023-10-25 16:49:07,290 - common.yaml_util - INFO - 写入extract.yml文件内容: {'busMod': '00001'}
+2023-10-25 16:49:07,291 - common.yaml_util - INFO - 写入extract.yml文件成功
+2023-10-25 16:49:07,291 - common.assert_util - INFO - 断言成功！预期结果：00001,实际结果：00001
+2023-10-25 16:49:07,291 - common.assert_util - INFO - 断言成功！预期结果：TN2022011200000607,实际结果：TN2022011200000607
+2023-10-25 16:49:07,292 - testcases.conftest - INFO - ************************test case run completed************************
+2023-10-25 16:49:07,297 - testcases.conftest - INFO - ************************starting run test cases************************
+2023-10-25 16:49:07,298 - common.yaml_util - INFO - 读取extract.yml文件中key为: busMod 的数据
+2023-10-25 16:49:07,298 - common.yaml_util - INFO - extract.yml文件key值为：busMod 的值为 00001 
+2023-10-25 16:49:07,299 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/encrypt
+2023-10-25 16:49:07,299 - common.requests_util - INFO - 请求方式:post
+2023-10-25 16:49:07,306 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 16:49:07,306 - common.requests_util - INFO - 响应结果：{"msg":"MmM0YTVlYzkyZWI3NmE4NjYwNWRkYjJiZWIxMmQyZmI3MGYzOWNjZjM4YmJlZjEzOTNlOTM5M2NmMDljNDk2OA==","code":200,"data":null}
+2023-10-25 16:49:07,306 - common.requests_util - INFO - sign值：MmM0YTVlYzkyZWI3NmE4NjYwNWRkYjJiZWIxMmQyZmI3MGYzOWNjZjM4YmJlZjEzOTNlOTM5M2NmMDljNDk2OA==
+2023-10-25 16:49:07,306 - common.requests_util - INFO - 请求头:{'sign': 'MmM0YTVlYzkyZWI3NmE4NjYwNWRkYjJiZWIxMmQyZmI3MGYzOWNjZjM4YmJlZjEzOTNlOTM5M2NmMDljNDk2OA==', 'channelNo': '19902'}
+2023-10-25 16:49:07,307 - common.requests_util - INFO - data:{'busiLiceNo': '91510100MA69MUBX8Q', 'busMod': '00001'}
+2023-10-25 16:49:07,307 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/busmod/acctQuery
+2023-10-25 16:49:07,307 - common.requests_util - INFO - 请求方式:post
+2023-10-25 16:49:07,871 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 16:49:07,871 - common.requests_util - INFO - 响应结果：{"msg":"操作成功","code":200,"data":[{"id":0,"supplierCode":"TN2022011200000607","busMod":"00001","bbkCode":"75","bankAcct":"755915678710501","bankAcctName":"企业网银新20161077","currency":"10","acctStat":null,"createTime":null,"updateTime":null}]}
+2023-10-25 16:49:07,871 - common.yaml_util - INFO - 写入extract.yml文件内容: {'bbkCode': '75', 'acct': '755915678710501'}
+2023-10-25 16:49:07,872 - common.yaml_util - INFO - 写入extract.yml文件成功
+2023-10-25 16:49:07,872 - common.assert_util - INFO - 断言成功！预期结果：75,实际结果：75
+2023-10-25 16:49:07,872 - common.assert_util - INFO - 断言成功！预期结果：755915678710501,实际结果：755915678710501
+2023-10-25 16:49:07,872 - common.assert_util - INFO - 断言成功！预期结果：企业网银新20161077,实际结果：企业网银新20161077
+2023-10-25 16:49:07,874 - testcases.conftest - INFO - ************************test case run completed************************
+2023-10-25 16:49:07,878 - testcases.conftest - INFO - ************************starting run test cases************************
+2023-10-25 16:49:07,878 - common.yaml_util - INFO - 读取extract.yml文件中key为: bbkCode 的数据
+2023-10-25 16:49:07,879 - common.yaml_util - INFO - extract.yml文件key值为：bbkCode 的值为 75 
+2023-10-25 16:49:07,880 - common.yaml_util - INFO - 读取extract.yml文件中key为: acct 的数据
+2023-10-25 16:49:07,880 - common.yaml_util - INFO - extract.yml文件key值为：acct 的值为 755915678710501 
+2023-10-25 16:49:07,881 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/encrypt
+2023-10-25 16:49:07,881 - common.requests_util - INFO - 请求方式:post
+2023-10-25 16:49:07,886 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 16:49:07,886 - common.requests_util - INFO - 响应结果：{"msg":"ZTg1NDc1MGQwYjZjZTI4ZjljNzBiYmQ5ZDMxNTFhZjhkZWM5MzU3NzMyMjQ3ZThkMTNkOWM4OTllNjMwNjU4OQ==","code":200,"data":null}
+2023-10-25 16:49:07,886 - common.requests_util - INFO - sign值：ZTg1NDc1MGQwYjZjZTI4ZjljNzBiYmQ5ZDMxNTFhZjhkZWM5MzU3NzMyMjQ3ZThkMTNkOWM4OTllNjMwNjU4OQ==
+2023-10-25 16:49:07,886 - common.requests_util - INFO - 请求头:{'sign': 'ZTg1NDc1MGQwYjZjZTI4ZjljNzBiYmQ5ZDMxNTFhZjhkZWM5MzU3NzMyMjQ3ZThkMTNkOWM4OTllNjMwNjU4OQ==', 'channelNo': '19902'}
+2023-10-25 16:49:07,886 - common.requests_util - INFO - data:{'busiLiceNo': '91510100MA69MUBX8Q', 'bbkCode': '75', 'acct': '755915678710501', 'authType': 1}
+2023-10-25 16:49:07,887 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/busmod/authAcctQuery
+2023-10-25 16:49:07,887 - common.requests_util - INFO - 请求方式:post
+2023-10-25 16:49:08,084 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 16:49:08,084 - common.requests_util - INFO - 响应结果：{"msg":"操作成功","code":200,"data":[{"id":0,"supplierCode":"TN2022011200000607","bbkCode":"75","bankAcct":"755915678710501","authType":1,"authAcct":"755915678710606","authAcctName":"企业网银新20161077","currency":"10","startValtyDate":"20211210","endValtyDate":"99991231","acctStat":"A","lddfMod":"2","createTime":null,"updateTime":null}]}
+2023-10-25 16:49:08,084 - common.yaml_util - INFO - 写入extract.yml文件内容: {'authAcct': '755915678710606'}
+2023-10-25 16:49:08,085 - common.yaml_util - INFO - 写入extract.yml文件成功
+2023-10-25 16:49:08,085 - common.assert_util - INFO - 断言成功！预期结果：操作成功,实际结果：操作成功
+2023-10-25 16:49:08,085 - common.assert_util - INFO - 断言成功！预期结果：200,实际结果：200
+2023-10-25 16:49:08,085 - common.assert_util - INFO - 断言成功！预期结果：755915678710606,实际结果：755915678710606
+2023-10-25 16:49:08,086 - testcases.conftest - INFO - ************************test case run completed************************
+2023-10-25 16:49:08,091 - testcases.conftest - INFO - ************************starting run test cases************************
+2023-10-25 16:49:08,091 - common.yaml_util - INFO - 读取extract.yml文件中key为: bbkCode 的数据
+2023-10-25 16:49:08,092 - common.yaml_util - INFO - extract.yml文件key值为：bbkCode 的值为 75 
+2023-10-25 16:49:08,093 - common.yaml_util - INFO - 读取extract.yml文件中key为: acct 的数据
+2023-10-25 16:49:08,094 - common.yaml_util - INFO - extract.yml文件key值为：acct 的值为 755915678710501 
+2023-10-25 16:49:08,094 - common.yaml_util - INFO - 读取extract.yml文件中key为: authAcct 的数据
+2023-10-25 16:49:08,095 - common.yaml_util - INFO - extract.yml文件key值为：authAcct 的值为 755915678710606 
+2023-10-25 16:49:08,095 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/encrypt
+2023-10-25 16:49:08,095 - common.requests_util - INFO - 请求方式:post
+2023-10-25 16:49:08,105 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 16:49:08,105 - common.requests_util - INFO - 响应结果：{"msg":"NmMzYWE3OTAyNDY5MjAzNGEyNjNlNTdhMjM2MzQ2OThkYjIwZjU2ODAyYWI4YzA2MTdjZjgwNDU3OGE1ZDEzNQ==","code":200,"data":null}
+2023-10-25 16:49:08,105 - common.requests_util - INFO - sign值：NmMzYWE3OTAyNDY5MjAzNGEyNjNlNTdhMjM2MzQ2OThkYjIwZjU2ODAyYWI4YzA2MTdjZjgwNDU3OGE1ZDEzNQ==
+2023-10-25 16:49:08,105 - common.requests_util - INFO - 请求头:{'sign': 'NmMzYWE3OTAyNDY5MjAzNGEyNjNlNTdhMjM2MzQ2OThkYjIwZjU2ODAyYWI4YzA2MTdjZjgwNDU3OGE1ZDEzNQ==', 'channelNo': '19902'}
+2023-10-25 16:49:08,105 - common.requests_util - INFO - data:{'busiLiceNo': '91510100MA69MUBX8Q', 'bbkCode': '75', 'acct': '755915678710501', 'authAcct': '755915678710606'}
+2023-10-25 16:49:08,105 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/busmod/agreementQuery
+2023-10-25 16:49:08,106 - common.requests_util - INFO - 请求方式:post
+2023-10-25 16:49:08,519 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 16:49:08,519 - common.requests_util - INFO - 响应结果：{"msg":"操作成功","code":200,"data":[{"id":0,"supplierCode":"TN2022011200000607","bbkCode":"75","bankAcct":"755915678710501","authAcct":"755915678710606","agreementCode":"AB0980","agreementType":"BYSA","productCode":"AGPAY001","agreementStat":"A","currency":"10","agreementInstitution":"755512","startValtyDate":"20230104","endValtyDate":"20240105","signDate":"20200102","createTime":null,"updateTime":null},{"id":0,"supplierCode":"TN2022011200000607","bbkCode":"75","bankAcct":"755915678710501","authAcct":"755915678710606","agreementCode":"AB0982","agreementType":"BYBK","productCode":"AGPAY999","agreementStat":"A","currency":"10","agreementInstitution":"755512","startValtyDate":"20230104","endValtyDate":"20240105","signDate":"20200102","createTime":null,"updateTime":null},{"id":0,"supplierCode":"TN2022011200000607","bbkCode":"75","bankAcct":"755915678710501","authAcct":"755915678710606","agreementCode":"AB0984","agreementType":"BYTF","productCode":"AGPAY019","agreementStat":"A","currency":"10","agreementInstitution":"755512","startValtyDate":"20230104","endValtyDate":"20240105","signDate":"20200102","createTime":null,"updateTime":null}]}
+2023-10-25 16:49:08,520 - common.assert_util - INFO - 断言成功！预期结果：操作成功,实际结果：操作成功
+2023-10-25 16:49:08,520 - common.assert_util - INFO - 断言成功！预期结果：200,实际结果：200
+2023-10-25 16:49:08,520 - common.assert_util - INFO - 断言成功！预期结果：TN2022011200000607,实际结果：TN2022011200000607
+2023-10-25 16:49:08,521 - testcases.conftest - INFO - ************************test case run completed************************
+2023-10-25 16:49:08,525 - testcases.conftest - INFO - ************************starting run test cases************************
+2023-10-25 16:49:08,526 - common.yaml_util - INFO - 读取extract.yml文件中key为: bbkCode 的数据
+2023-10-25 16:49:08,527 - common.yaml_util - INFO - extract.yml文件key值为：bbkCode 的值为 75 
+2023-10-25 16:49:08,527 - common.yaml_util - INFO - 读取extract.yml文件中key为: acct 的数据
+2023-10-25 16:49:08,527 - common.yaml_util - INFO - extract.yml文件key值为：acct 的值为 755915678710501 
+2023-10-25 16:49:08,528 - common.yaml_util - INFO - 读取extract.yml文件中key为: authAcct 的数据
+2023-10-25 16:49:08,528 - common.yaml_util - INFO - extract.yml文件key值为：authAcct 的值为 755915678710606 
+2023-10-25 16:49:08,529 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/encrypt
+2023-10-25 16:49:08,529 - common.requests_util - INFO - 请求方式:post
+2023-10-25 16:49:08,535 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 16:49:08,535 - common.requests_util - INFO - 响应结果：{"msg":"OWU3Y2FhMTk4NDVkNDA2OGVmYWYxZjU4NzRkYmEwMjcxMzgzM2JkN2UzZDBlYjk1NjBjZTEyZGEzZjU0ODIwOA==","code":200,"data":null}
+2023-10-25 16:49:08,535 - common.requests_util - INFO - sign值：OWU3Y2FhMTk4NDVkNDA2OGVmYWYxZjU4NzRkYmEwMjcxMzgzM2JkN2UzZDBlYjk1NjBjZTEyZGEzZjU0ODIwOA==
+2023-10-25 16:49:08,535 - common.requests_util - INFO - 请求头:{'sign': 'OWU3Y2FhMTk4NDVkNDA2OGVmYWYxZjU4NzRkYmEwMjcxMzgzM2JkN2UzZDBlYjk1NjBjZTEyZGEzZjU0ODIwOA==', 'channelNo': '19902'}
+2023-10-25 16:49:08,536 - common.requests_util - INFO - data:{'busiLiceNo': '91510100MA69MUBX8Q', 'busMod': '00001', 'totalAmt': 5.55, 'transCnt': 5, 'agreementCode': 'AB0980', 'agreementType': 'BYSA', 'currency': '10', 'bbkCode': '75', 'acct': '755915678710501', 'authAcct': '755915678710606', 'transRemark': '联动代发测试', 'msgContentType': '9', 'expectDate': '20231025', 'expectTime': '235959', 'detail': [{'receiptAcct': '62148311501315112', 'receiptAcctName': '吴极客', 'transAmt': 2.44, 'transRemark': '第一笔联动支付', 'sysFlag': 'Y'}, {'receiptAcct': '6214835982629402', 'receiptAcctName': '冯建杨', 'transAmt': 1, 'transRemark': '第二笔联动支付', 'sysFlag': 'Y'}, {'receiptAcct': '1241255345345345', 'receiptAcctName': '他行户1', 'transAmt': 0.11, 'transRemark': '第三笔联动支付', 'sysFlag': 'N', 'depositBank': '102100099996', 'depositBankAddr': '北京市'}, {'receiptAcct': '421455345345345', 'receiptAcctName': '他行户2', 'transAmt': 1.3, 'transRemark': '第四笔联动支付', 'sysFlag': 'N', 'depositBank': '102100099996', 'depositBankAddr': '北京市'}, {'receiptAcct': '74124455345345345', 'receiptAcctName': '他行户2', 'transAmt': 0.7, 'transRemark': '第五笔联动支付', 'sysFlag': 'N', 'depositBank': '102100099996', 'depositBankAddr': '北京市'}]}
+2023-10-25 16:49:08,536 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/apply
+2023-10-25 16:49:08,536 - common.requests_util - INFO - 请求方式:post
+2023-10-25 16:49:09,122 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 16:49:09,122 - common.requests_util - INFO - 响应结果：{"msg":"经办发起完成","code":200,"data":{"txnNo":"TLSK20231025164909599000000982","reqCode":"B150095231","reqStat":"NTE"}}
+2023-10-25 16:49:09,122 - common.yaml_util - INFO - 写入extract.yml文件内容: {'txnNo': 'TLSK20231025164909599000000982'}
+2023-10-25 16:49:09,123 - common.yaml_util - INFO - 写入extract.yml文件成功
+2023-10-25 16:49:09,123 - common.assert_util - INFO - 断言成功！预期结果：经办发起完成,实际结果：经办发起完成
+2023-10-25 16:49:09,124 - testcases.conftest - INFO - ************************test case run completed************************
+2023-10-25 16:49:09,128 - testcases.conftest - INFO - ************************starting run test cases************************
+2023-10-25 16:49:09,129 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/encrypt
+2023-10-25 16:49:09,129 - common.requests_util - INFO - 请求方式:post
+2023-10-25 16:49:09,135 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 16:49:09,135 - common.requests_util - INFO - 响应结果：{"msg":"Nzk1MzI3NWYwOTM0MGY2MjM4ZDhiNzcwM2E3NWYwMmZmNzViMmRhZjQ1ZTQ3ZGRlYjliZmNjNDRkYjBjYmRlOA==","code":200,"data":null}
+2023-10-25 16:49:09,135 - common.requests_util - INFO - sign值：Nzk1MzI3NWYwOTM0MGY2MjM4ZDhiNzcwM2E3NWYwMmZmNzViMmRhZjQ1ZTQ3ZGRlYjliZmNjNDRkYjBjYmRlOA==
+2023-10-25 16:49:09,136 - common.requests_util - INFO - 请求头:{'sign': 'Nzk1MzI3NWYwOTM0MGY2MjM4ZDhiNzcwM2E3NWYwMmZmNzViMmRhZjQ1ZTQ3ZGRlYjliZmNjNDRkYjBjYmRlOA==', 'channelNo': '19902'}
+2023-10-25 16:49:09,136 - common.requests_util - INFO - data:{'busiLiceNo': '91510100MA69MUBX8Q', 'dateType': 'A', 'startDate': '20231025', 'endDate': '20231025'}
+2023-10-25 16:49:09,136 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/applyInfo/query
+2023-10-25 16:49:09,136 - common.requests_util - INFO - 请求方式:post
+2023-10-25 16:49:09,715 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 16:49:09,715 - common.requests_util - INFO - 响应结果：{"msg":"查询完成","code":200,"data":[{"id":0,"txnNo":"TLSK20231025091847481000000976","supplierCode":"TN2022011200000607","busCode":"N39010","busMod":"00001","totalAmt":5.55,"transCnt":5,"successAmt":0.00,"successCnt":0,"agreementCode":"AB0980","agreementType":"BYSA","currency":"10","currencyType":null,"bbkCode":null,"bankAcct":"755915678710501","authAcct":"755915678710606","transRemark":"联动代发测试","msgContentType":"9","expectDate":"20231025","expectTime":"235959","operateDate":"20231025","nlaFlag":"N","reqCode":"B150095181","reqStat":"NTE","reqFlag":null,"errorCode":null,"errorMsg":null,"rtbFlag":null,"createTime":null,"updateTime":null,"createUserId":null,"updateUserId":null},{"id":0,"txnNo":"TLSK20231025091004136000000975","supplierCode":"TN2022011200000607","busCode":"N39010","busMod":"00001","totalAmt":5.55,"transCnt":5,"successAmt":0.00,"successCnt":0,"agreementCode":"AB0980","agreementType":"BYSA","currency":"10","currencyType":null,"bbkCode":null,"bankAcct":"755915678710501","authAcct":"755915678710606","transRemark":"联动代发测试","msgContentType":"9","expectDate":"20231025","expectTime":"235959","operateDate":"20231025","nlaFlag":"N","reqCode":"B150095184","reqStat":"NTE","reqFlag":null,"errorCode":null,"errorMsg":null,"rtbFlag":null,"createTime":null,"updateTime":null,"createUserId":null,"updateUserId":null},{"id":0,"txnNo":"TLSK20231025093503815000000977","supplierCode":"TN2022011200000607","busCode":"N39010","busMod":"00001","totalAmt":5.55,"transCnt":5,"successAmt":0.00,"successCnt":0,"agreementCode":"AB0980","agreementType":"BYSA","currency":"10","currencyType":null,"bbkCode":null,"bankAcct":"755915678710501","authAcct":"755915678710606","transRemark":"联动代发测试","msgContentType":"9","expectDate":"20231025","expectTime":"235959","operateDate":"20231025","nlaFlag":"N","reqCode":"B150095186","reqStat":"NTE","reqFlag":null,"errorCode":null,"errorMsg":null,"rtbFlag":null,"createTime":null,"updateTime":null,"createUserId":null,"updateUserId":null},{"id":0,"txnNo":"TLSK20231025095023937000000978","supplierCode":"TN2022011200000607","busCode":"N39010","busMod":"00001","totalAmt":5.55,"transCnt":5,"successAmt":0.00,"successCnt":0,"agreementCode":"AB0980","agreementType":"BYSA","currency":"10","currencyType":null,"bbkCode":null,"bankAcct":"755915678710501","authAcct":"755915678710606","transRemark":"联动代发测试","msgContentType":"9","expectDate":"20231025","expectTime":"235959","operateDate":"20231025","nlaFlag":"N","reqCode":"B150095187","reqStat":"NTE","reqFlag":null,"errorCode":null,"errorMsg":null,"rtbFlag":null,"createTime":null,"updateTime":null,"createUserId":null,"updateUserId":null},{"id":0,"txnNo":"TLSK20231025142125401000000980","supplierCode":"TN2022011200000607","busCode":"N39010","busMod":"00001","totalAmt":5.55,"transCnt":5,"successAmt":0.00,"successCnt":0,"agreementCode":"AB0980","agreementType":"BYSA","currency":"10","currencyType":null,"bbkCode":null,"bankAcct":"755915678710501","authAcct":"755915678710606","transRemark":"联动代发测试","msgContentType":"9","expectDate":"20231025","expectTime":"235959","operateDate":"20231025","nlaFlag":"N","reqCode":"B150095212","reqStat":"NTE","reqFlag":null,"errorCode":null,"errorMsg":null,"rtbFlag":null,"createTime":null,"updateTime":null,"createUserId":null,"updateUserId":null},{"id":0,"txnNo":"TLSK20231025164909599000000982","supplierCode":"TN2022011200000607","busCode":"N39010","busMod":"00001","totalAmt":5.55,"transCnt":5,"successAmt":0.00,"successCnt":0,"agreementCode":"AB0980","agreementType":"BYSA","currency":"10","currencyType":null,"bbkCode":null,"bankAcct":"755915678710501","authAcct":"755915678710606","transRemark":"联动代发测试","msgContentType":"9","expectDate":"20231025","expectTime":"235959","operateDate":"20231025","nlaFlag":"N","reqCode":"B150095231","reqStat":"NTE","reqFlag":null,"errorCode":null,"errorMsg":null,"rtbFlag":null,"createTime":null,"updateTime":null,"createUserId":null,"updateUserId":null}]}
+2023-10-25 16:49:09,716 - common.yaml_util - INFO - 读取extract.yml文件中key为: txnNo 的数据
+2023-10-25 16:49:09,723 - common.yaml_util - INFO - extract.yml文件key值为：txnNo 的值为 TLSK20231025164909599000000982 
+2023-10-25 16:49:09,723 - common.yaml_util - INFO - 读取extract.yml文件中key为: txnNo 的数据
+2023-10-25 16:49:09,724 - common.yaml_util - INFO - extract.yml文件key值为：txnNo 的值为 TLSK20231025164909599000000982 
+2023-10-25 16:49:09,724 - common.yaml_util - INFO - 读取extract.yml文件中key为: txnNo 的数据
+2023-10-25 16:49:09,725 - common.yaml_util - INFO - extract.yml文件key值为：txnNo 的值为 TLSK20231025164909599000000982 
+2023-10-25 16:49:09,725 - common.yaml_util - INFO - 读取extract.yml文件中key为: txnNo 的数据
+2023-10-25 16:49:09,726 - common.yaml_util - INFO - extract.yml文件key值为：txnNo 的值为 TLSK20231025164909599000000982 
+2023-10-25 16:49:09,726 - common.yaml_util - INFO - 读取extract.yml文件中key为: txnNo 的数据
+2023-10-25 16:49:09,727 - common.yaml_util - INFO - extract.yml文件key值为：txnNo 的值为 TLSK20231025164909599000000982 
+2023-10-25 16:49:09,727 - common.yaml_util - INFO - 读取extract.yml文件中key为: txnNo 的数据
+2023-10-25 16:49:09,728 - common.yaml_util - INFO - extract.yml文件key值为：txnNo 的值为 TLSK20231025164909599000000982 
+2023-10-25 16:49:09,728 - common.yaml_util - INFO - 写入extract.yml文件内容: {'reqCode': 'B150095231'}
+2023-10-25 16:49:09,729 - common.yaml_util - INFO - 写入extract.yml文件成功
+2023-10-25 16:49:09,729 - common.assert_util - INFO - 断言成功！预期结果：True,实际结果：True
+2023-10-25 16:49:09,730 - testcases.conftest - INFO - ************************test case run completed************************
+2023-10-25 16:49:09,734 - testcases.conftest - INFO - ************************starting run test cases************************
+2023-10-25 16:49:09,735 - common.yaml_util - INFO - 读取extract.yml文件中key为: reqCode 的数据
+2023-10-25 16:49:09,736 - common.yaml_util - INFO - extract.yml文件key值为：reqCode 的值为 B150095231 
+2023-10-25 16:49:09,736 - common.yaml_util - INFO - 读取extract.yml文件中key为: txnNo 的数据
+2023-10-25 16:49:09,737 - common.yaml_util - INFO - extract.yml文件key值为：txnNo 的值为 TLSK20231025164909599000000982 
+2023-10-25 16:49:09,738 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/encrypt
+2023-10-25 16:49:09,738 - common.requests_util - INFO - 请求方式:post
+2023-10-25 16:49:09,743 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 16:49:09,744 - common.requests_util - INFO - 响应结果：{"msg":"MGFhNDUzZjU5NDBiMjliOGEwZTdhZGVkNGMzNjRjMGRmYWE3NzhiY2VkYWJjNTFkZTdiYzJmNzI5ZTgzZDEwNA==","code":200,"data":null}
+2023-10-25 16:49:09,744 - common.requests_util - INFO - sign值：MGFhNDUzZjU5NDBiMjliOGEwZTdhZGVkNGMzNjRjMGRmYWE3NzhiY2VkYWJjNTFkZTdiYzJmNzI5ZTgzZDEwNA==
+2023-10-25 16:49:09,744 - common.requests_util - INFO - 请求头:{'sign': 'MGFhNDUzZjU5NDBiMjliOGEwZTdhZGVkNGMzNjRjMGRmYWE3NzhiY2VkYWJjNTFkZTdiYzJmNzI5ZTgzZDEwNA==', 'channelNo': '19902'}
+2023-10-25 16:49:09,744 - common.requests_util - INFO - data:{'busiLiceNo': '91510100MA69MUBX8Q', 'txnNo': 'TLSK20231025164909599000000982', 'reqCode': 'B150095231'}
+2023-10-25 16:49:09,745 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/applyDetailInfo/query
+2023-10-25 16:49:09,745 - common.requests_util - INFO - 请求方式:post
+2023-10-25 16:49:09,919 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 16:49:09,919 - common.requests_util - INFO - 响应结果：{"msg":"查询完成","code":200,"data":[{"id":0,"txnNo":"TLSK20231025164909599000000982","transCode":"1","receiptAcct":"62148311501315112","receiptAcctName":"吴极客","transAmt":2.44,"transDate":null,"transRemark":"第一笔联动支付","sysFlag":null,"depositBank":"招商银行","depositBankAddr":null,"transStat":"A","errorCode":null,"errorMsg":null,"createTime":null,"updateTime":null},{"id":0,"txnNo":"TLSK20231025164909599000000982","transCode":"2","receiptAcct":"6214835982629402","receiptAcctName":"冯建杨","transAmt":1.00,"transDate":null,"transRemark":"第二笔联动支付","sysFlag":null,"depositBank":"招商银行","depositBankAddr":null,"transStat":"A","errorCode":null,"errorMsg":null,"createTime":null,"updateTime":null},{"id":0,"txnNo":"TLSK20231025164909599000000982","transCode":"3","receiptAcct":"1241255345345345","receiptAcctName":"他行户1","transAmt":0.11,"transDate":null,"transRemark":"第三笔联动支付","sysFlag":null,"depositBank":"102100099996","depositBankAddr":"北京市","transStat":"A","errorCode":null,"errorMsg":null,"createTime":null,"updateTime":null},{"id":0,"txnNo":"TLSK20231025164909599000000982","transCode":"4","receiptAcct":"421455345345345","receiptAcctName":"他行户2","transAmt":1.30,"transDate":null,"transRemark":"第四笔联动支付","sysFlag":null,"depositBank":"102100099996","depositBankAddr":"北京市","transStat":"A","errorCode":null,"errorMsg":null,"createTime":null,"updateTime":null},{"id":0,"txnNo":"TLSK20231025164909599000000982","transCode":"5","receiptAcct":"74124455345345345","receiptAcctName":"他行户2","transAmt":0.70,"transDate":null,"transRemark":"第五笔联动支付","sysFlag":null,"depositBank":"102100099996","depositBankAddr":"北京市","transStat":"A","errorCode":null,"errorMsg":null,"createTime":null,"updateTime":null}]}
+2023-10-25 16:49:09,920 - common.yaml_util - INFO - 读取extract.yml文件中key为: txnNo 的数据
+2023-10-25 16:49:09,921 - common.yaml_util - INFO - extract.yml文件key值为：txnNo 的值为 TLSK20231025164909599000000982 
+2023-10-25 16:49:09,921 - common.assert_util - INFO - 断言成功！预期结果：TLSK20231025164909599000000982,实际结果：TLSK20231025164909599000000982
+2023-10-25 16:49:09,922 - testcases.conftest - INFO - ************************test case run completed************************
+2023-10-25 16:50:48,341 - common.yaml_util - INFO - 读取lddf_busmod_query.yml文件中测试用例数据成功
+2023-10-25 16:50:48,342 - common.yaml_util - INFO - 读取lddf_busmod_acctQuery.yml文件中测试用例数据成功
+2023-10-25 16:50:48,344 - common.yaml_util - INFO - 读取lddf_busmod_authAcctQuery.yml文件中测试用例数据成功
+2023-10-25 16:50:48,346 - common.yaml_util - INFO - 读取lddf_busmod_agreementQuery.yml文件中测试用例数据成功
+2023-10-25 16:50:48,352 - common.yaml_util - INFO - 读取lddf_apply.yml文件中测试用例数据成功
+2023-10-25 16:50:48,354 - common.yaml_util - INFO - 读取lddf_applyInfo_query.yml文件中测试用例数据成功
+2023-10-25 16:50:48,355 - common.yaml_util - INFO - 读取lddf_applyDetailInfo_query.yml文件中测试用例数据成功
+2023-10-25 16:50:48,435 - testcases.conftest - INFO - 清除extract_yaml文件内容
+2023-10-25 16:50:48,435 - common.yaml_util - INFO - 清除extract.yml文件内容成功
+2023-10-25 16:50:48,435 - testcases.conftest - INFO - ************************starting run test cases************************
+2023-10-25 16:50:48,437 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/encrypt
+2023-10-25 16:50:48,437 - common.requests_util - INFO - 请求方式:post
+2023-10-25 16:50:48,448 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 16:50:48,449 - common.requests_util - INFO - 响应结果：{"msg":"ZTA2MDZiMTY3ZjAxNjA3ZmJlNDAzNTU0M2M1NjQ1Mzk0ZTUyYTIxYzE0NDhlNzhiM2M1YjRiMmM4ZmVhMjg3Zg==","code":200,"data":null}
+2023-10-25 16:50:48,449 - common.requests_util - INFO - sign值：ZTA2MDZiMTY3ZjAxNjA3ZmJlNDAzNTU0M2M1NjQ1Mzk0ZTUyYTIxYzE0NDhlNzhiM2M1YjRiMmM4ZmVhMjg3Zg==
+2023-10-25 16:50:48,449 - common.requests_util - INFO - 请求头:{'sign': 'ZTA2MDZiMTY3ZjAxNjA3ZmJlNDAzNTU0M2M1NjQ1Mzk0ZTUyYTIxYzE0NDhlNzhiM2M1YjRiMmM4ZmVhMjg3Zg==', 'channelNo': '19902'}
+2023-10-25 16:50:48,449 - common.requests_util - INFO - data:{'busiLiceNo': '91510100MA69MUBX8Q'}
+2023-10-25 16:50:48,450 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/busmod/query
+2023-10-25 16:50:48,450 - common.requests_util - INFO - 请求方式:post
+2023-10-25 16:50:48,461 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 16:50:48,461 - common.requests_util - INFO - 响应结果：{"msg":"操作成功","code":200,"data":[{"id":102,"supplierCode":"TN2022011200000607","busMod":"00001","remark":null,"createTime":"2023-09-26 16:07:53","updateTime":"2023-09-26 16:07:53","createUserId":"xiongxl","updateUserId":"xiongxl"}]}
+2023-10-25 16:50:48,461 - common.yaml_util - INFO - 写入extract.yml文件内容: {'busMod': '00001'}
+2023-10-25 16:50:48,462 - common.yaml_util - INFO - 写入extract.yml文件成功
+2023-10-25 16:50:48,462 - common.assert_util - INFO - 断言成功！预期结果：00001,实际结果：00001
+2023-10-25 16:50:48,462 - common.assert_util - ERROR - 断言失败！预期结果：TN2022011200000606,实际结果：TN2022011200000607
+2023-10-25 16:50:48,575 - testcases.conftest - INFO - ************************test case run completed************************
+2023-10-25 16:50:48,578 - testcases.conftest - INFO - ************************starting run test cases************************
+2023-10-25 16:50:48,579 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/encrypt
+2023-10-25 16:50:48,579 - common.requests_util - INFO - 请求方式:post
+2023-10-25 16:50:48,657 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 16:50:48,658 - common.requests_util - INFO - 响应结果：{"msg":"ZTA2MDZiMTY3ZjAxNjA3ZmJlNDAzNTU0M2M1NjQ1Mzk0ZTUyYTIxYzE0NDhlNzhiM2M1YjRiMmM4ZmVhMjg3Zg==","code":200,"data":null}
+2023-10-25 16:50:48,658 - common.requests_util - INFO - sign值：ZTA2MDZiMTY3ZjAxNjA3ZmJlNDAzNTU0M2M1NjQ1Mzk0ZTUyYTIxYzE0NDhlNzhiM2M1YjRiMmM4ZmVhMjg3Zg==
+2023-10-25 16:50:48,658 - common.requests_util - INFO - 请求头:{'sign': 'ZTA2MDZiMTY3ZjAxNjA3ZmJlNDAzNTU0M2M1NjQ1Mzk0ZTUyYTIxYzE0NDhlNzhiM2M1YjRiMmM4ZmVhMjg3Zg==', 'channelNo': '19902'}
+2023-10-25 16:50:48,658 - common.requests_util - INFO - data:{'busiLiceNo': '91510100MA69MUBX8Q'}
+2023-10-25 16:50:48,658 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/busmod/query
+2023-10-25 16:50:48,659 - common.requests_util - INFO - 请求方式:post
+2023-10-25 16:50:48,674 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 16:50:48,675 - common.requests_util - INFO - 响应结果：{"msg":"操作成功","code":200,"data":[{"id":102,"supplierCode":"TN2022011200000607","busMod":"00001","remark":null,"createTime":"2023-09-26 16:07:53","updateTime":"2023-09-26 16:07:53","createUserId":"xiongxl","updateUserId":"xiongxl"}]}
+2023-10-25 16:50:48,675 - common.yaml_util - INFO - 写入extract.yml文件内容: {'busMod': '00001'}
+2023-10-25 16:50:48,676 - common.yaml_util - INFO - 写入extract.yml文件成功
+2023-10-25 16:50:48,676 - common.assert_util - INFO - 断言成功！预期结果：00001,实际结果：00001
+2023-10-25 16:50:48,676 - common.assert_util - ERROR - 断言失败！预期结果：TN2022011200000606,实际结果：TN2022011200000607
+2023-10-25 16:50:48,685 - testcases.conftest - INFO - ************************test case run completed************************
+2023-10-25 16:50:48,688 - testcases.conftest - INFO - ************************starting run test cases************************
+2023-10-25 16:50:48,689 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/encrypt
+2023-10-25 16:50:48,689 - common.requests_util - INFO - 请求方式:post
+2023-10-25 16:50:48,694 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 16:50:48,694 - common.requests_util - INFO - 响应结果：{"msg":"ZTA2MDZiMTY3ZjAxNjA3ZmJlNDAzNTU0M2M1NjQ1Mzk0ZTUyYTIxYzE0NDhlNzhiM2M1YjRiMmM4ZmVhMjg3Zg==","code":200,"data":null}
+2023-10-25 16:50:48,694 - common.requests_util - INFO - sign值：ZTA2MDZiMTY3ZjAxNjA3ZmJlNDAzNTU0M2M1NjQ1Mzk0ZTUyYTIxYzE0NDhlNzhiM2M1YjRiMmM4ZmVhMjg3Zg==
+2023-10-25 16:50:48,694 - common.requests_util - INFO - 请求头:{'sign': 'ZTA2MDZiMTY3ZjAxNjA3ZmJlNDAzNTU0M2M1NjQ1Mzk0ZTUyYTIxYzE0NDhlNzhiM2M1YjRiMmM4ZmVhMjg3Zg==', 'channelNo': '19902'}
+2023-10-25 16:50:48,694 - common.requests_util - INFO - data:{'busiLiceNo': '91510100MA69MUBX8Q'}
+2023-10-25 16:50:48,695 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/busmod/query
+2023-10-25 16:50:48,695 - common.requests_util - INFO - 请求方式:post
+2023-10-25 16:50:48,706 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 16:50:48,706 - common.requests_util - INFO - 响应结果：{"msg":"操作成功","code":200,"data":[{"id":102,"supplierCode":"TN2022011200000607","busMod":"00001","remark":null,"createTime":"2023-09-26 16:07:53","updateTime":"2023-09-26 16:07:53","createUserId":"xiongxl","updateUserId":"xiongxl"}]}
+2023-10-25 16:50:48,707 - common.yaml_util - INFO - 写入extract.yml文件内容: {'busMod': '00001'}
+2023-10-25 16:50:48,707 - common.yaml_util - INFO - 写入extract.yml文件成功
+2023-10-25 16:50:48,708 - common.assert_util - INFO - 断言成功！预期结果：00001,实际结果：00001
+2023-10-25 16:50:48,708 - common.assert_util - ERROR - 断言失败！预期结果：TN2022011200000606,实际结果：TN2022011200000607
+2023-10-25 16:50:48,720 - testcases.conftest - INFO - ************************test case run completed************************
+2023-10-25 16:50:48,725 - testcases.conftest - INFO - ************************starting run test cases************************
+2023-10-25 16:50:48,726 - common.yaml_util - INFO - 读取extract.yml文件中key为: busMod 的数据
+2023-10-25 16:50:48,727 - common.yaml_util - INFO - extract.yml文件key值为：busMod 的值为 00001 
+2023-10-25 16:50:48,728 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/encrypt
+2023-10-25 16:50:48,728 - common.requests_util - INFO - 请求方式:post
+2023-10-25 16:50:48,735 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 16:50:48,735 - common.requests_util - INFO - 响应结果：{"msg":"MmM0YTVlYzkyZWI3NmE4NjYwNWRkYjJiZWIxMmQyZmI3MGYzOWNjZjM4YmJlZjEzOTNlOTM5M2NmMDljNDk2OA==","code":200,"data":null}
+2023-10-25 16:50:48,735 - common.requests_util - INFO - sign值：MmM0YTVlYzkyZWI3NmE4NjYwNWRkYjJiZWIxMmQyZmI3MGYzOWNjZjM4YmJlZjEzOTNlOTM5M2NmMDljNDk2OA==
+2023-10-25 16:50:48,735 - common.requests_util - INFO - 请求头:{'sign': 'MmM0YTVlYzkyZWI3NmE4NjYwNWRkYjJiZWIxMmQyZmI3MGYzOWNjZjM4YmJlZjEzOTNlOTM5M2NmMDljNDk2OA==', 'channelNo': '19902'}
+2023-10-25 16:50:48,736 - common.requests_util - INFO - data:{'busiLiceNo': '91510100MA69MUBX8Q', 'busMod': '00001'}
+2023-10-25 16:50:48,736 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/busmod/acctQuery
+2023-10-25 16:50:48,736 - common.requests_util - INFO - 请求方式:post
+2023-10-25 16:50:49,058 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 16:50:49,058 - common.requests_util - INFO - 响应结果：{"msg":"操作成功","code":200,"data":[{"id":0,"supplierCode":"TN2022011200000607","busMod":"00001","bbkCode":"75","bankAcct":"755915678710501","bankAcctName":"企业网银新20161077","currency":"10","acctStat":null,"createTime":null,"updateTime":null}]}
+2023-10-25 16:50:49,058 - common.yaml_util - INFO - 写入extract.yml文件内容: {'bbkCode': '75', 'acct': '755915678710501'}
+2023-10-25 16:50:49,059 - common.yaml_util - INFO - 写入extract.yml文件成功
+2023-10-25 16:50:49,059 - common.assert_util - INFO - 断言成功！预期结果：75,实际结果：75
+2023-10-25 16:50:49,059 - common.assert_util - INFO - 断言成功！预期结果：755915678710501,实际结果：755915678710501
+2023-10-25 16:50:49,060 - common.assert_util - INFO - 断言成功！预期结果：企业网银新20161077,实际结果：企业网银新20161077
+2023-10-25 16:50:49,061 - testcases.conftest - INFO - ************************test case run completed************************
+2023-10-25 16:50:49,065 - testcases.conftest - INFO - ************************starting run test cases************************
+2023-10-25 16:50:49,066 - common.yaml_util - INFO - 读取extract.yml文件中key为: bbkCode 的数据
+2023-10-25 16:50:49,067 - common.yaml_util - INFO - extract.yml文件key值为：bbkCode 的值为 75 
+2023-10-25 16:50:49,067 - common.yaml_util - INFO - 读取extract.yml文件中key为: acct 的数据
+2023-10-25 16:50:49,068 - common.yaml_util - INFO - extract.yml文件key值为：acct 的值为 755915678710501 
+2023-10-25 16:50:49,068 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/encrypt
+2023-10-25 16:50:49,068 - common.requests_util - INFO - 请求方式:post
+2023-10-25 16:50:49,076 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 16:50:49,077 - common.requests_util - INFO - 响应结果：{"msg":"ZTg1NDc1MGQwYjZjZTI4ZjljNzBiYmQ5ZDMxNTFhZjhkZWM5MzU3NzMyMjQ3ZThkMTNkOWM4OTllNjMwNjU4OQ==","code":200,"data":null}
+2023-10-25 16:50:49,077 - common.requests_util - INFO - sign值：ZTg1NDc1MGQwYjZjZTI4ZjljNzBiYmQ5ZDMxNTFhZjhkZWM5MzU3NzMyMjQ3ZThkMTNkOWM4OTllNjMwNjU4OQ==
+2023-10-25 16:50:49,077 - common.requests_util - INFO - 请求头:{'sign': 'ZTg1NDc1MGQwYjZjZTI4ZjljNzBiYmQ5ZDMxNTFhZjhkZWM5MzU3NzMyMjQ3ZThkMTNkOWM4OTllNjMwNjU4OQ==', 'channelNo': '19902'}
+2023-10-25 16:50:49,077 - common.requests_util - INFO - data:{'busiLiceNo': '91510100MA69MUBX8Q', 'bbkCode': '75', 'acct': '755915678710501', 'authType': 1}
+2023-10-25 16:50:49,077 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/busmod/authAcctQuery
+2023-10-25 16:50:49,077 - common.requests_util - INFO - 请求方式:post
+2023-10-25 16:50:49,216 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 16:50:49,216 - common.requests_util - INFO - 响应结果：{"msg":"操作成功","code":200,"data":[{"id":0,"supplierCode":"TN2022011200000607","bbkCode":"75","bankAcct":"755915678710501","authType":1,"authAcct":"755915678710606","authAcctName":"企业网银新20161077","currency":"10","startValtyDate":"20211210","endValtyDate":"99991231","acctStat":"A","lddfMod":"2","createTime":null,"updateTime":null}]}
+2023-10-25 16:50:49,216 - common.yaml_util - INFO - 写入extract.yml文件内容: {'authAcct': '755915678710606'}
+2023-10-25 16:50:49,217 - common.yaml_util - INFO - 写入extract.yml文件成功
+2023-10-25 16:50:49,217 - common.assert_util - INFO - 断言成功！预期结果：操作成功,实际结果：操作成功
+2023-10-25 16:50:49,217 - common.assert_util - INFO - 断言成功！预期结果：200,实际结果：200
+2023-10-25 16:50:49,217 - common.assert_util - INFO - 断言成功！预期结果：755915678710606,实际结果：755915678710606
+2023-10-25 16:50:49,218 - testcases.conftest - INFO - ************************test case run completed************************
+2023-10-25 16:50:49,222 - testcases.conftest - INFO - ************************starting run test cases************************
+2023-10-25 16:50:49,223 - common.yaml_util - INFO - 读取extract.yml文件中key为: bbkCode 的数据
+2023-10-25 16:50:49,224 - common.yaml_util - INFO - extract.yml文件key值为：bbkCode 的值为 75 
+2023-10-25 16:50:49,224 - common.yaml_util - INFO - 读取extract.yml文件中key为: acct 的数据
+2023-10-25 16:50:49,225 - common.yaml_util - INFO - extract.yml文件key值为：acct 的值为 755915678710501 
+2023-10-25 16:50:49,226 - common.yaml_util - INFO - 读取extract.yml文件中key为: authAcct 的数据
+2023-10-25 16:50:49,227 - common.yaml_util - INFO - extract.yml文件key值为：authAcct 的值为 755915678710606 
+2023-10-25 16:50:49,227 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/encrypt
+2023-10-25 16:50:49,227 - common.requests_util - INFO - 请求方式:post
+2023-10-25 16:50:49,233 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 16:50:49,233 - common.requests_util - INFO - 响应结果：{"msg":"NmMzYWE3OTAyNDY5MjAzNGEyNjNlNTdhMjM2MzQ2OThkYjIwZjU2ODAyYWI4YzA2MTdjZjgwNDU3OGE1ZDEzNQ==","code":200,"data":null}
+2023-10-25 16:50:49,233 - common.requests_util - INFO - sign值：NmMzYWE3OTAyNDY5MjAzNGEyNjNlNTdhMjM2MzQ2OThkYjIwZjU2ODAyYWI4YzA2MTdjZjgwNDU3OGE1ZDEzNQ==
+2023-10-25 16:50:49,233 - common.requests_util - INFO - 请求头:{'sign': 'NmMzYWE3OTAyNDY5MjAzNGEyNjNlNTdhMjM2MzQ2OThkYjIwZjU2ODAyYWI4YzA2MTdjZjgwNDU3OGE1ZDEzNQ==', 'channelNo': '19902'}
+2023-10-25 16:50:49,234 - common.requests_util - INFO - data:{'busiLiceNo': '91510100MA69MUBX8Q', 'bbkCode': '75', 'acct': '755915678710501', 'authAcct': '755915678710606'}
+2023-10-25 16:50:49,234 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/busmod/agreementQuery
+2023-10-25 16:50:49,234 - common.requests_util - INFO - 请求方式:post
+2023-10-25 16:50:49,416 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 16:50:49,416 - common.requests_util - INFO - 响应结果：{"msg":"操作成功","code":200,"data":[{"id":0,"supplierCode":"TN2022011200000607","bbkCode":"75","bankAcct":"755915678710501","authAcct":"755915678710606","agreementCode":"AB0980","agreementType":"BYSA","productCode":"AGPAY001","agreementStat":"A","currency":"10","agreementInstitution":"755512","startValtyDate":"20230104","endValtyDate":"20240105","signDate":"20200102","createTime":null,"updateTime":null},{"id":0,"supplierCode":"TN2022011200000607","bbkCode":"75","bankAcct":"755915678710501","authAcct":"755915678710606","agreementCode":"AB0982","agreementType":"BYBK","productCode":"AGPAY999","agreementStat":"A","currency":"10","agreementInstitution":"755512","startValtyDate":"20230104","endValtyDate":"20240105","signDate":"20200102","createTime":null,"updateTime":null},{"id":0,"supplierCode":"TN2022011200000607","bbkCode":"75","bankAcct":"755915678710501","authAcct":"755915678710606","agreementCode":"AB0984","agreementType":"BYTF","productCode":"AGPAY019","agreementStat":"A","currency":"10","agreementInstitution":"755512","startValtyDate":"20230104","endValtyDate":"20240105","signDate":"20200102","createTime":null,"updateTime":null}]}
+2023-10-25 16:50:49,416 - common.assert_util - INFO - 断言成功！预期结果：操作成功,实际结果：操作成功
+2023-10-25 16:50:49,416 - common.assert_util - INFO - 断言成功！预期结果：200,实际结果：200
+2023-10-25 16:50:49,416 - common.assert_util - INFO - 断言成功！预期结果：TN2022011200000607,实际结果：TN2022011200000607
+2023-10-25 16:50:49,418 - testcases.conftest - INFO - ************************test case run completed************************
+2023-10-25 16:50:49,422 - testcases.conftest - INFO - ************************starting run test cases************************
+2023-10-25 16:50:49,422 - common.yaml_util - INFO - 读取extract.yml文件中key为: bbkCode 的数据
+2023-10-25 16:50:49,423 - common.yaml_util - INFO - extract.yml文件key值为：bbkCode 的值为 75 
+2023-10-25 16:50:49,424 - common.yaml_util - INFO - 读取extract.yml文件中key为: acct 的数据
+2023-10-25 16:50:49,425 - common.yaml_util - INFO - extract.yml文件key值为：acct 的值为 755915678710501 
+2023-10-25 16:50:49,425 - common.yaml_util - INFO - 读取extract.yml文件中key为: authAcct 的数据
+2023-10-25 16:50:49,426 - common.yaml_util - INFO - extract.yml文件key值为：authAcct 的值为 755915678710606 
+2023-10-25 16:50:49,426 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/encrypt
+2023-10-25 16:50:49,426 - common.requests_util - INFO - 请求方式:post
+2023-10-25 16:50:49,433 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 16:50:49,433 - common.requests_util - INFO - 响应结果：{"msg":"OWU3Y2FhMTk4NDVkNDA2OGVmYWYxZjU4NzRkYmEwMjcxMzgzM2JkN2UzZDBlYjk1NjBjZTEyZGEzZjU0ODIwOA==","code":200,"data":null}
+2023-10-25 16:50:49,433 - common.requests_util - INFO - sign值：OWU3Y2FhMTk4NDVkNDA2OGVmYWYxZjU4NzRkYmEwMjcxMzgzM2JkN2UzZDBlYjk1NjBjZTEyZGEzZjU0ODIwOA==
+2023-10-25 16:50:49,433 - common.requests_util - INFO - 请求头:{'sign': 'OWU3Y2FhMTk4NDVkNDA2OGVmYWYxZjU4NzRkYmEwMjcxMzgzM2JkN2UzZDBlYjk1NjBjZTEyZGEzZjU0ODIwOA==', 'channelNo': '19902'}
+2023-10-25 16:50:49,433 - common.requests_util - INFO - data:{'busiLiceNo': '91510100MA69MUBX8Q', 'busMod': '00001', 'totalAmt': 5.55, 'transCnt': 5, 'agreementCode': 'AB0980', 'agreementType': 'BYSA', 'currency': '10', 'bbkCode': '75', 'acct': '755915678710501', 'authAcct': '755915678710606', 'transRemark': '联动代发测试', 'msgContentType': '9', 'expectDate': '20231025', 'expectTime': '235959', 'detail': [{'receiptAcct': '62148311501315112', 'receiptAcctName': '吴极客', 'transAmt': 2.44, 'transRemark': '第一笔联动支付', 'sysFlag': 'Y'}, {'receiptAcct': '6214835982629402', 'receiptAcctName': '冯建杨', 'transAmt': 1, 'transRemark': '第二笔联动支付', 'sysFlag': 'Y'}, {'receiptAcct': '1241255345345345', 'receiptAcctName': '他行户1', 'transAmt': 0.11, 'transRemark': '第三笔联动支付', 'sysFlag': 'N', 'depositBank': '102100099996', 'depositBankAddr': '北京市'}, {'receiptAcct': '421455345345345', 'receiptAcctName': '他行户2', 'transAmt': 1.3, 'transRemark': '第四笔联动支付', 'sysFlag': 'N', 'depositBank': '102100099996', 'depositBankAddr': '北京市'}, {'receiptAcct': '74124455345345345', 'receiptAcctName': '他行户2', 'transAmt': 0.7, 'transRemark': '第五笔联动支付', 'sysFlag': 'N', 'depositBank': '102100099996', 'depositBankAddr': '北京市'}]}
+2023-10-25 16:50:49,434 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/apply
+2023-10-25 16:50:49,434 - common.requests_util - INFO - 请求方式:post
+2023-10-25 16:50:50,110 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 16:50:50,110 - common.requests_util - INFO - 响应结果：{"msg":"经办发起完成","code":200,"data":{"txnNo":"TLSK20231025165050498000000983","reqCode":"B150095237","reqStat":"NTE"}}
+2023-10-25 16:50:50,111 - common.yaml_util - INFO - 写入extract.yml文件内容: {'txnNo': 'TLSK20231025165050498000000983'}
+2023-10-25 16:50:50,112 - common.yaml_util - INFO - 写入extract.yml文件成功
+2023-10-25 16:50:50,112 - common.assert_util - INFO - 断言成功！预期结果：经办发起完成,实际结果：经办发起完成
+2023-10-25 16:50:50,113 - testcases.conftest - INFO - ************************test case run completed************************
+2023-10-25 16:50:50,118 - testcases.conftest - INFO - ************************starting run test cases************************
+2023-10-25 16:50:50,120 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/encrypt
+2023-10-25 16:50:50,120 - common.requests_util - INFO - 请求方式:post
+2023-10-25 16:50:50,126 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 16:50:50,126 - common.requests_util - INFO - 响应结果：{"msg":"Nzk1MzI3NWYwOTM0MGY2MjM4ZDhiNzcwM2E3NWYwMmZmNzViMmRhZjQ1ZTQ3ZGRlYjliZmNjNDRkYjBjYmRlOA==","code":200,"data":null}
+2023-10-25 16:50:50,126 - common.requests_util - INFO - sign值：Nzk1MzI3NWYwOTM0MGY2MjM4ZDhiNzcwM2E3NWYwMmZmNzViMmRhZjQ1ZTQ3ZGRlYjliZmNjNDRkYjBjYmRlOA==
+2023-10-25 16:50:50,126 - common.requests_util - INFO - 请求头:{'sign': 'Nzk1MzI3NWYwOTM0MGY2MjM4ZDhiNzcwM2E3NWYwMmZmNzViMmRhZjQ1ZTQ3ZGRlYjliZmNjNDRkYjBjYmRlOA==', 'channelNo': '19902'}
+2023-10-25 16:50:50,126 - common.requests_util - INFO - data:{'busiLiceNo': '91510100MA69MUBX8Q', 'dateType': 'A', 'startDate': '20231025', 'endDate': '20231025'}
+2023-10-25 16:50:50,127 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/applyInfo/query
+2023-10-25 16:50:50,127 - common.requests_util - INFO - 请求方式:post
+2023-10-25 16:50:50,515 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 16:50:50,516 - common.requests_util - INFO - 响应结果：{"msg":"查询完成","code":200,"data":[{"id":0,"txnNo":"TLSK20231025091847481000000976","supplierCode":"TN2022011200000607","busCode":"N39010","busMod":"00001","totalAmt":5.55,"transCnt":5,"successAmt":0.00,"successCnt":0,"agreementCode":"AB0980","agreementType":"BYSA","currency":"10","currencyType":null,"bbkCode":null,"bankAcct":"755915678710501","authAcct":"755915678710606","transRemark":"联动代发测试","msgContentType":"9","expectDate":"20231025","expectTime":"235959","operateDate":"20231025","nlaFlag":"N","reqCode":"B150095181","reqStat":"NTE","reqFlag":null,"errorCode":null,"errorMsg":null,"rtbFlag":null,"createTime":null,"updateTime":null,"createUserId":null,"updateUserId":null},{"id":0,"txnNo":"TLSK20231025091004136000000975","supplierCode":"TN2022011200000607","busCode":"N39010","busMod":"00001","totalAmt":5.55,"transCnt":5,"successAmt":0.00,"successCnt":0,"agreementCode":"AB0980","agreementType":"BYSA","currency":"10","currencyType":null,"bbkCode":null,"bankAcct":"755915678710501","authAcct":"755915678710606","transRemark":"联动代发测试","msgContentType":"9","expectDate":"20231025","expectTime":"235959","operateDate":"20231025","nlaFlag":"N","reqCode":"B150095184","reqStat":"NTE","reqFlag":null,"errorCode":null,"errorMsg":null,"rtbFlag":null,"createTime":null,"updateTime":null,"createUserId":null,"updateUserId":null},{"id":0,"txnNo":"TLSK20231025093503815000000977","supplierCode":"TN2022011200000607","busCode":"N39010","busMod":"00001","totalAmt":5.55,"transCnt":5,"successAmt":0.00,"successCnt":0,"agreementCode":"AB0980","agreementType":"BYSA","currency":"10","currencyType":null,"bbkCode":null,"bankAcct":"755915678710501","authAcct":"755915678710606","transRemark":"联动代发测试","msgContentType":"9","expectDate":"20231025","expectTime":"235959","operateDate":"20231025","nlaFlag":"N","reqCode":"B150095186","reqStat":"NTE","reqFlag":null,"errorCode":null,"errorMsg":null,"rtbFlag":null,"createTime":null,"updateTime":null,"createUserId":null,"updateUserId":null},{"id":0,"txnNo":"TLSK20231025095023937000000978","supplierCode":"TN2022011200000607","busCode":"N39010","busMod":"00001","totalAmt":5.55,"transCnt":5,"successAmt":0.00,"successCnt":0,"agreementCode":"AB0980","agreementType":"BYSA","currency":"10","currencyType":null,"bbkCode":null,"bankAcct":"755915678710501","authAcct":"755915678710606","transRemark":"联动代发测试","msgContentType":"9","expectDate":"20231025","expectTime":"235959","operateDate":"20231025","nlaFlag":"N","reqCode":"B150095187","reqStat":"NTE","reqFlag":null,"errorCode":null,"errorMsg":null,"rtbFlag":null,"createTime":null,"updateTime":null,"createUserId":null,"updateUserId":null},{"id":0,"txnNo":"TLSK20231025142125401000000980","supplierCode":"TN2022011200000607","busCode":"N39010","busMod":"00001","totalAmt":5.55,"transCnt":5,"successAmt":0.00,"successCnt":0,"agreementCode":"AB0980","agreementType":"BYSA","currency":"10","currencyType":null,"bbkCode":null,"bankAcct":"755915678710501","authAcct":"755915678710606","transRemark":"联动代发测试","msgContentType":"9","expectDate":"20231025","expectTime":"235959","operateDate":"20231025","nlaFlag":"N","reqCode":"B150095212","reqStat":"NTE","reqFlag":null,"errorCode":null,"errorMsg":null,"rtbFlag":null,"createTime":null,"updateTime":null,"createUserId":null,"updateUserId":null},{"id":0,"txnNo":"TLSK20231025164909599000000982","supplierCode":"TN2022011200000607","busCode":"N39010","busMod":"00001","totalAmt":5.55,"transCnt":5,"successAmt":0.00,"successCnt":0,"agreementCode":"AB0980","agreementType":"BYSA","currency":"10","currencyType":null,"bbkCode":null,"bankAcct":"755915678710501","authAcct":"755915678710606","transRemark":"联动代发测试","msgContentType":"9","expectDate":"20231025","expectTime":"235959","operateDate":"20231025","nlaFlag":"N","reqCode":"B150095231","reqStat":"NTE","reqFlag":null,"errorCode":null,"errorMsg":null,"rtbFlag":null,"createTime":null,"updateTime":null,"createUserId":null,"updateUserId":null},{"id":0,"txnNo":"TLSK20231025165050498000000983","supplierCode":"TN2022011200000607","busCode":"N39010","busMod":"00001","totalAmt":5.55,"transCnt":5,"successAmt":0.00,"successCnt":0,"agreementCode":"AB0980","agreementType":"BYSA","currency":"10","currencyType":null,"bbkCode":null,"bankAcct":"755915678710501","authAcct":"755915678710606","transRemark":"联动代发测试","msgContentType":"9","expectDate":"20231025","expectTime":"235959","operateDate":"20231025","nlaFlag":"N","reqCode":"B150095237","reqStat":"NTE","reqFlag":null,"errorCode":null,"errorMsg":null,"rtbFlag":null,"createTime":null,"updateTime":null,"createUserId":null,"updateUserId":null}]}
+2023-10-25 16:50:50,518 - common.yaml_util - INFO - 读取extract.yml文件中key为: txnNo 的数据
+2023-10-25 16:50:50,519 - common.yaml_util - INFO - extract.yml文件key值为：txnNo 的值为 TLSK20231025165050498000000983 
+2023-10-25 16:50:50,519 - common.yaml_util - INFO - 读取extract.yml文件中key为: txnNo 的数据
+2023-10-25 16:50:50,521 - common.yaml_util - INFO - extract.yml文件key值为：txnNo 的值为 TLSK20231025165050498000000983 
+2023-10-25 16:50:50,521 - common.yaml_util - INFO - 读取extract.yml文件中key为: txnNo 的数据
+2023-10-25 16:50:50,522 - common.yaml_util - INFO - extract.yml文件key值为：txnNo 的值为 TLSK20231025165050498000000983 
+2023-10-25 16:50:50,522 - common.yaml_util - INFO - 读取extract.yml文件中key为: txnNo 的数据
+2023-10-25 16:50:50,523 - common.yaml_util - INFO - extract.yml文件key值为：txnNo 的值为 TLSK20231025165050498000000983 
+2023-10-25 16:50:50,523 - common.yaml_util - INFO - 读取extract.yml文件中key为: txnNo 的数据
+2023-10-25 16:50:50,524 - common.yaml_util - INFO - extract.yml文件key值为：txnNo 的值为 TLSK20231025165050498000000983 
+2023-10-25 16:50:50,525 - common.yaml_util - INFO - 读取extract.yml文件中key为: txnNo 的数据
+2023-10-25 16:50:50,526 - common.yaml_util - INFO - extract.yml文件key值为：txnNo 的值为 TLSK20231025165050498000000983 
+2023-10-25 16:50:50,526 - common.yaml_util - INFO - 读取extract.yml文件中key为: txnNo 的数据
+2023-10-25 16:50:50,527 - common.yaml_util - INFO - extract.yml文件key值为：txnNo 的值为 TLSK20231025165050498000000983 
+2023-10-25 16:50:50,527 - common.yaml_util - INFO - 写入extract.yml文件内容: {'reqCode': 'B150095237'}
+2023-10-25 16:50:50,528 - common.yaml_util - INFO - 写入extract.yml文件成功
+2023-10-25 16:50:50,528 - common.assert_util - INFO - 断言成功！预期结果：True,实际结果：True
+2023-10-25 16:50:50,529 - testcases.conftest - INFO - ************************test case run completed************************
+2023-10-25 16:50:50,533 - testcases.conftest - INFO - ************************starting run test cases************************
+2023-10-25 16:50:50,534 - common.yaml_util - INFO - 读取extract.yml文件中key为: reqCode 的数据
+2023-10-25 16:50:50,535 - common.yaml_util - INFO - extract.yml文件key值为：reqCode 的值为 B150095237 
+2023-10-25 16:50:50,535 - common.yaml_util - INFO - 读取extract.yml文件中key为: txnNo 的数据
+2023-10-25 16:50:50,536 - common.yaml_util - INFO - extract.yml文件key值为：txnNo 的值为 TLSK20231025165050498000000983 
+2023-10-25 16:50:50,537 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/encrypt
+2023-10-25 16:50:50,537 - common.requests_util - INFO - 请求方式:post
+2023-10-25 16:50:50,547 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 16:50:50,547 - common.requests_util - INFO - 响应结果：{"msg":"ZDBlYmZhNDc0ZmIyY2RlZjZlZjQ5NzdmODE1YmE2YzdmMmU2MmI0OTYxOGU5NTQzNTM3YzA2NWQ0ODM2MGEwNA==","code":200,"data":null}
+2023-10-25 16:50:50,547 - common.requests_util - INFO - sign值：ZDBlYmZhNDc0ZmIyY2RlZjZlZjQ5NzdmODE1YmE2YzdmMmU2MmI0OTYxOGU5NTQzNTM3YzA2NWQ0ODM2MGEwNA==
+2023-10-25 16:50:50,547 - common.requests_util - INFO - 请求头:{'sign': 'ZDBlYmZhNDc0ZmIyY2RlZjZlZjQ5NzdmODE1YmE2YzdmMmU2MmI0OTYxOGU5NTQzNTM3YzA2NWQ0ODM2MGEwNA==', 'channelNo': '19902'}
+2023-10-25 16:50:50,548 - common.requests_util - INFO - data:{'busiLiceNo': '91510100MA69MUBX8Q', 'txnNo': 'TLSK20231025165050498000000983', 'reqCode': 'B150095237'}
+2023-10-25 16:50:50,548 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/applyDetailInfo/query
+2023-10-25 16:50:50,548 - common.requests_util - INFO - 请求方式:post
+2023-10-25 16:50:50,784 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 16:50:50,785 - common.requests_util - INFO - 响应结果：{"msg":"查询完成","code":200,"data":[{"id":0,"txnNo":"TLSK20231025165050498000000983","transCode":"1","receiptAcct":"62148311501315112","receiptAcctName":"吴极客","transAmt":2.44,"transDate":null,"transRemark":"第一笔联动支付","sysFlag":null,"depositBank":"招商银行","depositBankAddr":null,"transStat":"A","errorCode":null,"errorMsg":null,"createTime":null,"updateTime":null},{"id":0,"txnNo":"TLSK20231025165050498000000983","transCode":"2","receiptAcct":"6214835982629402","receiptAcctName":"冯建杨","transAmt":1.00,"transDate":null,"transRemark":"第二笔联动支付","sysFlag":null,"depositBank":"招商银行","depositBankAddr":null,"transStat":"A","errorCode":null,"errorMsg":null,"createTime":null,"updateTime":null},{"id":0,"txnNo":"TLSK20231025165050498000000983","transCode":"3","receiptAcct":"1241255345345345","receiptAcctName":"他行户1","transAmt":0.11,"transDate":null,"transRemark":"第三笔联动支付","sysFlag":null,"depositBank":"102100099996","depositBankAddr":"北京市","transStat":"A","errorCode":null,"errorMsg":null,"createTime":null,"updateTime":null},{"id":0,"txnNo":"TLSK20231025165050498000000983","transCode":"4","receiptAcct":"421455345345345","receiptAcctName":"他行户2","transAmt":1.30,"transDate":null,"transRemark":"第四笔联动支付","sysFlag":null,"depositBank":"102100099996","depositBankAddr":"北京市","transStat":"A","errorCode":null,"errorMsg":null,"createTime":null,"updateTime":null},{"id":0,"txnNo":"TLSK20231025165050498000000983","transCode":"5","receiptAcct":"74124455345345345","receiptAcctName":"他行户2","transAmt":0.70,"transDate":null,"transRemark":"第五笔联动支付","sysFlag":null,"depositBank":"102100099996","depositBankAddr":"北京市","transStat":"A","errorCode":null,"errorMsg":null,"createTime":null,"updateTime":null}]}
+2023-10-25 16:50:50,785 - common.yaml_util - INFO - 读取extract.yml文件中key为: txnNo 的数据
+2023-10-25 16:50:50,786 - common.yaml_util - INFO - extract.yml文件key值为：txnNo 的值为 TLSK20231025165050498000000983 
+2023-10-25 16:50:50,786 - common.assert_util - INFO - 断言成功！预期结果：TLSK20231025165050498000000983,实际结果：TLSK20231025165050498000000983
+2023-10-25 16:50:50,788 - testcases.conftest - INFO - ************************test case run completed************************
+2023-10-25 17:00:18,419 - common.yaml_util - INFO - 读取lddf_busmod_query.yml文件中测试用例数据成功
+2023-10-25 17:00:18,420 - common.yaml_util - INFO - 读取lddf_busmod_acctQuery.yml文件中测试用例数据成功
+2023-10-25 17:00:18,422 - common.yaml_util - INFO - 读取lddf_busmod_authAcctQuery.yml文件中测试用例数据成功
+2023-10-25 17:00:18,424 - common.yaml_util - INFO - 读取lddf_busmod_agreementQuery.yml文件中测试用例数据成功
+2023-10-25 17:00:18,431 - common.yaml_util - INFO - 读取lddf_apply.yml文件中测试用例数据成功
+2023-10-25 17:00:18,432 - common.yaml_util - INFO - 读取lddf_applyInfo_query.yml文件中测试用例数据成功
+2023-10-25 17:00:18,434 - common.yaml_util - INFO - 读取lddf_applyDetailInfo_query.yml文件中测试用例数据成功
+2023-10-25 17:00:18,514 - testcases.conftest - INFO - 清除extract_yaml文件内容
+2023-10-25 17:00:18,514 - common.yaml_util - INFO - 清除extract.yml文件内容成功
+2023-10-25 17:00:18,515 - testcases.conftest - INFO - ************************starting run test cases************************
+2023-10-25 17:00:18,517 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/encrypt
+2023-10-25 17:00:18,517 - common.requests_util - INFO - 请求方式:post
+2023-10-25 17:00:18,528 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 17:00:18,528 - common.requests_util - INFO - 响应结果：{"msg":"ZTA2MDZiMTY3ZjAxNjA3ZmJlNDAzNTU0M2M1NjQ1Mzk0ZTUyYTIxYzE0NDhlNzhiM2M1YjRiMmM4ZmVhMjg3Zg==","code":200,"data":null}
+2023-10-25 17:00:18,529 - common.requests_util - INFO - sign值：ZTA2MDZiMTY3ZjAxNjA3ZmJlNDAzNTU0M2M1NjQ1Mzk0ZTUyYTIxYzE0NDhlNzhiM2M1YjRiMmM4ZmVhMjg3Zg==
+2023-10-25 17:00:18,529 - common.requests_util - INFO - 请求头:{'sign': 'ZTA2MDZiMTY3ZjAxNjA3ZmJlNDAzNTU0M2M1NjQ1Mzk0ZTUyYTIxYzE0NDhlNzhiM2M1YjRiMmM4ZmVhMjg3Zg==', 'channelNo': '19902'}
+2023-10-25 17:00:18,529 - common.requests_util - INFO - data:{'busiLiceNo': '91510100MA69MUBX8Q'}
+2023-10-25 17:00:18,529 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/busmod/query
+2023-10-25 17:00:18,529 - common.requests_util - INFO - 请求方式:post
+2023-10-25 17:00:18,541 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 17:00:18,542 - common.requests_util - INFO - 响应结果：{"msg":"操作成功","code":200,"data":[{"id":102,"supplierCode":"TN2022011200000607","busMod":"00001","remark":null,"createTime":"2023-09-26 16:07:53","updateTime":"2023-09-26 16:07:53","createUserId":"xiongxl","updateUserId":"xiongxl"}]}
+2023-10-25 17:00:18,542 - common.yaml_util - INFO - 写入extract.yml文件内容: {'busMod': '00001'}
+2023-10-25 17:00:18,543 - common.yaml_util - INFO - 写入extract.yml文件成功
+2023-10-25 17:00:18,543 - common.assert_util - INFO - 断言成功！预期结果：00001,实际结果：00001
+2023-10-25 17:00:18,543 - common.assert_util - ERROR - 断言失败！预期结果：TN2022011200000606,实际结果：TN2022011200000607
+2023-10-25 17:00:18,543 - common.assert_util - ERROR - 
+2023-10-25 17:00:18,660 - testcases.conftest - INFO - ************************test case run completed************************
+2023-10-25 17:00:18,663 - testcases.conftest - INFO - ************************starting run test cases************************
+2023-10-25 17:00:18,664 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/encrypt
+2023-10-25 17:00:18,664 - common.requests_util - INFO - 请求方式:post
+2023-10-25 17:00:18,670 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 17:00:18,670 - common.requests_util - INFO - 响应结果：{"msg":"ZTA2MDZiMTY3ZjAxNjA3ZmJlNDAzNTU0M2M1NjQ1Mzk0ZTUyYTIxYzE0NDhlNzhiM2M1YjRiMmM4ZmVhMjg3Zg==","code":200,"data":null}
+2023-10-25 17:00:18,670 - common.requests_util - INFO - sign值：ZTA2MDZiMTY3ZjAxNjA3ZmJlNDAzNTU0M2M1NjQ1Mzk0ZTUyYTIxYzE0NDhlNzhiM2M1YjRiMmM4ZmVhMjg3Zg==
+2023-10-25 17:00:18,670 - common.requests_util - INFO - 请求头:{'sign': 'ZTA2MDZiMTY3ZjAxNjA3ZmJlNDAzNTU0M2M1NjQ1Mzk0ZTUyYTIxYzE0NDhlNzhiM2M1YjRiMmM4ZmVhMjg3Zg==', 'channelNo': '19902'}
+2023-10-25 17:00:18,671 - common.requests_util - INFO - data:{'busiLiceNo': '91510100MA69MUBX8Q'}
+2023-10-25 17:00:18,671 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/busmod/query
+2023-10-25 17:00:18,671 - common.requests_util - INFO - 请求方式:post
+2023-10-25 17:00:18,682 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 17:00:18,682 - common.requests_util - INFO - 响应结果：{"msg":"操作成功","code":200,"data":[{"id":102,"supplierCode":"TN2022011200000607","busMod":"00001","remark":null,"createTime":"2023-09-26 16:07:53","updateTime":"2023-09-26 16:07:53","createUserId":"xiongxl","updateUserId":"xiongxl"}]}
+2023-10-25 17:00:18,683 - common.yaml_util - INFO - 写入extract.yml文件内容: {'busMod': '00001'}
+2023-10-25 17:00:18,683 - common.yaml_util - INFO - 写入extract.yml文件成功
+2023-10-25 17:00:18,683 - common.assert_util - INFO - 断言成功！预期结果：00001,实际结果：00001
+2023-10-25 17:00:18,683 - common.assert_util - ERROR - 断言失败！预期结果：TN2022011200000606,实际结果：TN2022011200000607
+2023-10-25 17:00:18,683 - common.assert_util - ERROR - 
+2023-10-25 17:00:18,692 - testcases.conftest - INFO - ************************test case run completed************************
+2023-10-25 17:00:18,695 - testcases.conftest - INFO - ************************starting run test cases************************
+2023-10-25 17:00:18,696 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/encrypt
+2023-10-25 17:00:18,696 - common.requests_util - INFO - 请求方式:post
+2023-10-25 17:00:18,702 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 17:00:18,702 - common.requests_util - INFO - 响应结果：{"msg":"ZTA2MDZiMTY3ZjAxNjA3ZmJlNDAzNTU0M2M1NjQ1Mzk0ZTUyYTIxYzE0NDhlNzhiM2M1YjRiMmM4ZmVhMjg3Zg==","code":200,"data":null}
+2023-10-25 17:00:18,703 - common.requests_util - INFO - sign值：ZTA2MDZiMTY3ZjAxNjA3ZmJlNDAzNTU0M2M1NjQ1Mzk0ZTUyYTIxYzE0NDhlNzhiM2M1YjRiMmM4ZmVhMjg3Zg==
+2023-10-25 17:00:18,703 - common.requests_util - INFO - 请求头:{'sign': 'ZTA2MDZiMTY3ZjAxNjA3ZmJlNDAzNTU0M2M1NjQ1Mzk0ZTUyYTIxYzE0NDhlNzhiM2M1YjRiMmM4ZmVhMjg3Zg==', 'channelNo': '19902'}
+2023-10-25 17:00:18,703 - common.requests_util - INFO - data:{'busiLiceNo': '91510100MA69MUBX8Q'}
+2023-10-25 17:00:18,703 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/busmod/query
+2023-10-25 17:00:18,703 - common.requests_util - INFO - 请求方式:post
+2023-10-25 17:00:18,714 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 17:00:18,715 - common.requests_util - INFO - 响应结果：{"msg":"操作成功","code":200,"data":[{"id":102,"supplierCode":"TN2022011200000607","busMod":"00001","remark":null,"createTime":"2023-09-26 16:07:53","updateTime":"2023-09-26 16:07:53","createUserId":"xiongxl","updateUserId":"xiongxl"}]}
+2023-10-25 17:00:18,715 - common.yaml_util - INFO - 写入extract.yml文件内容: {'busMod': '00001'}
+2023-10-25 17:00:18,716 - common.yaml_util - INFO - 写入extract.yml文件成功
+2023-10-25 17:00:18,716 - common.assert_util - INFO - 断言成功！预期结果：00001,实际结果：00001
+2023-10-25 17:00:18,716 - common.assert_util - ERROR - 断言失败！预期结果：TN2022011200000606,实际结果：TN2022011200000607
+2023-10-25 17:00:18,716 - common.assert_util - ERROR - 
+2023-10-25 17:00:18,724 - testcases.conftest - INFO - ************************test case run completed************************
+2023-10-25 17:00:18,730 - testcases.conftest - INFO - ************************starting run test cases************************
+2023-10-25 17:00:18,730 - common.yaml_util - INFO - 读取extract.yml文件中key为: busMod 的数据
+2023-10-25 17:00:18,731 - common.yaml_util - INFO - extract.yml文件key值为：busMod 的值为 00001 
+2023-10-25 17:00:18,732 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/encrypt
+2023-10-25 17:00:18,732 - common.requests_util - INFO - 请求方式:post
+2023-10-25 17:00:18,737 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 17:00:18,737 - common.requests_util - INFO - 响应结果：{"msg":"MmM0YTVlYzkyZWI3NmE4NjYwNWRkYjJiZWIxMmQyZmI3MGYzOWNjZjM4YmJlZjEzOTNlOTM5M2NmMDljNDk2OA==","code":200,"data":null}
+2023-10-25 17:00:18,737 - common.requests_util - INFO - sign值：MmM0YTVlYzkyZWI3NmE4NjYwNWRkYjJiZWIxMmQyZmI3MGYzOWNjZjM4YmJlZjEzOTNlOTM5M2NmMDljNDk2OA==
+2023-10-25 17:00:18,737 - common.requests_util - INFO - 请求头:{'sign': 'MmM0YTVlYzkyZWI3NmE4NjYwNWRkYjJiZWIxMmQyZmI3MGYzOWNjZjM4YmJlZjEzOTNlOTM5M2NmMDljNDk2OA==', 'channelNo': '19902'}
+2023-10-25 17:00:18,737 - common.requests_util - INFO - data:{'busiLiceNo': '91510100MA69MUBX8Q', 'busMod': '00001'}
+2023-10-25 17:00:18,738 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/busmod/acctQuery
+2023-10-25 17:00:18,738 - common.requests_util - INFO - 请求方式:post
+2023-10-25 17:00:19,229 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 17:00:19,230 - common.requests_util - INFO - 响应结果：{"msg":"操作成功","code":200,"data":[{"id":0,"supplierCode":"TN2022011200000607","busMod":"00001","bbkCode":"75","bankAcct":"755915678710501","bankAcctName":"企业网银新20161077","currency":"10","acctStat":null,"createTime":null,"updateTime":null}]}
+2023-10-25 17:00:19,230 - common.yaml_util - INFO - 写入extract.yml文件内容: {'bbkCode': '75', 'acct': '755915678710501'}
+2023-10-25 17:00:19,231 - common.yaml_util - INFO - 写入extract.yml文件成功
+2023-10-25 17:00:19,231 - common.assert_util - INFO - 断言成功！预期结果：75,实际结果：75
+2023-10-25 17:00:19,231 - common.assert_util - INFO - 断言成功！预期结果：755915678710501,实际结果：755915678710501
+2023-10-25 17:00:19,231 - common.assert_util - INFO - 断言成功！预期结果：企业网银新20161077,实际结果：企业网银新20161077
+2023-10-25 17:00:19,232 - testcases.conftest - INFO - ************************test case run completed************************
+2023-10-25 17:00:19,237 - testcases.conftest - INFO - ************************starting run test cases************************
+2023-10-25 17:00:19,237 - common.yaml_util - INFO - 读取extract.yml文件中key为: bbkCode 的数据
+2023-10-25 17:00:19,238 - common.yaml_util - INFO - extract.yml文件key值为：bbkCode 的值为 75 
+2023-10-25 17:00:19,238 - common.yaml_util - INFO - 读取extract.yml文件中key为: acct 的数据
+2023-10-25 17:00:19,239 - common.yaml_util - INFO - extract.yml文件key值为：acct 的值为 755915678710501 
+2023-10-25 17:00:19,240 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/encrypt
+2023-10-25 17:00:19,240 - common.requests_util - INFO - 请求方式:post
+2023-10-25 17:00:19,248 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 17:00:19,249 - common.requests_util - INFO - 响应结果：{"msg":"ZTg1NDc1MGQwYjZjZTI4ZjljNzBiYmQ5ZDMxNTFhZjhkZWM5MzU3NzMyMjQ3ZThkMTNkOWM4OTllNjMwNjU4OQ==","code":200,"data":null}
+2023-10-25 17:00:19,249 - common.requests_util - INFO - sign值：ZTg1NDc1MGQwYjZjZTI4ZjljNzBiYmQ5ZDMxNTFhZjhkZWM5MzU3NzMyMjQ3ZThkMTNkOWM4OTllNjMwNjU4OQ==
+2023-10-25 17:00:19,249 - common.requests_util - INFO - 请求头:{'sign': 'ZTg1NDc1MGQwYjZjZTI4ZjljNzBiYmQ5ZDMxNTFhZjhkZWM5MzU3NzMyMjQ3ZThkMTNkOWM4OTllNjMwNjU4OQ==', 'channelNo': '19902'}
+2023-10-25 17:00:19,249 - common.requests_util - INFO - data:{'busiLiceNo': '91510100MA69MUBX8Q', 'bbkCode': '75', 'acct': '755915678710501', 'authType': 1}
+2023-10-25 17:00:19,249 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/busmod/authAcctQuery
+2023-10-25 17:00:19,250 - common.requests_util - INFO - 请求方式:post
+2023-10-25 17:00:19,398 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 17:00:19,398 - common.requests_util - INFO - 响应结果：{"msg":"操作成功","code":200,"data":[{"id":0,"supplierCode":"TN2022011200000607","bbkCode":"75","bankAcct":"755915678710501","authType":1,"authAcct":"755915678710606","authAcctName":"企业网银新20161077","currency":"10","startValtyDate":"20211210","endValtyDate":"99991231","acctStat":"A","lddfMod":"2","createTime":null,"updateTime":null}]}
+2023-10-25 17:00:19,398 - common.yaml_util - INFO - 写入extract.yml文件内容: {'authAcct': '755915678710606'}
+2023-10-25 17:00:19,399 - common.yaml_util - INFO - 写入extract.yml文件成功
+2023-10-25 17:00:19,399 - common.assert_util - INFO - 断言成功！预期结果：操作成功,实际结果：操作成功
+2023-10-25 17:00:19,400 - common.assert_util - INFO - 断言成功！预期结果：200,实际结果：200
+2023-10-25 17:00:19,400 - common.assert_util - INFO - 断言成功！预期结果：755915678710606,实际结果：755915678710606
+2023-10-25 17:00:19,401 - testcases.conftest - INFO - ************************test case run completed************************
+2023-10-25 17:00:19,405 - testcases.conftest - INFO - ************************starting run test cases************************
+2023-10-25 17:00:19,406 - common.yaml_util - INFO - 读取extract.yml文件中key为: bbkCode 的数据
+2023-10-25 17:00:19,407 - common.yaml_util - INFO - extract.yml文件key值为：bbkCode 的值为 75 
+2023-10-25 17:00:19,407 - common.yaml_util - INFO - 读取extract.yml文件中key为: acct 的数据
+2023-10-25 17:00:19,408 - common.yaml_util - INFO - extract.yml文件key值为：acct 的值为 755915678710501 
+2023-10-25 17:00:19,408 - common.yaml_util - INFO - 读取extract.yml文件中key为: authAcct 的数据
+2023-10-25 17:00:19,409 - common.yaml_util - INFO - extract.yml文件key值为：authAcct 的值为 755915678710606 
+2023-10-25 17:00:19,410 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/encrypt
+2023-10-25 17:00:19,410 - common.requests_util - INFO - 请求方式:post
+2023-10-25 17:00:19,415 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 17:00:19,415 - common.requests_util - INFO - 响应结果：{"msg":"NmMzYWE3OTAyNDY5MjAzNGEyNjNlNTdhMjM2MzQ2OThkYjIwZjU2ODAyYWI4YzA2MTdjZjgwNDU3OGE1ZDEzNQ==","code":200,"data":null}
+2023-10-25 17:00:19,415 - common.requests_util - INFO - sign值：NmMzYWE3OTAyNDY5MjAzNGEyNjNlNTdhMjM2MzQ2OThkYjIwZjU2ODAyYWI4YzA2MTdjZjgwNDU3OGE1ZDEzNQ==
+2023-10-25 17:00:19,416 - common.requests_util - INFO - 请求头:{'sign': 'NmMzYWE3OTAyNDY5MjAzNGEyNjNlNTdhMjM2MzQ2OThkYjIwZjU2ODAyYWI4YzA2MTdjZjgwNDU3OGE1ZDEzNQ==', 'channelNo': '19902'}
+2023-10-25 17:00:19,416 - common.requests_util - INFO - data:{'busiLiceNo': '91510100MA69MUBX8Q', 'bbkCode': '75', 'acct': '755915678710501', 'authAcct': '755915678710606'}
+2023-10-25 17:00:19,416 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/busmod/agreementQuery
+2023-10-25 17:00:19,416 - common.requests_util - INFO - 请求方式:post
+2023-10-25 17:00:19,905 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 17:00:19,905 - common.requests_util - INFO - 响应结果：{"msg":"操作成功","code":200,"data":[{"id":0,"supplierCode":"TN2022011200000607","bbkCode":"75","bankAcct":"755915678710501","authAcct":"755915678710606","agreementCode":"AB0980","agreementType":"BYSA","productCode":"AGPAY001","agreementStat":"A","currency":"10","agreementInstitution":"755512","startValtyDate":"20230104","endValtyDate":"20240105","signDate":"20200102","createTime":null,"updateTime":null},{"id":0,"supplierCode":"TN2022011200000607","bbkCode":"75","bankAcct":"755915678710501","authAcct":"755915678710606","agreementCode":"AB0982","agreementType":"BYBK","productCode":"AGPAY999","agreementStat":"A","currency":"10","agreementInstitution":"755512","startValtyDate":"20230104","endValtyDate":"20240105","signDate":"20200102","createTime":null,"updateTime":null},{"id":0,"supplierCode":"TN2022011200000607","bbkCode":"75","bankAcct":"755915678710501","authAcct":"755915678710606","agreementCode":"AB0984","agreementType":"BYTF","productCode":"AGPAY019","agreementStat":"A","currency":"10","agreementInstitution":"755512","startValtyDate":"20230104","endValtyDate":"20240105","signDate":"20200102","createTime":null,"updateTime":null}]}
+2023-10-25 17:00:19,905 - common.assert_util - INFO - 断言成功！预期结果：操作成功,实际结果：操作成功
+2023-10-25 17:00:19,905 - common.assert_util - INFO - 断言成功！预期结果：200,实际结果：200
+2023-10-25 17:00:19,906 - common.assert_util - INFO - 断言成功！预期结果：TN2022011200000607,实际结果：TN2022011200000607
+2023-10-25 17:00:19,907 - testcases.conftest - INFO - ************************test case run completed************************
+2023-10-25 17:00:19,911 - testcases.conftest - INFO - ************************starting run test cases************************
+2023-10-25 17:00:19,911 - common.yaml_util - INFO - 读取extract.yml文件中key为: bbkCode 的数据
+2023-10-25 17:00:19,912 - common.yaml_util - INFO - extract.yml文件key值为：bbkCode 的值为 75 
+2023-10-25 17:00:19,913 - common.yaml_util - INFO - 读取extract.yml文件中key为: acct 的数据
+2023-10-25 17:00:19,914 - common.yaml_util - INFO - extract.yml文件key值为：acct 的值为 755915678710501 
+2023-10-25 17:00:19,914 - common.yaml_util - INFO - 读取extract.yml文件中key为: authAcct 的数据
+2023-10-25 17:00:19,915 - common.yaml_util - INFO - extract.yml文件key值为：authAcct 的值为 755915678710606 
+2023-10-25 17:00:19,915 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/encrypt
+2023-10-25 17:00:19,915 - common.requests_util - INFO - 请求方式:post
+2023-10-25 17:00:19,921 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 17:00:19,922 - common.requests_util - INFO - 响应结果：{"msg":"OWU3Y2FhMTk4NDVkNDA2OGVmYWYxZjU4NzRkYmEwMjcxMzgzM2JkN2UzZDBlYjk1NjBjZTEyZGEzZjU0ODIwOA==","code":200,"data":null}
+2023-10-25 17:00:19,922 - common.requests_util - INFO - sign值：OWU3Y2FhMTk4NDVkNDA2OGVmYWYxZjU4NzRkYmEwMjcxMzgzM2JkN2UzZDBlYjk1NjBjZTEyZGEzZjU0ODIwOA==
+2023-10-25 17:00:19,922 - common.requests_util - INFO - 请求头:{'sign': 'OWU3Y2FhMTk4NDVkNDA2OGVmYWYxZjU4NzRkYmEwMjcxMzgzM2JkN2UzZDBlYjk1NjBjZTEyZGEzZjU0ODIwOA==', 'channelNo': '19902'}
+2023-10-25 17:00:19,922 - common.requests_util - INFO - data:{'busiLiceNo': '91510100MA69MUBX8Q', 'busMod': '00001', 'totalAmt': 5.55, 'transCnt': 5, 'agreementCode': 'AB0980', 'agreementType': 'BYSA', 'currency': '10', 'bbkCode': '75', 'acct': '755915678710501', 'authAcct': '755915678710606', 'transRemark': '联动代发测试', 'msgContentType': '9', 'expectDate': '20231025', 'expectTime': '235959', 'detail': [{'receiptAcct': '62148311501315112', 'receiptAcctName': '吴极客', 'transAmt': 2.44, 'transRemark': '第一笔联动支付', 'sysFlag': 'Y'}, {'receiptAcct': '6214835982629402', 'receiptAcctName': '冯建杨', 'transAmt': 1, 'transRemark': '第二笔联动支付', 'sysFlag': 'Y'}, {'receiptAcct': '1241255345345345', 'receiptAcctName': '他行户1', 'transAmt': 0.11, 'transRemark': '第三笔联动支付', 'sysFlag': 'N', 'depositBank': '102100099996', 'depositBankAddr': '北京市'}, {'receiptAcct': '421455345345345', 'receiptAcctName': '他行户2', 'transAmt': 1.3, 'transRemark': '第四笔联动支付', 'sysFlag': 'N', 'depositBank': '102100099996', 'depositBankAddr': '北京市'}, {'receiptAcct': '74124455345345345', 'receiptAcctName': '他行户2', 'transAmt': 0.7, 'transRemark': '第五笔联动支付', 'sysFlag': 'N', 'depositBank': '102100099996', 'depositBankAddr': '北京市'}]}
+2023-10-25 17:00:19,922 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/apply
+2023-10-25 17:00:19,923 - common.requests_util - INFO - 请求方式:post
+2023-10-25 17:00:20,930 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 17:00:20,930 - common.requests_util - INFO - 响应结果：{"msg":"经办发起完成","code":200,"data":{"txnNo":"TLSK20231025170020995000000984","reqCode":"B150095238","reqStat":"NTE"}}
+2023-10-25 17:00:20,931 - common.yaml_util - INFO - 写入extract.yml文件内容: {'txnNo': 'TLSK20231025170020995000000984'}
+2023-10-25 17:00:20,932 - common.yaml_util - INFO - 写入extract.yml文件成功
+2023-10-25 17:00:20,932 - common.assert_util - INFO - 断言成功！预期结果：经办发起完成,实际结果：经办发起完成
+2023-10-25 17:00:20,933 - testcases.conftest - INFO - ************************test case run completed************************
+2023-10-25 17:00:20,937 - testcases.conftest - INFO - ************************starting run test cases************************
+2023-10-25 17:00:20,938 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/encrypt
+2023-10-25 17:00:20,938 - common.requests_util - INFO - 请求方式:post
+2023-10-25 17:00:20,944 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 17:00:20,945 - common.requests_util - INFO - 响应结果：{"msg":"Nzk1MzI3NWYwOTM0MGY2MjM4ZDhiNzcwM2E3NWYwMmZmNzViMmRhZjQ1ZTQ3ZGRlYjliZmNjNDRkYjBjYmRlOA==","code":200,"data":null}
+2023-10-25 17:00:20,945 - common.requests_util - INFO - sign值：Nzk1MzI3NWYwOTM0MGY2MjM4ZDhiNzcwM2E3NWYwMmZmNzViMmRhZjQ1ZTQ3ZGRlYjliZmNjNDRkYjBjYmRlOA==
+2023-10-25 17:00:20,945 - common.requests_util - INFO - 请求头:{'sign': 'Nzk1MzI3NWYwOTM0MGY2MjM4ZDhiNzcwM2E3NWYwMmZmNzViMmRhZjQ1ZTQ3ZGRlYjliZmNjNDRkYjBjYmRlOA==', 'channelNo': '19902'}
+2023-10-25 17:00:20,945 - common.requests_util - INFO - data:{'busiLiceNo': '91510100MA69MUBX8Q', 'dateType': 'A', 'startDate': '20231025', 'endDate': '20231025'}
+2023-10-25 17:00:20,945 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/applyInfo/query
+2023-10-25 17:00:20,945 - common.requests_util - INFO - 请求方式:post
+2023-10-25 17:00:21,371 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 17:00:21,371 - common.requests_util - INFO - 响应结果：{"msg":"查询完成","code":200,"data":[{"id":0,"txnNo":"TLSK20231025091847481000000976","supplierCode":"TN2022011200000607","busCode":"N39010","busMod":"00001","totalAmt":5.55,"transCnt":5,"successAmt":0.00,"successCnt":0,"agreementCode":"AB0980","agreementType":"BYSA","currency":"10","currencyType":null,"bbkCode":null,"bankAcct":"755915678710501","authAcct":"755915678710606","transRemark":"联动代发测试","msgContentType":"9","expectDate":"20231025","expectTime":"235959","operateDate":"20231025","nlaFlag":"N","reqCode":"B150095181","reqStat":"NTE","reqFlag":null,"errorCode":null,"errorMsg":null,"rtbFlag":null,"createTime":null,"updateTime":null,"createUserId":null,"updateUserId":null},{"id":0,"txnNo":"TLSK20231025091004136000000975","supplierCode":"TN2022011200000607","busCode":"N39010","busMod":"00001","totalAmt":5.55,"transCnt":5,"successAmt":0.00,"successCnt":0,"agreementCode":"AB0980","agreementType":"BYSA","currency":"10","currencyType":null,"bbkCode":null,"bankAcct":"755915678710501","authAcct":"755915678710606","transRemark":"联动代发测试","msgContentType":"9","expectDate":"20231025","expectTime":"235959","operateDate":"20231025","nlaFlag":"N","reqCode":"B150095184","reqStat":"NTE","reqFlag":null,"errorCode":null,"errorMsg":null,"rtbFlag":null,"createTime":null,"updateTime":null,"createUserId":null,"updateUserId":null},{"id":0,"txnNo":"TLSK20231025093503815000000977","supplierCode":"TN2022011200000607","busCode":"N39010","busMod":"00001","totalAmt":5.55,"transCnt":5,"successAmt":0.00,"successCnt":0,"agreementCode":"AB0980","agreementType":"BYSA","currency":"10","currencyType":null,"bbkCode":null,"bankAcct":"755915678710501","authAcct":"755915678710606","transRemark":"联动代发测试","msgContentType":"9","expectDate":"20231025","expectTime":"235959","operateDate":"20231025","nlaFlag":"N","reqCode":"B150095186","reqStat":"NTE","reqFlag":null,"errorCode":null,"errorMsg":null,"rtbFlag":null,"createTime":null,"updateTime":null,"createUserId":null,"updateUserId":null},{"id":0,"txnNo":"TLSK20231025095023937000000978","supplierCode":"TN2022011200000607","busCode":"N39010","busMod":"00001","totalAmt":5.55,"transCnt":5,"successAmt":0.00,"successCnt":0,"agreementCode":"AB0980","agreementType":"BYSA","currency":"10","currencyType":null,"bbkCode":null,"bankAcct":"755915678710501","authAcct":"755915678710606","transRemark":"联动代发测试","msgContentType":"9","expectDate":"20231025","expectTime":"235959","operateDate":"20231025","nlaFlag":"N","reqCode":"B150095187","reqStat":"NTE","reqFlag":null,"errorCode":null,"errorMsg":null,"rtbFlag":null,"createTime":null,"updateTime":null,"createUserId":null,"updateUserId":null},{"id":0,"txnNo":"TLSK20231025142125401000000980","supplierCode":"TN2022011200000607","busCode":"N39010","busMod":"00001","totalAmt":5.55,"transCnt":5,"successAmt":0.00,"successCnt":0,"agreementCode":"AB0980","agreementType":"BYSA","currency":"10","currencyType":null,"bbkCode":null,"bankAcct":"755915678710501","authAcct":"755915678710606","transRemark":"联动代发测试","msgContentType":"9","expectDate":"20231025","expectTime":"235959","operateDate":"20231025","nlaFlag":"N","reqCode":"B150095212","reqStat":"NTE","reqFlag":null,"errorCode":null,"errorMsg":null,"rtbFlag":null,"createTime":null,"updateTime":null,"createUserId":null,"updateUserId":null},{"id":0,"txnNo":"TLSK20231025164909599000000982","supplierCode":"TN2022011200000607","busCode":"N39010","busMod":"00001","totalAmt":5.55,"transCnt":5,"successAmt":0.00,"successCnt":0,"agreementCode":"AB0980","agreementType":"BYSA","currency":"10","currencyType":null,"bbkCode":null,"bankAcct":"755915678710501","authAcct":"755915678710606","transRemark":"联动代发测试","msgContentType":"9","expectDate":"20231025","expectTime":"235959","operateDate":"20231025","nlaFlag":"N","reqCode":"B150095231","reqStat":"NTE","reqFlag":null,"errorCode":null,"errorMsg":null,"rtbFlag":null,"createTime":null,"updateTime":null,"createUserId":null,"updateUserId":null},{"id":0,"txnNo":"TLSK20231025165050498000000983","supplierCode":"TN2022011200000607","busCode":"N39010","busMod":"00001","totalAmt":5.55,"transCnt":5,"successAmt":0.00,"successCnt":0,"agreementCode":"AB0980","agreementType":"BYSA","currency":"10","currencyType":null,"bbkCode":null,"bankAcct":"755915678710501","authAcct":"755915678710606","transRemark":"联动代发测试","msgContentType":"9","expectDate":"20231025","expectTime":"235959","operateDate":"20231025","nlaFlag":"N","reqCode":"B150095237","reqStat":"NTE","reqFlag":null,"errorCode":null,"errorMsg":null,"rtbFlag":null,"createTime":null,"updateTime":null,"createUserId":null,"updateUserId":null},{"id":0,"txnNo":"TLSK20231025170020995000000984","supplierCode":"TN2022011200000607","busCode":"N39010","busMod":"00001","totalAmt":5.55,"transCnt":5,"successAmt":0.00,"successCnt":0,"agreementCode":"AB0980","agreementType":"BYSA","currency":"10","currencyType":null,"bbkCode":null,"bankAcct":"755915678710501","authAcct":"755915678710606","transRemark":"联动代发测试","msgContentType":"9","expectDate":"20231025","expectTime":"235959","operateDate":"20231025","nlaFlag":"N","reqCode":"B150095238","reqStat":"NTE","reqFlag":null,"errorCode":null,"errorMsg":null,"rtbFlag":null,"createTime":null,"updateTime":null,"createUserId":null,"updateUserId":null}]}
+2023-10-25 17:00:21,382 - common.yaml_util - INFO - 读取extract.yml文件中key为: txnNo 的数据
+2023-10-25 17:00:21,383 - common.yaml_util - INFO - extract.yml文件key值为：txnNo 的值为 TLSK20231025170020995000000984 
+2023-10-25 17:00:21,383 - common.yaml_util - INFO - 写入extract.yml文件内容: {'reqCode': 'B150095238'}
+2023-10-25 17:00:21,384 - common.yaml_util - INFO - 写入extract.yml文件成功
+2023-10-25 17:00:21,384 - common.assert_util - INFO - 断言成功！预期结果：True,实际结果：True
+2023-10-25 17:00:21,385 - testcases.conftest - INFO - ************************test case run completed************************
+2023-10-25 17:00:21,389 - testcases.conftest - INFO - ************************starting run test cases************************
+2023-10-25 17:00:21,391 - common.yaml_util - INFO - 读取extract.yml文件中key为: reqCode 的数据
+2023-10-25 17:00:21,392 - common.yaml_util - INFO - extract.yml文件key值为：reqCode 的值为 B150095238 
+2023-10-25 17:00:21,392 - common.yaml_util - INFO - 读取extract.yml文件中key为: txnNo 的数据
+2023-10-25 17:00:21,393 - common.yaml_util - INFO - extract.yml文件key值为：txnNo 的值为 TLSK20231025170020995000000984 
+2023-10-25 17:00:21,394 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/encrypt
+2023-10-25 17:00:21,394 - common.requests_util - INFO - 请求方式:post
+2023-10-25 17:00:21,400 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 17:00:21,400 - common.requests_util - INFO - 响应结果：{"msg":"MjM2NDUzYWNjZmY3MTZhN2Q5NzBjOTYyM2QxZjgxNDA4NTMyNTQ1MWY4NTBkMzdhOWM3N2ZiYTdlMGZmZTZmNA==","code":200,"data":null}
+2023-10-25 17:00:21,401 - common.requests_util - INFO - sign值：MjM2NDUzYWNjZmY3MTZhN2Q5NzBjOTYyM2QxZjgxNDA4NTMyNTQ1MWY4NTBkMzdhOWM3N2ZiYTdlMGZmZTZmNA==
+2023-10-25 17:00:21,401 - common.requests_util - INFO - 请求头:{'sign': 'MjM2NDUzYWNjZmY3MTZhN2Q5NzBjOTYyM2QxZjgxNDA4NTMyNTQ1MWY4NTBkMzdhOWM3N2ZiYTdlMGZmZTZmNA==', 'channelNo': '19902'}
+2023-10-25 17:00:21,401 - common.requests_util - INFO - data:{'busiLiceNo': '91510100MA69MUBX8Q', 'txnNo': 'TLSK20231025170020995000000984', 'reqCode': 'B150095238'}
+2023-10-25 17:00:21,401 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/applyDetailInfo/query
+2023-10-25 17:00:21,401 - common.requests_util - INFO - 请求方式:post
+2023-10-25 17:00:21,612 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 17:00:21,612 - common.requests_util - INFO - 响应结果：{"msg":"查询完成","code":200,"data":[{"id":0,"txnNo":"TLSK20231025170020995000000984","transCode":"1","receiptAcct":"62148311501315112","receiptAcctName":"吴极客","transAmt":2.44,"transDate":null,"transRemark":"第一笔联动支付","sysFlag":null,"depositBank":"招商银行","depositBankAddr":null,"transStat":"A","errorCode":null,"errorMsg":null,"createTime":null,"updateTime":null},{"id":0,"txnNo":"TLSK20231025170020995000000984","transCode":"2","receiptAcct":"6214835982629402","receiptAcctName":"冯建杨","transAmt":1.00,"transDate":null,"transRemark":"第二笔联动支付","sysFlag":null,"depositBank":"招商银行","depositBankAddr":null,"transStat":"A","errorCode":null,"errorMsg":null,"createTime":null,"updateTime":null},{"id":0,"txnNo":"TLSK20231025170020995000000984","transCode":"3","receiptAcct":"1241255345345345","receiptAcctName":"他行户1","transAmt":0.11,"transDate":null,"transRemark":"第三笔联动支付","sysFlag":null,"depositBank":"102100099996","depositBankAddr":"北京市","transStat":"A","errorCode":null,"errorMsg":null,"createTime":null,"updateTime":null},{"id":0,"txnNo":"TLSK20231025170020995000000984","transCode":"4","receiptAcct":"421455345345345","receiptAcctName":"他行户2","transAmt":1.30,"transDate":null,"transRemark":"第四笔联动支付","sysFlag":null,"depositBank":"102100099996","depositBankAddr":"北京市","transStat":"A","errorCode":null,"errorMsg":null,"createTime":null,"updateTime":null},{"id":0,"txnNo":"TLSK20231025170020995000000984","transCode":"5","receiptAcct":"74124455345345345","receiptAcctName":"他行户2","transAmt":0.70,"transDate":null,"transRemark":"第五笔联动支付","sysFlag":null,"depositBank":"102100099996","depositBankAddr":"北京市","transStat":"A","errorCode":null,"errorMsg":null,"createTime":null,"updateTime":null}]}
+2023-10-25 17:00:21,612 - common.yaml_util - INFO - 读取extract.yml文件中key为: txnNo 的数据
+2023-10-25 17:00:21,614 - common.yaml_util - INFO - extract.yml文件key值为：txnNo 的值为 TLSK20231025170020995000000984 
+2023-10-25 17:00:21,614 - common.assert_util - INFO - 断言成功！预期结果：TLSK20231025170020995000000984,实际结果：TLSK20231025170020995000000984
+2023-10-25 17:00:21,615 - testcases.conftest - INFO - ************************test case run completed************************
+2023-10-25 17:07:30,532 - common.yaml_util - INFO - 读取lddf_busmod_query.yml文件中测试用例数据成功
+2023-10-25 17:07:30,534 - common.yaml_util - INFO - 读取lddf_busmod_acctQuery.yml文件中测试用例数据成功
+2023-10-25 17:07:30,536 - common.yaml_util - INFO - 读取lddf_busmod_authAcctQuery.yml文件中测试用例数据成功
+2023-10-25 17:07:30,538 - common.yaml_util - INFO - 读取lddf_busmod_agreementQuery.yml文件中测试用例数据成功
+2023-10-25 17:07:30,544 - common.yaml_util - INFO - 读取lddf_apply.yml文件中测试用例数据成功
+2023-10-25 17:07:30,545 - common.yaml_util - INFO - 读取lddf_applyInfo_query.yml文件中测试用例数据成功
+2023-10-25 17:07:30,547 - common.yaml_util - INFO - 读取lddf_applyDetailInfo_query.yml文件中测试用例数据成功
+2023-10-25 17:07:30,624 - testcases.conftest - INFO - 清除extract_yaml文件内容
+2023-10-25 17:07:30,625 - common.yaml_util - INFO - 清除extract.yml文件内容成功
+2023-10-25 17:07:30,625 - testcases.conftest - INFO - ************************starting run test cases************************
+2023-10-25 17:07:30,627 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/encrypt
+2023-10-25 17:07:30,627 - common.requests_util - INFO - 请求方式:post
+2023-10-25 17:07:30,640 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 17:07:30,640 - common.requests_util - INFO - 响应结果：{"msg":"ZTA2MDZiMTY3ZjAxNjA3ZmJlNDAzNTU0M2M1NjQ1Mzk0ZTUyYTIxYzE0NDhlNzhiM2M1YjRiMmM4ZmVhMjg3Zg==","code":200,"data":null}
+2023-10-25 17:07:30,641 - common.requests_util - INFO - sign值：ZTA2MDZiMTY3ZjAxNjA3ZmJlNDAzNTU0M2M1NjQ1Mzk0ZTUyYTIxYzE0NDhlNzhiM2M1YjRiMmM4ZmVhMjg3Zg==
+2023-10-25 17:07:30,641 - common.requests_util - INFO - 请求头:{'sign': 'ZTA2MDZiMTY3ZjAxNjA3ZmJlNDAzNTU0M2M1NjQ1Mzk0ZTUyYTIxYzE0NDhlNzhiM2M1YjRiMmM4ZmVhMjg3Zg==', 'channelNo': '19902'}
+2023-10-25 17:07:30,641 - common.requests_util - INFO - data:{'busiLiceNo': '91510100MA69MUBX8Q'}
+2023-10-25 17:07:30,641 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/busmod/query
+2023-10-25 17:07:30,641 - common.requests_util - INFO - 请求方式:post
+2023-10-25 17:07:30,675 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 17:07:30,675 - common.requests_util - INFO - 响应结果：{"msg":"操作成功","code":200,"data":[{"id":102,"supplierCode":"TN2022011200000607","busMod":"00001","remark":null,"createTime":"2023-09-26 16:07:53","updateTime":"2023-09-26 16:07:53","createUserId":"xiongxl","updateUserId":"xiongxl"}]}
+2023-10-25 17:07:30,676 - common.yaml_util - INFO - 写入extract.yml文件内容: {'busMod': '00001'}
+2023-10-25 17:07:30,678 - common.yaml_util - INFO - 写入extract.yml文件成功
+2023-10-25 17:07:30,678 - common.assert_util - INFO - 断言成功！预期结果：00001,实际结果：00001
+2023-10-25 17:07:30,678 - common.assert_util - ERROR - 断言失败！预期结果：TN2022011200000606,实际结果：TN2022011200000607
+2023-10-25 17:07:30,678 - common.assert_util - ERROR - 
+2023-10-25 17:07:30,815 - testcases.conftest - INFO - ************************test case run completed************************
+2023-10-25 17:07:30,819 - testcases.conftest - INFO - ************************starting run test cases************************
+2023-10-25 17:07:30,820 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/encrypt
+2023-10-25 17:07:30,820 - common.requests_util - INFO - 请求方式:post
+2023-10-25 17:07:30,825 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 17:07:30,825 - common.requests_util - INFO - 响应结果：{"msg":"ZTA2MDZiMTY3ZjAxNjA3ZmJlNDAzNTU0M2M1NjQ1Mzk0ZTUyYTIxYzE0NDhlNzhiM2M1YjRiMmM4ZmVhMjg3Zg==","code":200,"data":null}
+2023-10-25 17:07:30,825 - common.requests_util - INFO - sign值：ZTA2MDZiMTY3ZjAxNjA3ZmJlNDAzNTU0M2M1NjQ1Mzk0ZTUyYTIxYzE0NDhlNzhiM2M1YjRiMmM4ZmVhMjg3Zg==
+2023-10-25 17:07:30,825 - common.requests_util - INFO - 请求头:{'sign': 'ZTA2MDZiMTY3ZjAxNjA3ZmJlNDAzNTU0M2M1NjQ1Mzk0ZTUyYTIxYzE0NDhlNzhiM2M1YjRiMmM4ZmVhMjg3Zg==', 'channelNo': '19902'}
+2023-10-25 17:07:30,826 - common.requests_util - INFO - data:{'busiLiceNo': '91510100MA69MUBX8Q'}
+2023-10-25 17:07:30,826 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/busmod/query
+2023-10-25 17:07:30,826 - common.requests_util - INFO - 请求方式:post
+2023-10-25 17:07:30,836 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 17:07:30,836 - common.requests_util - INFO - 响应结果：{"msg":"操作成功","code":200,"data":[{"id":102,"supplierCode":"TN2022011200000607","busMod":"00001","remark":null,"createTime":"2023-09-26 16:07:53","updateTime":"2023-09-26 16:07:53","createUserId":"xiongxl","updateUserId":"xiongxl"}]}
+2023-10-25 17:07:30,836 - common.yaml_util - INFO - 写入extract.yml文件内容: {'busMod': '00001'}
+2023-10-25 17:07:30,837 - common.yaml_util - INFO - 写入extract.yml文件成功
+2023-10-25 17:07:30,837 - common.assert_util - INFO - 断言成功！预期结果：00001,实际结果：00001
+2023-10-25 17:07:30,837 - common.assert_util - ERROR - 断言失败！预期结果：TN2022011200000606,实际结果：TN2022011200000607
+2023-10-25 17:07:30,837 - common.assert_util - ERROR - 
+2023-10-25 17:07:30,846 - testcases.conftest - INFO - ************************test case run completed************************
+2023-10-25 17:07:30,850 - testcases.conftest - INFO - ************************starting run test cases************************
+2023-10-25 17:07:30,851 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/encrypt
+2023-10-25 17:07:30,851 - common.requests_util - INFO - 请求方式:post
+2023-10-25 17:07:30,859 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 17:07:30,860 - common.requests_util - INFO - 响应结果：{"msg":"ZTA2MDZiMTY3ZjAxNjA3ZmJlNDAzNTU0M2M1NjQ1Mzk0ZTUyYTIxYzE0NDhlNzhiM2M1YjRiMmM4ZmVhMjg3Zg==","code":200,"data":null}
+2023-10-25 17:07:30,860 - common.requests_util - INFO - sign值：ZTA2MDZiMTY3ZjAxNjA3ZmJlNDAzNTU0M2M1NjQ1Mzk0ZTUyYTIxYzE0NDhlNzhiM2M1YjRiMmM4ZmVhMjg3Zg==
+2023-10-25 17:07:30,860 - common.requests_util - INFO - 请求头:{'sign': 'ZTA2MDZiMTY3ZjAxNjA3ZmJlNDAzNTU0M2M1NjQ1Mzk0ZTUyYTIxYzE0NDhlNzhiM2M1YjRiMmM4ZmVhMjg3Zg==', 'channelNo': '19902'}
+2023-10-25 17:07:30,860 - common.requests_util - INFO - data:{'busiLiceNo': '91510100MA69MUBX8Q'}
+2023-10-25 17:07:30,860 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/busmod/query
+2023-10-25 17:07:30,861 - common.requests_util - INFO - 请求方式:post
+2023-10-25 17:07:30,871 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 17:07:30,871 - common.requests_util - INFO - 响应结果：{"msg":"操作成功","code":200,"data":[{"id":102,"supplierCode":"TN2022011200000607","busMod":"00001","remark":null,"createTime":"2023-09-26 16:07:53","updateTime":"2023-09-26 16:07:53","createUserId":"xiongxl","updateUserId":"xiongxl"}]}
+2023-10-25 17:07:30,871 - common.yaml_util - INFO - 写入extract.yml文件内容: {'busMod': '00001'}
+2023-10-25 17:07:30,872 - common.yaml_util - INFO - 写入extract.yml文件成功
+2023-10-25 17:07:30,872 - common.assert_util - INFO - 断言成功！预期结果：00001,实际结果：00001
+2023-10-25 17:07:30,872 - common.assert_util - ERROR - 断言失败！预期结果：TN2022011200000606,实际结果：TN2022011200000607
+2023-10-25 17:07:30,872 - common.assert_util - ERROR - 
+2023-10-25 17:07:30,880 - testcases.conftest - INFO - ************************test case run completed************************
+2023-10-25 17:10:14,486 - common.yaml_util - INFO - 读取lddf_busmod_query.yml文件中测试用例数据成功
+2023-10-25 17:10:14,488 - common.yaml_util - INFO - 读取lddf_busmod_acctQuery.yml文件中测试用例数据成功
+2023-10-25 17:10:14,490 - common.yaml_util - INFO - 读取lddf_busmod_authAcctQuery.yml文件中测试用例数据成功
+2023-10-25 17:10:14,492 - common.yaml_util - INFO - 读取lddf_busmod_agreementQuery.yml文件中测试用例数据成功
+2023-10-25 17:10:14,498 - common.yaml_util - INFO - 读取lddf_apply.yml文件中测试用例数据成功
+2023-10-25 17:10:14,500 - common.yaml_util - INFO - 读取lddf_applyInfo_query.yml文件中测试用例数据成功
+2023-10-25 17:10:14,502 - common.yaml_util - INFO - 读取lddf_applyDetailInfo_query.yml文件中测试用例数据成功
+2023-10-25 17:10:14,583 - testcases.conftest - INFO - 清除extract_yaml文件内容
+2023-10-25 17:10:14,584 - common.yaml_util - INFO - 清除extract.yml文件内容成功
+2023-10-25 17:10:14,584 - testcases.conftest - INFO - ************************starting run test cases************************
+2023-10-25 17:10:14,586 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/encrypt
+2023-10-25 17:10:14,586 - common.requests_util - INFO - 请求方式:post
+2023-10-25 17:10:14,599 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 17:10:14,600 - common.requests_util - INFO - 响应结果：{"msg":"ZTA2MDZiMTY3ZjAxNjA3ZmJlNDAzNTU0M2M1NjQ1Mzk0ZTUyYTIxYzE0NDhlNzhiM2M1YjRiMmM4ZmVhMjg3Zg==","code":200,"data":null}
+2023-10-25 17:10:14,600 - common.requests_util - INFO - sign值：ZTA2MDZiMTY3ZjAxNjA3ZmJlNDAzNTU0M2M1NjQ1Mzk0ZTUyYTIxYzE0NDhlNzhiM2M1YjRiMmM4ZmVhMjg3Zg==
+2023-10-25 17:10:14,600 - common.requests_util - INFO - 请求头:{'sign': 'ZTA2MDZiMTY3ZjAxNjA3ZmJlNDAzNTU0M2M1NjQ1Mzk0ZTUyYTIxYzE0NDhlNzhiM2M1YjRiMmM4ZmVhMjg3Zg==', 'channelNo': '19902'}
+2023-10-25 17:10:14,600 - common.requests_util - INFO - data:{'busiLiceNo': '91510100MA69MUBX8Q'}
+2023-10-25 17:10:14,600 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/busmod/query
+2023-10-25 17:10:14,600 - common.requests_util - INFO - 请求方式:post
+2023-10-25 17:10:14,614 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 17:10:14,614 - common.requests_util - INFO - 响应结果：{"msg":"操作成功","code":200,"data":[{"id":102,"supplierCode":"TN2022011200000607","busMod":"00001","remark":null,"createTime":"2023-09-26 16:07:53","updateTime":"2023-09-26 16:07:53","createUserId":"xiongxl","updateUserId":"xiongxl"}]}
+2023-10-25 17:10:14,614 - common.yaml_util - INFO - 写入extract.yml文件内容: {'busMod': '00001'}
+2023-10-25 17:10:14,615 - common.yaml_util - INFO - 写入extract.yml文件成功
+2023-10-25 17:10:14,615 - common.assert_util - INFO - 断言成功！预期结果：00001,实际结果：00001
+2023-10-25 17:10:14,616 - common.assert_util - ERROR - 断言失败！预期结果：TN2022011200000606,实际结果：TN2022011200000607
+Traceback (most recent call last):
+  File "D:\interface_test\common\assert_util.py", line 21, in assertEqual
+    assert expectation == actual
+AssertionError
+2023-10-25 17:10:14,736 - testcases.conftest - INFO - ************************test case run completed************************
+2023-10-25 17:10:14,739 - testcases.conftest - INFO - ************************starting run test cases************************
+2023-10-25 17:10:14,740 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/encrypt
+2023-10-25 17:10:14,740 - common.requests_util - INFO - 请求方式:post
+2023-10-25 17:10:14,745 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 17:10:14,746 - common.requests_util - INFO - 响应结果：{"msg":"ZTA2MDZiMTY3ZjAxNjA3ZmJlNDAzNTU0M2M1NjQ1Mzk0ZTUyYTIxYzE0NDhlNzhiM2M1YjRiMmM4ZmVhMjg3Zg==","code":200,"data":null}
+2023-10-25 17:10:14,746 - common.requests_util - INFO - sign值：ZTA2MDZiMTY3ZjAxNjA3ZmJlNDAzNTU0M2M1NjQ1Mzk0ZTUyYTIxYzE0NDhlNzhiM2M1YjRiMmM4ZmVhMjg3Zg==
+2023-10-25 17:10:14,746 - common.requests_util - INFO - 请求头:{'sign': 'ZTA2MDZiMTY3ZjAxNjA3ZmJlNDAzNTU0M2M1NjQ1Mzk0ZTUyYTIxYzE0NDhlNzhiM2M1YjRiMmM4ZmVhMjg3Zg==', 'channelNo': '19902'}
+2023-10-25 17:10:14,746 - common.requests_util - INFO - data:{'busiLiceNo': '91510100MA69MUBX8Q'}
+2023-10-25 17:10:14,746 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/busmod/query
+2023-10-25 17:10:14,746 - common.requests_util - INFO - 请求方式:post
+2023-10-25 17:10:14,760 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 17:10:14,760 - common.requests_util - INFO - 响应结果：{"msg":"操作成功","code":200,"data":[{"id":102,"supplierCode":"TN2022011200000607","busMod":"00001","remark":null,"createTime":"2023-09-26 16:07:53","updateTime":"2023-09-26 16:07:53","createUserId":"xiongxl","updateUserId":"xiongxl"}]}
+2023-10-25 17:10:14,760 - common.yaml_util - INFO - 写入extract.yml文件内容: {'busMod': '00001'}
+2023-10-25 17:10:14,761 - common.yaml_util - INFO - 写入extract.yml文件成功
+2023-10-25 17:10:14,761 - common.assert_util - INFO - 断言成功！预期结果：00001,实际结果：00001
+2023-10-25 17:10:14,761 - common.assert_util - ERROR - 断言失败！预期结果：TN2022011200000606,实际结果：TN2022011200000607
+Traceback (most recent call last):
+  File "D:\interface_test\common\assert_util.py", line 21, in assertEqual
+    assert expectation == actual
+AssertionError
+2023-10-25 17:10:14,770 - testcases.conftest - INFO - ************************test case run completed************************
+2023-10-25 17:10:14,776 - testcases.conftest - INFO - ************************starting run test cases************************
+2023-10-25 17:10:14,777 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/encrypt
+2023-10-25 17:10:14,777 - common.requests_util - INFO - 请求方式:post
+2023-10-25 17:10:14,785 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 17:10:14,785 - common.requests_util - INFO - 响应结果：{"msg":"ZTA2MDZiMTY3ZjAxNjA3ZmJlNDAzNTU0M2M1NjQ1Mzk0ZTUyYTIxYzE0NDhlNzhiM2M1YjRiMmM4ZmVhMjg3Zg==","code":200,"data":null}
+2023-10-25 17:10:14,786 - common.requests_util - INFO - sign值：ZTA2MDZiMTY3ZjAxNjA3ZmJlNDAzNTU0M2M1NjQ1Mzk0ZTUyYTIxYzE0NDhlNzhiM2M1YjRiMmM4ZmVhMjg3Zg==
+2023-10-25 17:10:14,786 - common.requests_util - INFO - 请求头:{'sign': 'ZTA2MDZiMTY3ZjAxNjA3ZmJlNDAzNTU0M2M1NjQ1Mzk0ZTUyYTIxYzE0NDhlNzhiM2M1YjRiMmM4ZmVhMjg3Zg==', 'channelNo': '19902'}
+2023-10-25 17:10:14,786 - common.requests_util - INFO - data:{'busiLiceNo': '91510100MA69MUBX8Q'}
+2023-10-25 17:10:14,786 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/busmod/query
+2023-10-25 17:10:14,787 - common.requests_util - INFO - 请求方式:post
+2023-10-25 17:10:14,803 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 17:10:14,803 - common.requests_util - INFO - 响应结果：{"msg":"操作成功","code":200,"data":[{"id":102,"supplierCode":"TN2022011200000607","busMod":"00001","remark":null,"createTime":"2023-09-26 16:07:53","updateTime":"2023-09-26 16:07:53","createUserId":"xiongxl","updateUserId":"xiongxl"}]}
+2023-10-25 17:10:14,804 - common.yaml_util - INFO - 写入extract.yml文件内容: {'busMod': '00001'}
+2023-10-25 17:10:14,805 - common.yaml_util - INFO - 写入extract.yml文件成功
+2023-10-25 17:10:14,806 - common.assert_util - INFO - 断言成功！预期结果：00001,实际结果：00001
+2023-10-25 17:10:14,806 - common.assert_util - ERROR - 断言失败！预期结果：TN2022011200000606,实际结果：TN2022011200000607
+Traceback (most recent call last):
+  File "D:\interface_test\common\assert_util.py", line 21, in assertEqual
+    assert expectation == actual
+AssertionError
+2023-10-25 17:10:14,815 - testcases.conftest - INFO - ************************test case run completed************************
+2023-10-25 17:11:27,673 - common.yaml_util - INFO - 读取lddf_busmod_query.yml文件中测试用例数据成功
+2023-10-25 17:11:27,675 - common.yaml_util - INFO - 读取lddf_busmod_acctQuery.yml文件中测试用例数据成功
+2023-10-25 17:11:27,676 - common.yaml_util - INFO - 读取lddf_busmod_authAcctQuery.yml文件中测试用例数据成功
+2023-10-25 17:11:27,679 - common.yaml_util - INFO - 读取lddf_busmod_agreementQuery.yml文件中测试用例数据成功
+2023-10-25 17:11:27,685 - common.yaml_util - INFO - 读取lddf_apply.yml文件中测试用例数据成功
+2023-10-25 17:11:27,687 - common.yaml_util - INFO - 读取lddf_applyInfo_query.yml文件中测试用例数据成功
+2023-10-25 17:11:27,689 - common.yaml_util - INFO - 读取lddf_applyDetailInfo_query.yml文件中测试用例数据成功
+2023-10-25 17:11:27,767 - testcases.conftest - INFO - 清除extract_yaml文件内容
+2023-10-25 17:11:27,768 - common.yaml_util - INFO - 清除extract.yml文件内容成功
+2023-10-25 17:11:27,768 - testcases.conftest - INFO - ************************starting run test cases************************
+2023-10-25 17:11:27,769 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/encrypt
+2023-10-25 17:11:27,770 - common.requests_util - INFO - 请求方式:post
+2023-10-25 17:11:27,781 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 17:11:27,781 - common.requests_util - INFO - 响应结果：{"msg":"ZTA2MDZiMTY3ZjAxNjA3ZmJlNDAzNTU0M2M1NjQ1Mzk0ZTUyYTIxYzE0NDhlNzhiM2M1YjRiMmM4ZmVhMjg3Zg==","code":200,"data":null}
+2023-10-25 17:11:27,782 - common.requests_util - INFO - sign值：ZTA2MDZiMTY3ZjAxNjA3ZmJlNDAzNTU0M2M1NjQ1Mzk0ZTUyYTIxYzE0NDhlNzhiM2M1YjRiMmM4ZmVhMjg3Zg==
+2023-10-25 17:11:27,782 - common.requests_util - INFO - 请求头:{'sign': 'ZTA2MDZiMTY3ZjAxNjA3ZmJlNDAzNTU0M2M1NjQ1Mzk0ZTUyYTIxYzE0NDhlNzhiM2M1YjRiMmM4ZmVhMjg3Zg==', 'channelNo': '19902'}
+2023-10-25 17:11:27,782 - common.requests_util - INFO - data:{'busiLiceNo': '91510100MA69MUBX8Q'}
+2023-10-25 17:11:27,782 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/busmod/query
+2023-10-25 17:11:27,782 - common.requests_util - INFO - 请求方式:post
+2023-10-25 17:11:27,794 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 17:11:27,794 - common.requests_util - INFO - 响应结果：{"msg":"操作成功","code":200,"data":[{"id":102,"supplierCode":"TN2022011200000607","busMod":"00001","remark":null,"createTime":"2023-09-26 16:07:53","updateTime":"2023-09-26 16:07:53","createUserId":"xiongxl","updateUserId":"xiongxl"}]}
+2023-10-25 17:11:27,794 - common.yaml_util - INFO - 写入extract.yml文件内容: {'busMod': '00001'}
+2023-10-25 17:11:27,795 - common.yaml_util - INFO - 写入extract.yml文件成功
+2023-10-25 17:11:27,795 - common.assert_util - INFO - 断言成功！预期结果：00001,实际结果：00001
+2023-10-25 17:11:27,795 - common.assert_util - ERROR - 断言失败！预期结果：TN2022011200000606,实际结果：TN2022011200000607
+Traceback (most recent call last):
+  File "D:\interface_test\common\assert_util.py", line 21, in assertEqual
+    assert expectation == actual
+AssertionError
+2023-10-25 17:11:27,797 - testcases.conftest - INFO - ************************test case run completed************************
+2023-10-25 17:12:11,647 - common.yaml_util - INFO - 读取lddf_busmod_query.yml文件中测试用例数据成功
+2023-10-25 17:12:11,649 - common.yaml_util - INFO - 读取lddf_busmod_acctQuery.yml文件中测试用例数据成功
+2023-10-25 17:12:11,651 - common.yaml_util - INFO - 读取lddf_busmod_authAcctQuery.yml文件中测试用例数据成功
+2023-10-25 17:12:11,653 - common.yaml_util - INFO - 读取lddf_busmod_agreementQuery.yml文件中测试用例数据成功
+2023-10-25 17:12:11,659 - common.yaml_util - INFO - 读取lddf_apply.yml文件中测试用例数据成功
+2023-10-25 17:12:11,661 - common.yaml_util - INFO - 读取lddf_applyInfo_query.yml文件中测试用例数据成功
+2023-10-25 17:12:11,662 - common.yaml_util - INFO - 读取lddf_applyDetailInfo_query.yml文件中测试用例数据成功
+2023-10-25 17:12:11,741 - testcases.conftest - INFO - 清除extract_yaml文件内容
+2023-10-25 17:12:11,741 - common.yaml_util - INFO - 清除extract.yml文件内容成功
+2023-10-25 17:12:11,741 - testcases.conftest - INFO - ************************starting run test cases************************
+2023-10-25 17:12:11,744 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/encrypt
+2023-10-25 17:12:11,744 - common.requests_util - INFO - 请求方式:post
+2023-10-25 17:12:11,754 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 17:12:11,754 - common.requests_util - INFO - 响应结果：{"msg":"ZTA2MDZiMTY3ZjAxNjA3ZmJlNDAzNTU0M2M1NjQ1Mzk0ZTUyYTIxYzE0NDhlNzhiM2M1YjRiMmM4ZmVhMjg3Zg==","code":200,"data":null}
+2023-10-25 17:12:11,754 - common.requests_util - INFO - sign值：ZTA2MDZiMTY3ZjAxNjA3ZmJlNDAzNTU0M2M1NjQ1Mzk0ZTUyYTIxYzE0NDhlNzhiM2M1YjRiMmM4ZmVhMjg3Zg==
+2023-10-25 17:12:11,754 - common.requests_util - INFO - 请求头:{'sign': 'ZTA2MDZiMTY3ZjAxNjA3ZmJlNDAzNTU0M2M1NjQ1Mzk0ZTUyYTIxYzE0NDhlNzhiM2M1YjRiMmM4ZmVhMjg3Zg==', 'channelNo': '19902'}
+2023-10-25 17:12:11,754 - common.requests_util - INFO - data:{'busiLiceNo': '91510100MA69MUBX8Q'}
+2023-10-25 17:12:11,755 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/busmod/query
+2023-10-25 17:12:11,755 - common.requests_util - INFO - 请求方式:post
+2023-10-25 17:12:11,769 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 17:12:11,769 - common.requests_util - INFO - 响应结果：{"msg":"操作成功","code":200,"data":[{"id":102,"supplierCode":"TN2022011200000607","busMod":"00001","remark":null,"createTime":"2023-09-26 16:07:53","updateTime":"2023-09-26 16:07:53","createUserId":"xiongxl","updateUserId":"xiongxl"}]}
+2023-10-25 17:12:11,769 - common.yaml_util - INFO - 写入extract.yml文件内容: {'busMod': '00001'}
+2023-10-25 17:12:11,770 - common.yaml_util - INFO - 写入extract.yml文件成功
+2023-10-25 17:12:11,770 - common.assert_util - INFO - 断言成功！预期结果：00001,实际结果：00001
+2023-10-25 17:12:11,770 - common.assert_util - ERROR - 断言失败！预期结果：TN2022011200000606,实际结果：TN2022011200000607
+Traceback (most recent call last):
+  File "D:\interface_test\common\assert_util.py", line 21, in assertEqual
+    assert expectation == actual
+AssertionError
+2023-10-25 17:12:11,882 - testcases.conftest - INFO - ************************test case run completed************************
+2023-10-25 17:12:11,885 - testcases.conftest - INFO - ************************starting run test cases************************
+2023-10-25 17:12:11,886 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/encrypt
+2023-10-25 17:12:11,886 - common.requests_util - INFO - 请求方式:post
+2023-10-25 17:12:11,895 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 17:12:11,895 - common.requests_util - INFO - 响应结果：{"msg":"ZTA2MDZiMTY3ZjAxNjA3ZmJlNDAzNTU0M2M1NjQ1Mzk0ZTUyYTIxYzE0NDhlNzhiM2M1YjRiMmM4ZmVhMjg3Zg==","code":200,"data":null}
+2023-10-25 17:12:11,895 - common.requests_util - INFO - sign值：ZTA2MDZiMTY3ZjAxNjA3ZmJlNDAzNTU0M2M1NjQ1Mzk0ZTUyYTIxYzE0NDhlNzhiM2M1YjRiMmM4ZmVhMjg3Zg==
+2023-10-25 17:12:11,896 - common.requests_util - INFO - 请求头:{'sign': 'ZTA2MDZiMTY3ZjAxNjA3ZmJlNDAzNTU0M2M1NjQ1Mzk0ZTUyYTIxYzE0NDhlNzhiM2M1YjRiMmM4ZmVhMjg3Zg==', 'channelNo': '19902'}
+2023-10-25 17:12:11,896 - common.requests_util - INFO - data:{'busiLiceNo': '91510100MA69MUBX8Q'}
+2023-10-25 17:12:11,896 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/busmod/query
+2023-10-25 17:12:11,896 - common.requests_util - INFO - 请求方式:post
+2023-10-25 17:12:11,906 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 17:12:11,906 - common.requests_util - INFO - 响应结果：{"msg":"操作成功","code":200,"data":[{"id":102,"supplierCode":"TN2022011200000607","busMod":"00001","remark":null,"createTime":"2023-09-26 16:07:53","updateTime":"2023-09-26 16:07:53","createUserId":"xiongxl","updateUserId":"xiongxl"}]}
+2023-10-25 17:12:11,906 - common.yaml_util - INFO - 写入extract.yml文件内容: {'busMod': '00001'}
+2023-10-25 17:12:11,907 - common.yaml_util - INFO - 写入extract.yml文件成功
+2023-10-25 17:12:11,907 - common.assert_util - INFO - 断言成功！预期结果：00001,实际结果：00001
+2023-10-25 17:12:11,907 - common.assert_util - ERROR - 断言失败！预期结果：TN2022011200000606,实际结果：TN2022011200000607
+Traceback (most recent call last):
+  File "D:\interface_test\common\assert_util.py", line 21, in assertEqual
+    assert expectation == actual
+AssertionError
+2023-10-25 17:12:11,916 - testcases.conftest - INFO - ************************test case run completed************************
+2023-10-25 17:12:11,919 - testcases.conftest - INFO - ************************starting run test cases************************
+2023-10-25 17:12:11,920 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/encrypt
+2023-10-25 17:12:11,920 - common.requests_util - INFO - 请求方式:post
+2023-10-25 17:12:11,925 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 17:12:11,925 - common.requests_util - INFO - 响应结果：{"msg":"ZTA2MDZiMTY3ZjAxNjA3ZmJlNDAzNTU0M2M1NjQ1Mzk0ZTUyYTIxYzE0NDhlNzhiM2M1YjRiMmM4ZmVhMjg3Zg==","code":200,"data":null}
+2023-10-25 17:12:11,925 - common.requests_util - INFO - sign值：ZTA2MDZiMTY3ZjAxNjA3ZmJlNDAzNTU0M2M1NjQ1Mzk0ZTUyYTIxYzE0NDhlNzhiM2M1YjRiMmM4ZmVhMjg3Zg==
+2023-10-25 17:12:11,925 - common.requests_util - INFO - 请求头:{'sign': 'ZTA2MDZiMTY3ZjAxNjA3ZmJlNDAzNTU0M2M1NjQ1Mzk0ZTUyYTIxYzE0NDhlNzhiM2M1YjRiMmM4ZmVhMjg3Zg==', 'channelNo': '19902'}
+2023-10-25 17:12:11,925 - common.requests_util - INFO - data:{'busiLiceNo': '91510100MA69MUBX8Q'}
+2023-10-25 17:12:11,926 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/busmod/query
+2023-10-25 17:12:11,926 - common.requests_util - INFO - 请求方式:post
+2023-10-25 17:12:11,945 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 17:12:11,946 - common.requests_util - INFO - 响应结果：{"msg":"操作成功","code":200,"data":[{"id":102,"supplierCode":"TN2022011200000607","busMod":"00001","remark":null,"createTime":"2023-09-26 16:07:53","updateTime":"2023-09-26 16:07:53","createUserId":"xiongxl","updateUserId":"xiongxl"}]}
+2023-10-25 17:12:11,946 - common.yaml_util - INFO - 写入extract.yml文件内容: {'busMod': '00001'}
+2023-10-25 17:12:11,947 - common.yaml_util - INFO - 写入extract.yml文件成功
+2023-10-25 17:12:11,947 - common.assert_util - INFO - 断言成功！预期结果：00001,实际结果：00001
+2023-10-25 17:12:11,947 - common.assert_util - ERROR - 断言失败！预期结果：TN2022011200000606,实际结果：TN2022011200000607
+Traceback (most recent call last):
+  File "D:\interface_test\common\assert_util.py", line 21, in assertEqual
+    assert expectation == actual
+AssertionError
+2023-10-25 17:12:11,954 - testcases.conftest - INFO - ************************test case run completed************************
+2023-10-25 17:13:12,358 - common.yaml_util - INFO - 读取lddf_busmod_query.yml文件中测试用例数据成功
+2023-10-25 17:13:12,359 - common.yaml_util - INFO - 读取lddf_busmod_acctQuery.yml文件中测试用例数据成功
+2023-10-25 17:13:12,361 - common.yaml_util - INFO - 读取lddf_busmod_authAcctQuery.yml文件中测试用例数据成功
+2023-10-25 17:13:12,363 - common.yaml_util - INFO - 读取lddf_busmod_agreementQuery.yml文件中测试用例数据成功
+2023-10-25 17:13:12,369 - common.yaml_util - INFO - 读取lddf_apply.yml文件中测试用例数据成功
+2023-10-25 17:13:12,371 - common.yaml_util - INFO - 读取lddf_applyInfo_query.yml文件中测试用例数据成功
+2023-10-25 17:13:12,373 - common.yaml_util - INFO - 读取lddf_applyDetailInfo_query.yml文件中测试用例数据成功
+2023-10-25 17:13:12,452 - testcases.conftest - INFO - 清除extract_yaml文件内容
+2023-10-25 17:13:12,452 - common.yaml_util - INFO - 清除extract.yml文件内容成功
+2023-10-25 17:13:12,453 - testcases.conftest - INFO - ************************starting run test cases************************
+2023-10-25 17:13:12,455 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/encrypt
+2023-10-25 17:13:12,455 - common.requests_util - INFO - 请求方式:post
+2023-10-25 17:13:12,476 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 17:13:12,476 - common.requests_util - INFO - 响应结果：{"msg":"ZTA2MDZiMTY3ZjAxNjA3ZmJlNDAzNTU0M2M1NjQ1Mzk0ZTUyYTIxYzE0NDhlNzhiM2M1YjRiMmM4ZmVhMjg3Zg==","code":200,"data":null}
+2023-10-25 17:13:12,476 - common.requests_util - INFO - sign值：ZTA2MDZiMTY3ZjAxNjA3ZmJlNDAzNTU0M2M1NjQ1Mzk0ZTUyYTIxYzE0NDhlNzhiM2M1YjRiMmM4ZmVhMjg3Zg==
+2023-10-25 17:13:12,476 - common.requests_util - INFO - 请求头:{'sign': 'ZTA2MDZiMTY3ZjAxNjA3ZmJlNDAzNTU0M2M1NjQ1Mzk0ZTUyYTIxYzE0NDhlNzhiM2M1YjRiMmM4ZmVhMjg3Zg==', 'channelNo': '19902'}
+2023-10-25 17:13:12,477 - common.requests_util - INFO - data:{'busiLiceNo': '91510100MA69MUBX8Q'}
+2023-10-25 17:13:12,477 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/busmod/query
+2023-10-25 17:13:12,477 - common.requests_util - INFO - 请求方式:post
+2023-10-25 17:13:12,490 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 17:13:12,491 - common.requests_util - INFO - 响应结果：{"msg":"操作成功","code":200,"data":[{"id":102,"supplierCode":"TN2022011200000607","busMod":"00001","remark":null,"createTime":"2023-09-26 16:07:53","updateTime":"2023-09-26 16:07:53","createUserId":"xiongxl","updateUserId":"xiongxl"}]}
+2023-10-25 17:13:12,491 - common.yaml_util - INFO - 写入extract.yml文件内容: {'busMod': '00001'}
+2023-10-25 17:13:12,492 - common.yaml_util - INFO - 写入extract.yml文件成功
+2023-10-25 17:13:12,492 - common.assert_util - INFO - 断言成功！预期结果：00001,实际结果：00001
+2023-10-25 17:13:12,492 - common.assert_util - ERROR - 断言失败！预期结果：TN2022011200000606,实际结果：TN2022011200000607
+Traceback (most recent call last):
+  File "D:\interface_test\common\assert_util.py", line 21, in assertEqual
+    assert expectation == actual
+AssertionError
+2023-10-25 17:13:12,493 - common.assert_util - ERROR - 
+2023-10-25 17:13:12,609 - testcases.conftest - INFO - ************************test case run completed************************
+2023-10-25 17:13:12,614 - testcases.conftest - INFO - ************************starting run test cases************************
+2023-10-25 17:13:12,615 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/encrypt
+2023-10-25 17:13:12,615 - common.requests_util - INFO - 请求方式:post
+2023-10-25 17:13:12,622 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 17:13:12,623 - common.requests_util - INFO - 响应结果：{"msg":"ZTA2MDZiMTY3ZjAxNjA3ZmJlNDAzNTU0M2M1NjQ1Mzk0ZTUyYTIxYzE0NDhlNzhiM2M1YjRiMmM4ZmVhMjg3Zg==","code":200,"data":null}
+2023-10-25 17:13:12,623 - common.requests_util - INFO - sign值：ZTA2MDZiMTY3ZjAxNjA3ZmJlNDAzNTU0M2M1NjQ1Mzk0ZTUyYTIxYzE0NDhlNzhiM2M1YjRiMmM4ZmVhMjg3Zg==
+2023-10-25 17:13:12,623 - common.requests_util - INFO - 请求头:{'sign': 'ZTA2MDZiMTY3ZjAxNjA3ZmJlNDAzNTU0M2M1NjQ1Mzk0ZTUyYTIxYzE0NDhlNzhiM2M1YjRiMmM4ZmVhMjg3Zg==', 'channelNo': '19902'}
+2023-10-25 17:13:12,623 - common.requests_util - INFO - data:{'busiLiceNo': '91510100MA69MUBX8Q'}
+2023-10-25 17:13:12,623 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/busmod/query
+2023-10-25 17:13:12,623 - common.requests_util - INFO - 请求方式:post
+2023-10-25 17:13:12,634 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 17:13:12,634 - common.requests_util - INFO - 响应结果：{"msg":"操作成功","code":200,"data":[{"id":102,"supplierCode":"TN2022011200000607","busMod":"00001","remark":null,"createTime":"2023-09-26 16:07:53","updateTime":"2023-09-26 16:07:53","createUserId":"xiongxl","updateUserId":"xiongxl"}]}
+2023-10-25 17:13:12,635 - common.yaml_util - INFO - 写入extract.yml文件内容: {'busMod': '00001'}
+2023-10-25 17:13:12,636 - common.yaml_util - INFO - 写入extract.yml文件成功
+2023-10-25 17:13:12,636 - common.assert_util - INFO - 断言成功！预期结果：00001,实际结果：00001
+2023-10-25 17:13:12,636 - common.assert_util - ERROR - 断言失败！预期结果：TN2022011200000606,实际结果：TN2022011200000607
+Traceback (most recent call last):
+  File "D:\interface_test\common\assert_util.py", line 21, in assertEqual
+    assert expectation == actual
+AssertionError
+2023-10-25 17:13:12,636 - common.assert_util - ERROR - 
+2023-10-25 17:13:12,645 - testcases.conftest - INFO - ************************test case run completed************************
+2023-10-25 17:13:12,648 - testcases.conftest - INFO - ************************starting run test cases************************
+2023-10-25 17:13:12,649 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/encrypt
+2023-10-25 17:13:12,649 - common.requests_util - INFO - 请求方式:post
+2023-10-25 17:13:12,657 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 17:13:12,657 - common.requests_util - INFO - 响应结果：{"msg":"ZTA2MDZiMTY3ZjAxNjA3ZmJlNDAzNTU0M2M1NjQ1Mzk0ZTUyYTIxYzE0NDhlNzhiM2M1YjRiMmM4ZmVhMjg3Zg==","code":200,"data":null}
+2023-10-25 17:13:12,657 - common.requests_util - INFO - sign值：ZTA2MDZiMTY3ZjAxNjA3ZmJlNDAzNTU0M2M1NjQ1Mzk0ZTUyYTIxYzE0NDhlNzhiM2M1YjRiMmM4ZmVhMjg3Zg==
+2023-10-25 17:13:12,657 - common.requests_util - INFO - 请求头:{'sign': 'ZTA2MDZiMTY3ZjAxNjA3ZmJlNDAzNTU0M2M1NjQ1Mzk0ZTUyYTIxYzE0NDhlNzhiM2M1YjRiMmM4ZmVhMjg3Zg==', 'channelNo': '19902'}
+2023-10-25 17:13:12,657 - common.requests_util - INFO - data:{'busiLiceNo': '91510100MA69MUBX8Q'}
+2023-10-25 17:13:12,657 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/busmod/query
+2023-10-25 17:13:12,658 - common.requests_util - INFO - 请求方式:post
+2023-10-25 17:13:12,667 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 17:13:12,667 - common.requests_util - INFO - 响应结果：{"msg":"操作成功","code":200,"data":[{"id":102,"supplierCode":"TN2022011200000607","busMod":"00001","remark":null,"createTime":"2023-09-26 16:07:53","updateTime":"2023-09-26 16:07:53","createUserId":"xiongxl","updateUserId":"xiongxl"}]}
+2023-10-25 17:13:12,668 - common.yaml_util - INFO - 写入extract.yml文件内容: {'busMod': '00001'}
+2023-10-25 17:13:12,669 - common.yaml_util - INFO - 写入extract.yml文件成功
+2023-10-25 17:13:12,669 - common.assert_util - INFO - 断言成功！预期结果：00001,实际结果：00001
+2023-10-25 17:13:12,669 - common.assert_util - ERROR - 断言失败！预期结果：TN2022011200000606,实际结果：TN2022011200000607
+Traceback (most recent call last):
+  File "D:\interface_test\common\assert_util.py", line 21, in assertEqual
+    assert expectation == actual
+AssertionError
+2023-10-25 17:13:12,669 - common.assert_util - ERROR - 
+2023-10-25 17:13:12,677 - testcases.conftest - INFO - ************************test case run completed************************
+2023-10-25 17:13:57,677 - common.yaml_util - INFO - 读取lddf_busmod_query.yml文件中测试用例数据成功
+2023-10-25 17:13:57,678 - common.yaml_util - INFO - 读取lddf_busmod_acctQuery.yml文件中测试用例数据成功
+2023-10-25 17:13:57,680 - common.yaml_util - INFO - 读取lddf_busmod_authAcctQuery.yml文件中测试用例数据成功
+2023-10-25 17:13:57,682 - common.yaml_util - INFO - 读取lddf_busmod_agreementQuery.yml文件中测试用例数据成功
+2023-10-25 17:13:57,688 - common.yaml_util - INFO - 读取lddf_apply.yml文件中测试用例数据成功
+2023-10-25 17:13:57,690 - common.yaml_util - INFO - 读取lddf_applyInfo_query.yml文件中测试用例数据成功
+2023-10-25 17:13:57,692 - common.yaml_util - INFO - 读取lddf_applyDetailInfo_query.yml文件中测试用例数据成功
+2023-10-25 17:13:57,767 - testcases.conftest - INFO - 清除extract_yaml文件内容
+2023-10-25 17:13:57,768 - common.yaml_util - INFO - 清除extract.yml文件内容成功
+2023-10-25 17:13:57,768 - testcases.conftest - INFO - ************************starting run test cases************************
+2023-10-25 17:13:57,770 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/encrypt
+2023-10-25 17:13:57,770 - common.requests_util - INFO - 请求方式:post
+2023-10-25 17:13:57,782 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 17:13:57,782 - common.requests_util - INFO - 响应结果：{"msg":"ZTA2MDZiMTY3ZjAxNjA3ZmJlNDAzNTU0M2M1NjQ1Mzk0ZTUyYTIxYzE0NDhlNzhiM2M1YjRiMmM4ZmVhMjg3Zg==","code":200,"data":null}
+2023-10-25 17:13:57,783 - common.requests_util - INFO - sign值：ZTA2MDZiMTY3ZjAxNjA3ZmJlNDAzNTU0M2M1NjQ1Mzk0ZTUyYTIxYzE0NDhlNzhiM2M1YjRiMmM4ZmVhMjg3Zg==
+2023-10-25 17:13:57,783 - common.requests_util - INFO - 请求头:{'sign': 'ZTA2MDZiMTY3ZjAxNjA3ZmJlNDAzNTU0M2M1NjQ1Mzk0ZTUyYTIxYzE0NDhlNzhiM2M1YjRiMmM4ZmVhMjg3Zg==', 'channelNo': '19902'}
+2023-10-25 17:13:57,783 - common.requests_util - INFO - data:{'busiLiceNo': '91510100MA69MUBX8Q'}
+2023-10-25 17:13:57,783 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/busmod/query
+2023-10-25 17:13:57,783 - common.requests_util - INFO - 请求方式:post
+2023-10-25 17:13:57,795 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 17:13:57,795 - common.requests_util - INFO - 响应结果：{"msg":"操作成功","code":200,"data":[{"id":102,"supplierCode":"TN2022011200000607","busMod":"00001","remark":null,"createTime":"2023-09-26 16:07:53","updateTime":"2023-09-26 16:07:53","createUserId":"xiongxl","updateUserId":"xiongxl"}]}
+2023-10-25 17:13:57,795 - common.yaml_util - INFO - 写入extract.yml文件内容: {'busMod': '00001'}
+2023-10-25 17:13:57,796 - common.yaml_util - INFO - 写入extract.yml文件成功
+2023-10-25 17:13:57,796 - common.assert_util - INFO - 断言成功！预期结果：00001,实际结果：00001
+2023-10-25 17:13:57,796 - common.assert_util - ERROR - 断言失败！预期结果：TN2022011200000606,实际结果：TN2022011200000607
+Traceback (most recent call last):
+  File "D:\interface_test\common\assert_util.py", line 21, in assertEqual
+    assert expectation == actual
+AssertionError
+2023-10-25 17:13:57,797 - common.assert_util - ERROR - Traceback (most recent call last):
+  File "D:\interface_test\common\assert_util.py", line 21, in assertEqual
+    assert expectation == actual
+AssertionError
+
+2023-10-25 17:13:57,907 - testcases.conftest - INFO - ************************test case run completed************************
+2023-10-25 17:13:57,910 - testcases.conftest - INFO - ************************starting run test cases************************
+2023-10-25 17:13:57,911 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/encrypt
+2023-10-25 17:13:57,911 - common.requests_util - INFO - 请求方式:post
+2023-10-25 17:13:57,916 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 17:13:57,916 - common.requests_util - INFO - 响应结果：{"msg":"ZTA2MDZiMTY3ZjAxNjA3ZmJlNDAzNTU0M2M1NjQ1Mzk0ZTUyYTIxYzE0NDhlNzhiM2M1YjRiMmM4ZmVhMjg3Zg==","code":200,"data":null}
+2023-10-25 17:13:57,916 - common.requests_util - INFO - sign值：ZTA2MDZiMTY3ZjAxNjA3ZmJlNDAzNTU0M2M1NjQ1Mzk0ZTUyYTIxYzE0NDhlNzhiM2M1YjRiMmM4ZmVhMjg3Zg==
+2023-10-25 17:13:57,916 - common.requests_util - INFO - 请求头:{'sign': 'ZTA2MDZiMTY3ZjAxNjA3ZmJlNDAzNTU0M2M1NjQ1Mzk0ZTUyYTIxYzE0NDhlNzhiM2M1YjRiMmM4ZmVhMjg3Zg==', 'channelNo': '19902'}
+2023-10-25 17:13:57,917 - common.requests_util - INFO - data:{'busiLiceNo': '91510100MA69MUBX8Q'}
+2023-10-25 17:13:57,917 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/busmod/query
+2023-10-25 17:13:57,917 - common.requests_util - INFO - 请求方式:post
+2023-10-25 17:13:57,928 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 17:13:57,928 - common.requests_util - INFO - 响应结果：{"msg":"操作成功","code":200,"data":[{"id":102,"supplierCode":"TN2022011200000607","busMod":"00001","remark":null,"createTime":"2023-09-26 16:07:53","updateTime":"2023-09-26 16:07:53","createUserId":"xiongxl","updateUserId":"xiongxl"}]}
+2023-10-25 17:13:57,928 - common.yaml_util - INFO - 写入extract.yml文件内容: {'busMod': '00001'}
+2023-10-25 17:13:57,929 - common.yaml_util - INFO - 写入extract.yml文件成功
+2023-10-25 17:13:57,929 - common.assert_util - INFO - 断言成功！预期结果：00001,实际结果：00001
+2023-10-25 17:13:57,929 - common.assert_util - ERROR - 断言失败！预期结果：TN2022011200000606,实际结果：TN2022011200000607
+Traceback (most recent call last):
+  File "D:\interface_test\common\assert_util.py", line 21, in assertEqual
+    assert expectation == actual
+AssertionError
+2023-10-25 17:13:57,929 - common.assert_util - ERROR - Traceback (most recent call last):
+  File "D:\interface_test\common\assert_util.py", line 21, in assertEqual
+    assert expectation == actual
+AssertionError
+
+2023-10-25 17:13:57,938 - testcases.conftest - INFO - ************************test case run completed************************
+2023-10-25 17:13:57,940 - testcases.conftest - INFO - ************************starting run test cases************************
+2023-10-25 17:13:57,941 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/encrypt
+2023-10-25 17:13:57,941 - common.requests_util - INFO - 请求方式:post
+2023-10-25 17:13:57,949 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 17:13:57,949 - common.requests_util - INFO - 响应结果：{"msg":"ZTA2MDZiMTY3ZjAxNjA3ZmJlNDAzNTU0M2M1NjQ1Mzk0ZTUyYTIxYzE0NDhlNzhiM2M1YjRiMmM4ZmVhMjg3Zg==","code":200,"data":null}
+2023-10-25 17:13:57,949 - common.requests_util - INFO - sign值：ZTA2MDZiMTY3ZjAxNjA3ZmJlNDAzNTU0M2M1NjQ1Mzk0ZTUyYTIxYzE0NDhlNzhiM2M1YjRiMmM4ZmVhMjg3Zg==
+2023-10-25 17:13:57,949 - common.requests_util - INFO - 请求头:{'sign': 'ZTA2MDZiMTY3ZjAxNjA3ZmJlNDAzNTU0M2M1NjQ1Mzk0ZTUyYTIxYzE0NDhlNzhiM2M1YjRiMmM4ZmVhMjg3Zg==', 'channelNo': '19902'}
+2023-10-25 17:13:57,949 - common.requests_util - INFO - data:{'busiLiceNo': '91510100MA69MUBX8Q'}
+2023-10-25 17:13:57,949 - common.requests_util - INFO - 请求地址:http://172.24.100.75:9203/expose/lddf/busmod/query
+2023-10-25 17:13:57,950 - common.requests_util - INFO - 请求方式:post
+2023-10-25 17:13:57,960 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 17:13:57,960 - common.requests_util - INFO - 响应结果：{"msg":"操作成功","code":200,"data":[{"id":102,"supplierCode":"TN2022011200000607","busMod":"00001","remark":null,"createTime":"2023-09-26 16:07:53","updateTime":"2023-09-26 16:07:53","createUserId":"xiongxl","updateUserId":"xiongxl"}]}
+2023-10-25 17:13:57,960 - common.yaml_util - INFO - 写入extract.yml文件内容: {'busMod': '00001'}
+2023-10-25 17:13:57,961 - common.yaml_util - INFO - 写入extract.yml文件成功
+2023-10-25 17:13:57,961 - common.assert_util - INFO - 断言成功！预期结果：00001,实际结果：00001
+2023-10-25 17:13:57,961 - common.assert_util - ERROR - 断言失败！预期结果：TN2022011200000606,实际结果：TN2022011200000607
+Traceback (most recent call last):
+  File "D:\interface_test\common\assert_util.py", line 21, in assertEqual
+    assert expectation == actual
+AssertionError
+2023-10-25 17:13:57,962 - common.assert_util - ERROR - Traceback (most recent call last):
+  File "D:\interface_test\common\assert_util.py", line 21, in assertEqual
+    assert expectation == actual
+AssertionError
+
+2023-10-25 17:13:57,969 - testcases.conftest - INFO - ************************test case run completed************************

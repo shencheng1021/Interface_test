@@ -1,0 +1,19 @@
+INFO     base.base_util:base_util.py:20 ************************starting run test cases************************
+INFO     common.yaml_util:yaml_util.py:22 读取extract.yml文件中key为: reqCode 的数据
+INFO     common.yaml_util:yaml_util.py:30 extract.yml文件key值为：reqCode 的值为 B150095212 
+INFO     common.yaml_util:yaml_util.py:22 读取extract.yml文件中key为: txnNo 的数据
+INFO     common.yaml_util:yaml_util.py:30 extract.yml文件key值为：txnNo 的值为 TLSK20231025142125401000000980 
+INFO     common.requests_util:requests_util.py:25 请求地址:http://172.24.100.75:9203/expose/lddf/encrypt
+INFO     common.requests_util:requests_util.py:26 请求方式:post
+INFO     common.requests_util:requests_util.py:33 请求结果状态码：[200]
+INFO     common.requests_util:requests_util.py:34 响应结果：{"msg":"NDRiMzEyMzU3NmQzY2ZiYTNjODM1OTJhODNlY2M5NGE0ZjIzMGFmMTkyNjdmMGQ0MDdiNzFkNGJhNDVmYjk0Zg==","code":200,"data":null}
+INFO     common.requests_util:requests_util.py:49 sign值：NDRiMzEyMzU3NmQzY2ZiYTNjODM1OTJhODNlY2M5NGE0ZjIzMGFmMTkyNjdmMGQ0MDdiNzFkNGJhNDVmYjk0Zg==
+INFO     common.requests_util:requests_util.py:60 请求头:{'sign': 'NDRiMzEyMzU3NmQzY2ZiYTNjODM1OTJhODNlY2M5NGE0ZjIzMGFmMTkyNjdmMGQ0MDdiNzFkNGJhNDVmYjk0Zg==', 'channelNo': '19902'}
+INFO     common.requests_util:requests_util.py:61 data:{'busiLiceNo': '91510100MA69MUBX8Q', 'txnNo': 'TLSK20231025142125401000000980', 'reqCode': 'B150095212'}
+INFO     common.requests_util:requests_util.py:25 请求地址:http://172.24.100.75:9203/expose/lddf/applyDetailInfo/query
+INFO     common.requests_util:requests_util.py:26 请求方式:post
+INFO     common.requests_util:requests_util.py:33 请求结果状态码：[200]
+INFO     common.requests_util:requests_util.py:34 响应结果：{"msg":"查询完成","code":200,"data":[{"id":0,"txnNo":"TLSK20231025142125401000000980","transCode":"1","receiptAcct":"62148311501315112","receiptAcctName":"吴极客","transAmt":2.44,"transDate":null,"transRemark":"第一笔联动支付","sysFlag":null,"depositBank":"招商银行","depositBankAddr":null,"transStat":"A","errorCode":null,"errorMsg":null,"createTime":null,"updateTime":null},{"id":0,"txnNo":"TLSK20231025142125401000000980","transCode":"2","receiptAcct":"6214835982629402","receiptAcctName":"冯建杨","transAmt":1.00,"transDate":null,"transRemark":"第二笔联动支付","sysFlag":null,"depositBank":"招商银行","depositBankAddr":null,"transStat":"A","errorCode":null,"errorMsg":null,"createTime":null,"updateTime":null},{"id":0,"txnNo":"TLSK20231025142125401000000980","transCode":"3","receiptAcct":"1241255345345345","receiptAcctName":"他行户1","transAmt":0.11,"transDate":null,"transRemark":"第三笔联动支付","sysFlag":null,"depositBank":"102100099996","depositBankAddr":"北京市","transStat":"A","errorCode":null,"errorMsg":null,"createTime":null,"updateTime":null},{"id":0,"txnNo":"TLSK20231025142125401000000980","transCode":"4","receiptAcct":"421455345345345","receiptAcctName":"他行户2","transAmt":1.30,"transDate":null,"transRemark":"第四笔联动支付","sysFlag":null,"depositBank":"102100099996","depositBankAddr":"北京市","transStat":"A","errorCode":null,"errorMsg":null,"createTime":null,"updateTime":null},{"id":0,"txnNo":"TLSK20231025142125401000000980","transCode":"5","receiptAcct":"74124455345345345","receiptAcctName":"他行户2","transAmt":0.70,"transDate":null,"transRemark":"第五笔联动支付","sysFlag":null,"depositBank":"102100099996","depositBankAddr":"北京市","transStat":"A","errorCode":null,"errorMsg":null,"createTime":null,"updateTime":null}]}
+INFO     common.yaml_util:yaml_util.py:22 读取extract.yml文件中key为: txnNo 的数据
+INFO     common.yaml_util:yaml_util.py:30 extract.yml文件key值为：txnNo 的值为 TLSK20231025142125401000000980
+INFO     base.base_util:base_util.py:23 ************************test case run completed************************
