@@ -40,6 +40,7 @@ class YamlUtil:
             raise e
         else:
             log.logger.info("写入extract.yml文件成功")
+
     def clear_yaml(self):
         try:
             with open(os.path.dirname(__file__).split('common')[0]+'extract.yml',mode='w',encoding='utf-8') as file:
