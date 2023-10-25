@@ -7,18 +7,25 @@
 @time: 2023/9/25 14:25
 """
 import json
+import logging
 
 import requests
 import pytest
+
+from base.base_util import BaseUtil
 from common.config import ConfigParser
 from common.gmssl_util import GmSsl
+from common.logger_util import Logger
 from common.requests_util import RequestsUtil
 from common.yaml_util import YamlUtil
 import allure
 
+log=Logger(__name__,CmdLevel=logging.INFO, FileLevel=logging.INFO)
+
+
 @allure.epic("接口测试")
 @allure.feature("砼联数科官网接口测试")
-class TestInterface:
+class TestInterface(BaseUtil):
 
     @allure.title("获取access_token")
     @pytest.mark.parametrize('caseinfo', YamlUtil().read_testcase_yaml('get_access_token.yml'))
@@ -28,10 +35,11 @@ class TestInterface:
         data=caseinfo['requests']['data']
         headers=caseinfo['requests']['headers']
         method=caseinfo['requests']['method']
+        log.logger.info("请求头：%s" % headers)
+        log.logger.info("请求数据：%s" % data)
         result=RequestsUtil().send_request(method,url,data=data,headers = headers)
         result=json.loads(result)
         YamlUtil().write_yaml({'access_token':result['access_token']})
-        print(result)
         assert 'access_token' in result
         assert 'token_type' in result
         assert 'expires_in' in result
@@ -46,10 +54,10 @@ class TestInterface:
         caseinfo['requests']['data']['accessToken'] = YamlUtil().read_yaml('access_token')
         data=caseinfo['requests']['data']
         method = caseinfo['requests']['method']
+        log.logger.info("请求数据：%s" % data)
         result = RequestsUtil().send_request(method,url,params=data)
         result=json.loads(result)
         GmSsl().set_token(result['data'])
-        print(result)
         assert '登录成功' == result['msg']
 
     @allure.title("查询账户关联的企业列表")
@@ -59,9 +67,9 @@ class TestInterface:
         caseinfo['requests']['headers']['Cookie'] = "Token="+YamlUtil().read_yaml('token')
         headers = caseinfo['requests']['headers']
         method = caseinfo['requests']['method']
+        log.logger.info("请求头：%s" % headers)
         result = RequestsUtil().send_request(method,url,headers=headers)
         result=json.loads(result)
-        print(result)
         assert 'TN2023030800027204' == result['data'][0]['traderNo']
 
     @allure.title("查询当前账户商户中心菜单权限")
@@ -72,9 +80,9 @@ class TestInterface:
         caseinfo['requests']['headers']['Cookie'] = "Token=" + YamlUtil().read_yaml('token')
         caseinfo['requests']['headers']['Token'] = YamlUtil().read_yaml('token')
         headers=caseinfo['requests']['headers']
+        log.logger.info("请求头：%s" % headers)
         result=RequestsUtil().send_request(method,url,headers=headers)
         result=json.loads(result)
-        print(result)
         assert '操作成功' == result['msg']
 
 if __name__ == '__main__':

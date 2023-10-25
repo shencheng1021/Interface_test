@@ -11,14 +11,14 @@ import time
 
 import pytest
 
-
+from base.base_util import BaseUtil
 from common.requests_util import RequestsUtil
 from common.yaml_util import YamlUtil
 import allure
 
 @allure.epic("接口测试")
 @allure.feature("联动代发产品接口测试")
-class Test_Lddf:
+class Test_Lddf(BaseUtil):
 
     @allure.title("获取可用的业务模式编号")
     @pytest.mark.parametrize('caseinfo', YamlUtil().read_testcase_yaml('lddf_busmod_query.yml'))
@@ -26,10 +26,8 @@ class Test_Lddf:
         '''
         description:获取可用的业务模式编号
         '''
-        print(caseinfo)
         result=RequestsUtil().lddf_request(caseinfo)
         YamlUtil().write_yaml({'busMod': result['data'][0]['busMod']})
-        print(result)
         assert result['data'][0]['busMod'] == '00001'
         assert result['data'][0]['supplierCode'] == 'TN2022011200000607'
 
@@ -41,7 +39,6 @@ class Test_Lddf:
         '''
         caseinfo['requests']['data']['busMod']=YamlUtil().read_yaml('busMod')
         result=RequestsUtil().lddf_request(caseinfo)
-        print(result)
         YamlUtil().write_yaml({'bbkCode':result['data'][0]['bbkCode'],'acct':result['data'][0]['bankAcct']})
         assert result['data'][0]['bbkCode'] == '75'
         assert result['data'][0]['bankAcct'] == '755915678710501'
@@ -57,7 +54,6 @@ class Test_Lddf:
         caseinfo['requests']['data']['acct'] = YamlUtil().read_yaml('acct')
         result = RequestsUtil().lddf_request(caseinfo)
         YamlUtil().write_yaml({'authAcct':result['data'][0]['authAcct']})
-        print(result)
         assert result['msg'] == '操作成功'
         assert result['code'] == 200
         assert result['data'][0]['authAcct'] == '755915678710606'
@@ -72,7 +68,6 @@ class Test_Lddf:
         caseinfo['requests']['data']['acct'] = YamlUtil().read_yaml('acct')
         caseinfo['requests']['data']['authAcct'] = YamlUtil().read_yaml('authAcct')
         result = RequestsUtil().lddf_request(caseinfo)
-        print(result)
         assert result['msg'] == "操作成功"
         assert result['code'] == 200
         assert result['data'][0]['supplierCode'] == 'TN2022011200000607'
@@ -89,7 +84,6 @@ class Test_Lddf:
         caseinfo['requests']['data']['expectDate'] = time.strftime('%Y%m%d',time.localtime(time.time()))
         result = RequestsUtil().lddf_request(caseinfo)
         YamlUtil().write_yaml({'txnNo': result['data']['txnNo']})
-        print(result)
         assert result['msg'] == '经办发起完成'
         assert result['code'] == 200
         assert 'txnNo' in result['data']
@@ -105,7 +99,6 @@ class Test_Lddf:
         caseinfo['requests']['data']['startDate'] = time.strftime('%Y%m%d',time.localtime(time.time()))
         caseinfo['requests']['data']['endDate'] = time.strftime('%Y%m%d', time.localtime(time.time()))
         result = RequestsUtil().lddf_request(caseinfo)
-        print(result)
         i=len(result['data'])
         flag=False
         for i in range(0,i):
@@ -123,7 +116,6 @@ class Test_Lddf:
         caseinfo['requests']['data']['reqCode'] = YamlUtil().read_yaml('reqCode')
         caseinfo['requests']['data']['txnNo'] = YamlUtil().read_yaml('txnNo')
         result = RequestsUtil().lddf_request(caseinfo)
-        print(result)
         assert result['msg'] == '查询完成'
         assert result['code'] == 200
         assert result['data'][0]['txnNo'] == YamlUtil().read_yaml('txnNo')

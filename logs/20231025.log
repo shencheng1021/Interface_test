@@ -1,0 +1,138 @@
+2023-10-25 14:08:43,091 - common.yaml_util - INFO - 读取get_access_token.yml文件中测试用例数据成功
+2023-10-25 14:08:43,093 - common.yaml_util - INFO - 读取get_token.yml文件中测试用例数据成功
+2023-10-25 14:08:43,094 - common.yaml_util - INFO - 读取get_traders.yml文件中测试用例数据成功
+2023-10-25 14:08:43,096 - common.yaml_util - INFO - 读取get_menus.yml文件中测试用例数据成功
+2023-10-25 14:08:43,177 - common.yaml_util - INFO - 清除extract.yml文件内容成功
+2023-10-25 14:08:43,177 - base.base_util - INFO - ************************starting run test cases************************
+2023-10-25 14:08:43,179 - testcases.test_interface - INFO - 请求头：{'enterCode': 'TLSK', 'Authorization': 'Basic dG9uZ0xpYW46dG9uZ0xpYW4=', 'Content-Type': 'application/x-www-form-urlencoded', 'Host': '172.24.100.107:14000'}
+2023-10-25 14:08:43,180 - testcases.test_interface - INFO - 请求数据：{'mobile': 'SMSCUST%4017754754412', 'code': 230516}
+2023-10-25 14:08:43,180 - common.requests_util - INFO - 请求地址:http://172.24.100.107:14000/auth/oauth/token?grant_type=mobile&source=PORTAL_CONFIG
+2023-10-25 14:08:43,180 - common.requests_util - INFO - 请求方式:post
+2023-10-25 14:08:43,265 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 14:08:43,265 - common.requests_util - INFO - 响应结果：{"access_token":"ee68a919-0a62-427c-8e35-fce958704f11","token_type":"bearer","refresh_token":"49e2befd-e16d-4d1f-98c5-e3e35460bef2","expires_in":7199,"scope":"server","loginEnterCode":"TLSK","license":"made by panda","cnName":"砼联数字科技有限","phone":"17754754412","active":true,"id":33521,"avatar":null,"type":"2","client_id":"tongLian","email":null,"username":"17754754412"}
+2023-10-25 14:08:43,266 - common.yaml_util - INFO - 写入extract.yml文件内容: {'access_token': 'ee68a919-0a62-427c-8e35-fce958704f11'}
+2023-10-25 14:08:43,267 - common.yaml_util - INFO - 写入extract.yml文件成功
+2023-10-25 14:08:43,268 - base.base_util - INFO - ************************test case run completed************************
+2023-10-25 14:08:43,273 - base.base_util - INFO - ************************starting run test cases************************
+2023-10-25 14:08:43,274 - common.yaml_util - INFO - 读取extract.yml文件中key为: access_token 的数据
+2023-10-25 14:08:43,275 - common.yaml_util - INFO - extract.yml文件key值为：access_token 的值为 ee68a919-0a62-427c-8e35-fce958704f11 
+2023-10-25 14:08:43,275 - testcases.test_interface - INFO - 请求数据：{'Accept': 'application/json, text/plain, */*', 'accessToken': 'ee68a919-0a62-427c-8e35-fce958704f11'}
+2023-10-25 14:08:43,275 - common.requests_util - INFO - 请求地址:http://172.24.100.75:10006/expose/website/newLoginByCenter
+2023-10-25 14:08:43,275 - common.requests_util - INFO - 请求方式:get
+2023-10-25 14:08:43,404 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 14:08:43,405 - common.requests_util - INFO - 响应结果：{"msg":"登录成功","code":200,"data":"{\"head\":{\"dgtlEnvlp\":\"04fce0d673f87835347ae4b64875f594415c47940dd4e4984a5997045dcc9106a20f22c3c01fbc16f66bdd637208b179a9534e4485f2df6dd7300fd7ee14689a3581df56912f3b885ca95e5ea9874921f8f1c3f2d120c75a94c62c757ce56317e9de0698f110ae280d587497ff9716632233124f3f6e46c9231cc3f8cacf898c03\",\"sign\":\"d89f2949a3b652889a35f81b6a6133c83c6bddef559c01ccc18133451b90a188\"},\"body\":\"842c7114fcde9b39350ed57cfd0dd33fe181d3e768e9f81a64d4157cd79d5a5fd59bcfd523dd83f283f971b1b59ae5bb0a08e22690c39d260912e250e2e23db41cc528dc6b3e478d891f29471e138b5cc5ba83eaf454ab6c764b994a56ce04ef7a8fbc11713036602c2060679105061b8c192b20bfc266e395668ffc86a381b139550d7088f78278b2954ddf1b5ba4c9960a29bf10fe57bf3ae8e7bacce6420d82483f084f5bd180a410733304b80062ab8a9b4f89bbf890b6f0a534e5eb882f9abadbdd7cb8d6ae2298f27a3f97181dd2ef8f6946bacad84913b274a1fba608938c3546907b2c98a17aebb1ce67f39aaae8e628bdaf68c6bfbf2adf85a9b2d2b1226b4fd3ea4e3c9a02c7fe02486a3e164519f9a92fe666f0cfb20b33ccb36d\"}"}
+2023-10-25 14:08:43,423 - common.yaml_util - INFO - 写入extract.yml文件内容: {'token': 'eyJ1c2VySWQiOiIxNzc1NDc1NDQxMiIsInRva2VuIjoiNmY5N2ZjZThmNmFlNDI0Zjg0NGNiZmUxMDU1NDY4OWYifQ=='}
+2023-10-25 14:08:43,424 - common.yaml_util - INFO - 写入extract.yml文件成功
+2023-10-25 14:08:43,425 - base.base_util - INFO - ************************test case run completed************************
+2023-10-25 14:08:43,429 - base.base_util - INFO - ************************starting run test cases************************
+2023-10-25 14:08:43,429 - common.yaml_util - INFO - 读取extract.yml文件中key为: token 的数据
+2023-10-25 14:08:43,430 - common.yaml_util - INFO - extract.yml文件key值为：token 的值为 eyJ1c2VySWQiOiIxNzc1NDc1NDQxMiIsInRva2VuIjoiNmY5N2ZjZThmNmFlNDI0Zjg0NGNiZmUxMDU1NDY4OWYifQ== 
+2023-10-25 14:08:43,430 - testcases.test_interface - INFO - 请求头：{'Host': '172.24.100.75:10006', 'Cookie': 'Token=eyJ1c2VySWQiOiIxNzc1NDc1NDQxMiIsInRva2VuIjoiNmY5N2ZjZThmNmFlNDI0Zjg0NGNiZmUxMDU1NDY4OWYifQ=='}
+2023-10-25 14:08:43,431 - common.requests_util - INFO - 请求地址:http://172.24.100.75:10006/expose/website/traders
+2023-10-25 14:08:43,431 - common.requests_util - INFO - 请求方式:get
+2023-10-25 14:08:43,589 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 14:08:43,590 - common.requests_util - INFO - 响应结果：{"msg":"查询成功","code":200,"data":[{"traderNo":"TN2023030800027204","name":"砼联数字科技有限"},{"traderNo":"TN2023042100031602","name":"gdfgsd双方的"}]}
+2023-10-25 14:08:43,591 - base.base_util - INFO - ************************test case run completed************************
+2023-10-25 14:08:43,595 - base.base_util - INFO - ************************starting run test cases************************
+2023-10-25 14:08:43,596 - common.yaml_util - INFO - 读取extract.yml文件中key为: token 的数据
+2023-10-25 14:08:43,596 - common.yaml_util - INFO - extract.yml文件key值为：token 的值为 eyJ1c2VySWQiOiIxNzc1NDc1NDQxMiIsInRva2VuIjoiNmY5N2ZjZThmNmFlNDI0Zjg0NGNiZmUxMDU1NDY4OWYifQ== 
+2023-10-25 14:08:43,597 - common.yaml_util - INFO - 读取extract.yml文件中key为: token 的数据
+2023-10-25 14:08:43,597 - common.yaml_util - INFO - extract.yml文件key值为：token 的值为 eyJ1c2VySWQiOiIxNzc1NDc1NDQxMiIsInRva2VuIjoiNmY5N2ZjZThmNmFlNDI0Zjg0NGNiZmUxMDU1NDY4OWYifQ== 
+2023-10-25 14:08:43,597 - testcases.test_interface - INFO - 请求头：{'Host': '172.24.100.75:10006', 'Cookie': 'Token=eyJ1c2VySWQiOiIxNzc1NDc1NDQxMiIsInRva2VuIjoiNmY5N2ZjZThmNmFlNDI0Zjg0NGNiZmUxMDU1NDY4OWYifQ==', 'Token': 'eyJ1c2VySWQiOiIxNzc1NDc1NDQxMiIsInRva2VuIjoiNmY5N2ZjZThmNmFlNDI0Zjg0NGNiZmUxMDU1NDY4OWYifQ=='}
+2023-10-25 14:08:43,598 - common.requests_util - INFO - 请求地址:http://172.24.100.75:10006/expose/website/getMenus
+2023-10-25 14:08:43,598 - common.requests_util - INFO - 请求方式:get
+2023-10-25 14:08:43,652 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 14:08:43,652 - common.requests_util - INFO - 响应结果：{"msg":"操作成功","code":200,"data":[{"code":"perCenter","name":"首页","url":"/financing","sortNo":100,"coreFlag":0,"actionCodes":["VIEW"]},{"code":"enterManage","name":"企业信息管理","url":"/financing","sortNo":200,"coreFlag":0,"actionCodes":["VIEW"]},{"code":"supplierManage","name":"供应商管理","url":"/financing","sortNo":300,"coreFlag":0,"actionCodes":["VIEW"]},{"code":"tradeInfo","name":"交易信息","url":"/financing","sortNo":400,"coreFlag":0,"actionCodes":["VIEW"]},{"code":"financingInfo","name":"融资信息","url":"/financing","sortNo":500,"coreFlag":0,"actionCodes":["VIEW"]},{"code":"certiManage","name":"凭证管理","url":"/financing","sortNo":700,"coreFlag":0,"actionCodes":["VIEW"]},{"code":"productManage","name":"产品管理","url":"/financing","sortNo":800,"coreFlag":0,"actionCodes":["VIEW"]},{"code":"concretePay","name":"砼联支付","url":"/financing","sortNo":900,"coreFlag":0,"actionCodes":["VIEW"]},{"code":"authManage","name":"权限设置","url":"/financing","sortNo":1000,"coreFlag":0,"actionCodes":["VIEW"]}]}
+2023-10-25 14:08:43,654 - base.base_util - INFO - ************************test case run completed************************
+2023-10-25 14:08:53,087 - common.yaml_util - INFO - 读取get_access_token.yml文件中测试用例数据成功
+2023-10-25 14:08:53,088 - common.yaml_util - INFO - 读取get_token.yml文件中测试用例数据成功
+2023-10-25 14:08:53,089 - common.yaml_util - INFO - 读取get_traders.yml文件中测试用例数据成功
+2023-10-25 14:08:53,090 - common.yaml_util - INFO - 读取get_menus.yml文件中测试用例数据成功
+2023-10-25 14:08:53,168 - common.yaml_util - INFO - 清除extract.yml文件内容成功
+2023-10-25 14:08:53,169 - base.base_util - INFO - ************************starting run test cases************************
+2023-10-25 14:08:53,170 - testcases.test_interface - INFO - 请求头：{'enterCode': 'TLSK', 'Authorization': 'Basic dG9uZ0xpYW46dG9uZ0xpYW4=', 'Content-Type': 'application/x-www-form-urlencoded', 'Host': '172.24.100.107:14000'}
+2023-10-25 14:08:53,170 - testcases.test_interface - INFO - 请求数据：{'mobile': 'SMSCUST%4017754754412', 'code': 230516}
+2023-10-25 14:08:53,171 - common.requests_util - INFO - 请求地址:http://172.24.100.107:14000/auth/oauth/token?grant_type=mobile&source=PORTAL_CONFIG
+2023-10-25 14:08:53,171 - common.requests_util - INFO - 请求方式:post
+2023-10-25 14:08:53,529 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 14:08:53,529 - common.requests_util - INFO - 响应结果：{"access_token":"ee68a919-0a62-427c-8e35-fce958704f11","token_type":"bearer","refresh_token":"49e2befd-e16d-4d1f-98c5-e3e35460bef2","expires_in":7199,"scope":"server","loginEnterCode":"TLSK","license":"made by panda","cnName":"砼联数字科技有限","phone":"17754754412","active":true,"id":33521,"avatar":null,"type":"2","client_id":"tongLian","email":null,"username":"17754754412"}
+2023-10-25 14:08:53,530 - common.yaml_util - INFO - 写入extract.yml文件内容: {'access_token': 'ee68a919-0a62-427c-8e35-fce958704f11'}
+2023-10-25 14:08:53,531 - common.yaml_util - INFO - 写入extract.yml文件成功
+2023-10-25 14:08:53,532 - base.base_util - INFO - ************************test case run completed************************
+2023-10-25 14:08:53,536 - base.base_util - INFO - ************************starting run test cases************************
+2023-10-25 14:08:53,537 - common.yaml_util - INFO - 读取extract.yml文件中key为: access_token 的数据
+2023-10-25 14:08:53,537 - common.yaml_util - INFO - extract.yml文件key值为：access_token 的值为 ee68a919-0a62-427c-8e35-fce958704f11 
+2023-10-25 14:08:53,537 - testcases.test_interface - INFO - 请求数据：{'Accept': 'application/json, text/plain, */*', 'accessToken': 'ee68a919-0a62-427c-8e35-fce958704f11'}
+2023-10-25 14:08:53,538 - common.requests_util - INFO - 请求地址:http://172.24.100.75:10006/expose/website/newLoginByCenter
+2023-10-25 14:08:53,538 - common.requests_util - INFO - 请求方式:get
+2023-10-25 14:08:53,601 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 14:08:53,601 - common.requests_util - INFO - 响应结果：{"msg":"登录成功","code":200,"data":"{\"head\":{\"dgtlEnvlp\":\"04b92ff4df7a8246d191929cfff8199f3f958dfd73ad3b6b17a31f2f51efa3f41c742efc49a664236f5503575b648ee5012370338936f9ccd833df3e037cbb3fd9ad7f97c178cb4e56678dc1e511394b37eceb8d4e9519f2256b569bbbdb9a75bbd7f2c5804a6bdabce0b2cfd4aed6ab679f4634a9d74035f5039b8cb9367b8a5f\",\"sign\":\"72bdfd9d04335da9b6343542e1b3144f78309f339ce61be1a935f275e43115a6\"},\"body\":\"cfd9cae43c1467424eb4d65bdaf2f9a86d24d0700e20574ce9168d1db9606e9701e501aa6d61b6ad1c98dacceb3cfc9e49a4f9bda5317519c3d82ed39fb45f00f01106dc695ab96ae3aa061626ed219c6acea5f48f1d3dfbdb7acb421a7b315a1c900057198d71c84d82018fd0667edc82e4f46df77aacecfb0928285b9a3257c4fe7086e77498a54f02e2dc7f5351bc26a79cfd6b163ce9bee37b6e69cdd7729a8a5a7b04bc4652ba69ec419a73482dfc6ab34de48b821dc236c6e65648871f347207269b9b04d53fb8176407016494926e216bd59e907a943febf9a9d5ef2a06946a3bfd2208215f2a9734cf3623089fc59522210ccd4b09be4251904b1246f05dffc3a885fcc1f35529151adab26d446dd89fc914d98a6aaf86b8e50adddc\"}"}
+2023-10-25 14:08:53,619 - common.yaml_util - INFO - 写入extract.yml文件内容: {'token': 'eyJ1c2VySWQiOiIxNzc1NDc1NDQxMiIsInRva2VuIjoiNzY2ODhiM2I0NzZhNGVkOWJhYTFiZTY1ZThiOWEwNWUifQ=='}
+2023-10-25 14:08:53,620 - common.yaml_util - INFO - 写入extract.yml文件成功
+2023-10-25 14:08:53,621 - base.base_util - INFO - ************************test case run completed************************
+2023-10-25 14:08:53,625 - base.base_util - INFO - ************************starting run test cases************************
+2023-10-25 14:08:53,625 - common.yaml_util - INFO - 读取extract.yml文件中key为: token 的数据
+2023-10-25 14:08:53,626 - common.yaml_util - INFO - extract.yml文件key值为：token 的值为 eyJ1c2VySWQiOiIxNzc1NDc1NDQxMiIsInRva2VuIjoiNzY2ODhiM2I0NzZhNGVkOWJhYTFiZTY1ZThiOWEwNWUifQ== 
+2023-10-25 14:08:53,626 - testcases.test_interface - INFO - 请求头：{'Host': '172.24.100.75:10006', 'Cookie': 'Token=eyJ1c2VySWQiOiIxNzc1NDc1NDQxMiIsInRva2VuIjoiNzY2ODhiM2I0NzZhNGVkOWJhYTFiZTY1ZThiOWEwNWUifQ=='}
+2023-10-25 14:08:53,627 - common.requests_util - INFO - 请求地址:http://172.24.100.75:10006/expose/website/traders
+2023-10-25 14:08:53,627 - common.requests_util - INFO - 请求方式:get
+2023-10-25 14:08:53,670 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 14:08:53,670 - common.requests_util - INFO - 响应结果：{"msg":"查询成功","code":200,"data":[{"traderNo":"TN2023030800027204","name":"砼联数字科技有限"},{"traderNo":"TN2023042100031602","name":"gdfgsd双方的"}]}
+2023-10-25 14:08:53,671 - base.base_util - INFO - ************************test case run completed************************
+2023-10-25 14:08:53,675 - base.base_util - INFO - ************************starting run test cases************************
+2023-10-25 14:08:53,676 - common.yaml_util - INFO - 读取extract.yml文件中key为: token 的数据
+2023-10-25 14:08:53,677 - common.yaml_util - INFO - extract.yml文件key值为：token 的值为 eyJ1c2VySWQiOiIxNzc1NDc1NDQxMiIsInRva2VuIjoiNzY2ODhiM2I0NzZhNGVkOWJhYTFiZTY1ZThiOWEwNWUifQ== 
+2023-10-25 14:08:53,677 - common.yaml_util - INFO - 读取extract.yml文件中key为: token 的数据
+2023-10-25 14:08:53,677 - common.yaml_util - INFO - extract.yml文件key值为：token 的值为 eyJ1c2VySWQiOiIxNzc1NDc1NDQxMiIsInRva2VuIjoiNzY2ODhiM2I0NzZhNGVkOWJhYTFiZTY1ZThiOWEwNWUifQ== 
+2023-10-25 14:08:53,678 - testcases.test_interface - INFO - 请求头：{'Host': '172.24.100.75:10006', 'Cookie': 'Token=eyJ1c2VySWQiOiIxNzc1NDc1NDQxMiIsInRva2VuIjoiNzY2ODhiM2I0NzZhNGVkOWJhYTFiZTY1ZThiOWEwNWUifQ==', 'Token': 'eyJ1c2VySWQiOiIxNzc1NDc1NDQxMiIsInRva2VuIjoiNzY2ODhiM2I0NzZhNGVkOWJhYTFiZTY1ZThiOWEwNWUifQ=='}
+2023-10-25 14:08:53,678 - common.requests_util - INFO - 请求地址:http://172.24.100.75:10006/expose/website/getMenus
+2023-10-25 14:08:53,678 - common.requests_util - INFO - 请求方式:get
+2023-10-25 14:08:53,718 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 14:08:53,718 - common.requests_util - INFO - 响应结果：{"msg":"操作成功","code":200,"data":[{"code":"perCenter","name":"首页","url":"/financing","sortNo":100,"coreFlag":0,"actionCodes":["VIEW"]},{"code":"enterManage","name":"企业信息管理","url":"/financing","sortNo":200,"coreFlag":0,"actionCodes":["VIEW"]},{"code":"supplierManage","name":"供应商管理","url":"/financing","sortNo":300,"coreFlag":0,"actionCodes":["VIEW"]},{"code":"tradeInfo","name":"交易信息","url":"/financing","sortNo":400,"coreFlag":0,"actionCodes":["VIEW"]},{"code":"financingInfo","name":"融资信息","url":"/financing","sortNo":500,"coreFlag":0,"actionCodes":["VIEW"]},{"code":"certiManage","name":"凭证管理","url":"/financing","sortNo":700,"coreFlag":0,"actionCodes":["VIEW"]},{"code":"productManage","name":"产品管理","url":"/financing","sortNo":800,"coreFlag":0,"actionCodes":["VIEW"]},{"code":"concretePay","name":"砼联支付","url":"/financing","sortNo":900,"coreFlag":0,"actionCodes":["VIEW"]},{"code":"authManage","name":"权限设置","url":"/financing","sortNo":1000,"coreFlag":0,"actionCodes":["VIEW"]}]}
+2023-10-25 14:08:53,719 - base.base_util - INFO - ************************test case run completed************************
+2023-10-25 14:09:07,624 - common.yaml_util - INFO - 读取get_access_token.yml文件中测试用例数据成功
+2023-10-25 14:09:07,626 - common.yaml_util - INFO - 读取get_token.yml文件中测试用例数据成功
+2023-10-25 14:09:07,627 - common.yaml_util - INFO - 读取get_traders.yml文件中测试用例数据成功
+2023-10-25 14:09:07,628 - common.yaml_util - INFO - 读取get_menus.yml文件中测试用例数据成功
+2023-10-25 14:09:07,707 - common.yaml_util - INFO - 清除extract.yml文件内容成功
+2023-10-25 14:09:07,708 - base.base_util - INFO - ************************starting run test cases************************
+2023-10-25 14:09:07,710 - testcases.test_interface - INFO - 请求头：{'enterCode': 'TLSK', 'Authorization': 'Basic dG9uZ0xpYW46dG9uZ0xpYW4=', 'Content-Type': 'application/x-www-form-urlencoded', 'Host': '172.24.100.107:14000'}
+2023-10-25 14:09:07,710 - testcases.test_interface - INFO - 请求数据：{'mobile': 'SMSCUST%4017754754412', 'code': 230516}
+2023-10-25 14:09:07,711 - common.requests_util - INFO - 请求地址:http://172.24.100.107:14000/auth/oauth/token?grant_type=mobile&source=PORTAL_CONFIG
+2023-10-25 14:09:07,711 - common.requests_util - INFO - 请求方式:post
+2023-10-25 14:09:07,781 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 14:09:07,781 - common.requests_util - INFO - 响应结果：{"access_token":"ee68a919-0a62-427c-8e35-fce958704f11","token_type":"bearer","refresh_token":"49e2befd-e16d-4d1f-98c5-e3e35460bef2","expires_in":7199,"scope":"server","loginEnterCode":"TLSK","license":"made by panda","cnName":"砼联数字科技有限","phone":"17754754412","active":true,"id":33521,"avatar":null,"type":"2","client_id":"tongLian","email":null,"username":"17754754412"}
+2023-10-25 14:09:07,781 - common.yaml_util - INFO - 写入extract.yml文件内容: {'access_token': 'ee68a919-0a62-427c-8e35-fce958704f11'}
+2023-10-25 14:09:07,782 - common.yaml_util - INFO - 写入extract.yml文件成功
+2023-10-25 14:09:07,783 - base.base_util - INFO - ************************test case run completed************************
+2023-10-25 14:09:07,788 - base.base_util - INFO - ************************starting run test cases************************
+2023-10-25 14:09:07,788 - common.yaml_util - INFO - 读取extract.yml文件中key为: access_token 的数据
+2023-10-25 14:09:07,789 - common.yaml_util - INFO - extract.yml文件key值为：access_token 的值为 ee68a919-0a62-427c-8e35-fce958704f11 
+2023-10-25 14:09:07,789 - testcases.test_interface - INFO - 请求数据：{'Accept': 'application/json, text/plain, */*', 'accessToken': 'ee68a919-0a62-427c-8e35-fce958704f11'}
+2023-10-25 14:09:07,789 - common.requests_util - INFO - 请求地址:http://172.24.100.75:10006/expose/website/newLoginByCenter
+2023-10-25 14:09:07,790 - common.requests_util - INFO - 请求方式:get
+2023-10-25 14:09:07,848 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 14:09:07,848 - common.requests_util - INFO - 响应结果：{"msg":"登录成功","code":200,"data":"{\"head\":{\"dgtlEnvlp\":\"04712e1eacf4376a44419be4f4230a5c664c1fb2c7a5de445eee39b674d9098b4b0caa18e632eb8cd2cde95844d261cfe5a6fad551cdfb4bdbd764c43042d28c96e0771b674dea76a4b8fa7aaa7d1746dafdb003de1f931822c94f6646fce2b799af7fc1b8ffbb2b2b0abf3c10d4ee548f2967c11ecf812f7fe29b47dcf3544927\",\"sign\":\"7512a45fcba0ffdab7d463dbfc1846b0862e0c96a5f696e19a72471c90aa5b7f\"},\"body\":\"8573ab5569a48e3d756b80fdc5cbc4c3aedf6aabfbf54073d225acaa20cfa34f362491f0d9bcbdfc6e49d839189bc05f7cee060d4ff83dd41a20c4b218d2bec666e9cccf3ef4e87e2b9e5e00c0cbe1b0ca022300e0b9ef023f81d9f60e4c6bbe07577c775ba4217c4b3f0fa4ea4238a8fb907b606779cd34506da65215732d7722bba95f711e76f5769f0f4c2c39438fd356441a603ecee27efff6537aa0d89ddd5eb03a34aac0ad3d9f0985dc2ae0739548953593b481fa3790f993f454e22292cf700c7e9d68db4a080e53a9422a50b8015333dcf313c267ea8566b09676434cfc6bc90442ffbb0bcfe66dfca207dce71626b02152b133624607b9f29c9d7f761ba193db288d71c89a796456666c5c1b75e7e80def171b8133c45f923301a0\"}"}
+2023-10-25 14:09:07,864 - common.yaml_util - INFO - 写入extract.yml文件内容: {'token': 'eyJ1c2VySWQiOiIxNzc1NDc1NDQxMiIsInRva2VuIjoiOGQzZGZiZjM2ZGY2NGM1NWExYzY5MTg0NDFhYTVlMmMifQ=='}
+2023-10-25 14:09:07,865 - common.yaml_util - INFO - 写入extract.yml文件成功
+2023-10-25 14:09:07,866 - base.base_util - INFO - ************************test case run completed************************
+2023-10-25 14:09:07,871 - base.base_util - INFO - ************************starting run test cases************************
+2023-10-25 14:09:07,872 - common.yaml_util - INFO - 读取extract.yml文件中key为: token 的数据
+2023-10-25 14:09:07,873 - common.yaml_util - INFO - extract.yml文件key值为：token 的值为 eyJ1c2VySWQiOiIxNzc1NDc1NDQxMiIsInRva2VuIjoiOGQzZGZiZjM2ZGY2NGM1NWExYzY5MTg0NDFhYTVlMmMifQ== 
+2023-10-25 14:09:07,873 - testcases.test_interface - INFO - 请求头：{'Host': '172.24.100.75:10006', 'Cookie': 'Token=eyJ1c2VySWQiOiIxNzc1NDc1NDQxMiIsInRva2VuIjoiOGQzZGZiZjM2ZGY2NGM1NWExYzY5MTg0NDFhYTVlMmMifQ=='}
+2023-10-25 14:09:07,873 - common.requests_util - INFO - 请求地址:http://172.24.100.75:10006/expose/website/traders
+2023-10-25 14:09:07,873 - common.requests_util - INFO - 请求方式:get
+2023-10-25 14:09:07,916 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 14:09:07,916 - common.requests_util - INFO - 响应结果：{"msg":"查询成功","code":200,"data":[{"traderNo":"TN2023030800027204","name":"砼联数字科技有限"},{"traderNo":"TN2023042100031602","name":"gdfgsd双方的"}]}
+2023-10-25 14:09:07,918 - base.base_util - INFO - ************************test case run completed************************
+2023-10-25 14:09:07,922 - base.base_util - INFO - ************************starting run test cases************************
+2023-10-25 14:09:07,922 - common.yaml_util - INFO - 读取extract.yml文件中key为: token 的数据
+2023-10-25 14:09:07,923 - common.yaml_util - INFO - extract.yml文件key值为：token 的值为 eyJ1c2VySWQiOiIxNzc1NDc1NDQxMiIsInRva2VuIjoiOGQzZGZiZjM2ZGY2NGM1NWExYzY5MTg0NDFhYTVlMmMifQ== 
+2023-10-25 14:09:07,923 - common.yaml_util - INFO - 读取extract.yml文件中key为: token 的数据
+2023-10-25 14:09:07,923 - common.yaml_util - INFO - extract.yml文件key值为：token 的值为 eyJ1c2VySWQiOiIxNzc1NDc1NDQxMiIsInRva2VuIjoiOGQzZGZiZjM2ZGY2NGM1NWExYzY5MTg0NDFhYTVlMmMifQ== 
+2023-10-25 14:09:07,923 - testcases.test_interface - INFO - 请求头：{'Host': '172.24.100.75:10006', 'Cookie': 'Token=eyJ1c2VySWQiOiIxNzc1NDc1NDQxMiIsInRva2VuIjoiOGQzZGZiZjM2ZGY2NGM1NWExYzY5MTg0NDFhYTVlMmMifQ==', 'Token': 'eyJ1c2VySWQiOiIxNzc1NDc1NDQxMiIsInRva2VuIjoiOGQzZGZiZjM2ZGY2NGM1NWExYzY5MTg0NDFhYTVlMmMifQ=='}
+2023-10-25 14:09:07,925 - common.requests_util - INFO - 请求地址:http://172.24.100.75:10006/expose/website/getMenus
+2023-10-25 14:09:07,925 - common.requests_util - INFO - 请求方式:get
+2023-10-25 14:09:07,953 - common.requests_util - INFO - 请求结果状态码：[200]
+2023-10-25 14:09:07,953 - common.requests_util - INFO - 响应结果：{"msg":"操作成功","code":200,"data":[{"code":"perCenter","name":"首页","url":"/financing","sortNo":100,"coreFlag":0,"actionCodes":["VIEW"]},{"code":"enterManage","name":"企业信息管理","url":"/financing","sortNo":200,"coreFlag":0,"actionCodes":["VIEW"]},{"code":"supplierManage","name":"供应商管理","url":"/financing","sortNo":300,"coreFlag":0,"actionCodes":["VIEW"]},{"code":"tradeInfo","name":"交易信息","url":"/financing","sortNo":400,"coreFlag":0,"actionCodes":["VIEW"]},{"code":"financingInfo","name":"融资信息","url":"/financing","sortNo":500,"coreFlag":0,"actionCodes":["VIEW"]},{"code":"certiManage","name":"凭证管理","url":"/financing","sortNo":700,"coreFlag":0,"actionCodes":["VIEW"]},{"code":"productManage","name":"产品管理","url":"/financing","sortNo":800,"coreFlag":0,"actionCodes":["VIEW"]},{"code":"concretePay","name":"砼联支付","url":"/financing","sortNo":900,"coreFlag":0,"actionCodes":["VIEW"]},{"code":"authManage","name":"权限设置","url":"/financing","sortNo":1000,"coreFlag":0,"actionCodes":["VIEW"]}]}
+2023-10-25 14:09:07,954 - base.base_util - INFO - ************************test case run completed************************
