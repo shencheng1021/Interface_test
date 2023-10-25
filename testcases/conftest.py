@@ -19,6 +19,7 @@ log=Logger(__name__,CmdLevel=logging.INFO, FileLevel=logging.INFO)
 @allure.step("初始化extract_yaml文件")
 @pytest.fixture(scope='session',autouse=True)
 def clear_extract_yaml():
+    log.logger.info("清除extract_yaml文件内容")
     YamlUtil().clear_yaml()
 
 
