@@ -1,0 +1,47 @@
+-
+  name: 初审审核通过
+  requests:
+    method: post
+    url: http://172.24.100.75:10006/expose/approval/comm/reviewPassedBatch
+    headers:
+      Host: 172.24.100.75:10006
+      Content-Type: application/json;charset=UTF-8
+      Cookie:
+      Token:
+    data:
+      - userId: shencheng
+        creditNo:
+        opinion: ""
+  assert: 操作成功
+
+-
+  name: 复核审核通过
+  requests:
+    method: post
+    url: http://172.24.100.75:10006/expose/approval/comm/reviewPassedBatch
+    headers:
+      Host: 172.24.100.75:10006
+      Content-Type: application/json;charset=UTF-8
+      Cookie:
+      Token:
+    data:
+      - userId: shencheng
+        creditNo:
+        opinion: ""
+  assert: 操作成功
+
+-
+  name: 终审审核通过
+  requests:
+    method: post
+    url: http://172.24.100.75:10006/expose/approval/comm/reviewPassedBatch
+    headers:
+      Host: 172.24.100.75:10006
+      Content-Type: application/json;charset=UTF-8
+      Cookie:
+      Token:
+    data:
+      - userId: shencheng
+        creditNo:
+        opinion: ""
+  assert: 操作成功

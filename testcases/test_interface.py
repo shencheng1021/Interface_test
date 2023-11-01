@@ -10,11 +10,12 @@ import json
 import logging
 import pytest
 from common.assert_util import AssertUtil
-from common.gmssl_util import GmSsl
 from common.logger_util import Logger
 from common.requests_util import RequestsUtil
 from common.yaml_util import YamlUtil
 import allure
+
+from common.get_token_util import GetToken
 
 log=Logger(__name__,CmdLevel=logging.INFO, FileLevel=logging.INFO)
 
@@ -23,41 +24,44 @@ log=Logger(__name__,CmdLevel=logging.INFO, FileLevel=logging.INFO)
 @allure.feature("砼联数科官网接口测试")
 class TestInterface:
 
-    @allure.title("获取access_token")
-    @pytest.mark.parametrize('caseinfo', YamlUtil().read_testcase_yaml('get_access_token.yml'))
-    def test_get_access_token(self,caseinfo):
-
-        url=caseinfo['requests']['url']
-        data=caseinfo['requests']['data']
-        headers=caseinfo['requests']['headers']
-        method=caseinfo['requests']['method']
-        log.logger.info("请求头：%s" % headers)
-        log.logger.info("请求数据：%s" % data)
-        result=RequestsUtil().send_request(method,url,data=data,headers = headers)
-        result=json.loads(result)
-        YamlUtil().write_yaml({'access_token':result['access_token']})
-        AssertUtil().assertIn('access_token',result)
-        AssertUtil().assertEqual('TLSK',result['loginEnterCode'])
-        #assert 'access_token' in result
-        # assert 'token_type' in result
-        # assert 'expires_in' in result
-        # assert 'scope' in result
-        # assert result['loginEnterCode'] == 'TLSK'
-        # assert 'license' in result
-
-    @allure.title("登录接口，获取接口返回的token")
-    @pytest.mark.parametrize('caseinfo', YamlUtil().read_testcase_yaml('get_token.yml'))
-    def test_get_token(self,caseinfo):
-        url=caseinfo['requests']['url']
-        caseinfo['requests']['data']['accessToken'] = YamlUtil().read_yaml('access_token')
-        data=caseinfo['requests']['data']
-        method = caseinfo['requests']['method']
-        log.logger.info("请求数据：%s" % data)
-        result = RequestsUtil().send_request(method,url,params=data)
-        result=json.loads(result)
-        GmSsl().set_token(result['data'])
-        AssertUtil().assertEqual('登录成功',result['msg'])
+    # @allure.title("获取access_token")
+    # @pytest.mark.parametrize('caseinfo', YamlUtil().read_testcase_yaml('get_access_token.yml'))
+    # def test_get_access_token(self,caseinfo):
+    #
+    #     url=caseinfo['requests']['url']
+    #     data=caseinfo['requests']['data']
+    #     headers=caseinfo['requests']['headers']
+    #     method=caseinfo['requests']['method']
+    #     log.logger.info("请求头：%s" % headers)
+    #     log.logger.info("请求数据：%s" % data)
+    #     result=RequestsUtil().send_request(method,url,data=data,headers = headers)
+    #     result=json.loads(result)
+    #     YamlUtil().write_yaml({'access_token':result['access_token']})
+    #     AssertUtil().assertIn('access_token',result)
+    #     AssertUtil().assertEqual('TLSK',result['loginEnterCode'])
+    #     #assert 'access_token' in result
+    #     # assert 'token_type' in result
+    #     # assert 'expires_in' in result
+    #     # assert 'scope' in result
+    #     # assert result['loginEnterCode'] == 'TLSK'
+    #     # assert 'license' in result
+    #
+    # @allure.title("登录接口，获取接口返回的token")
+    # @pytest.mark.parametrize('caseinfo', YamlUtil().read_testcase_yaml('get_token.yml'))
+    # def test_get_token(self,caseinfo):
+    #     url=caseinfo['requests']['url']
+    #     caseinfo['requests']['data']['accessToken'] = YamlUtil().read_yaml('access_token')
+    #     data=caseinfo['requests']['data']
+    #     method = caseinfo['requests']['method']
+    #     log.logger.info("请求数据：%s" % data)
+    #     result = RequestsUtil().send_request(method,url,params=data)
+    #     result=json.loads(result)
+    #     GmSsl().set_token(result['data'])
+    #     AssertUtil().assertEqual('登录成功',result['msg'])
         #assert '登录成功' == result['msg']
+    @allure.title("登录接口，获取接口返回的token")
+    def test_get_token(self):
+        GetToken().get_token('17754754412')
 
     @allure.title("查询账户关联的企业列表")
     @pytest.mark.parametrize('caseinfo', YamlUtil().read_testcase_yaml('get_traders.yml'))
@@ -67,8 +71,8 @@ class TestInterface:
         headers = caseinfo['requests']['headers']
         method = caseinfo['requests']['method']
         log.logger.info("请求头：%s" % headers)
-        result = RequestsUtil().send_request(method,url,headers=headers)
-        result=json.loads(result)
+        rep = RequestsUtil().send_request(method,url,headers=headers)
+        result = json.loads(rep)
         AssertUtil().assertEqual('TN2023030800027204', result['data'][0]['traderNo'])
         #assert 'TN2023030800027204' == result['data'][0]['traderNo']
 
@@ -82,8 +86,8 @@ class TestInterface:
         caseinfo['requests']['headers']['Token'] = token
         headers=caseinfo['requests']['headers']
         log.logger.info("请求头：%s" % headers)
-        result=RequestsUtil().send_request(method,url,headers=headers)
-        result=json.loads(result)
+        rep=RequestsUtil().send_request(method,url,headers=headers)
+        result=json.loads(rep)
         AssertUtil().assertEqual("操作成功",result['msg'])
         #assert '操作成功' == result['msg']
 

@@ -1,0 +1,12 @@
+-
+  name: 同意数据授权
+  requests:
+    method: get
+    url: http://172.24.100.75:10006/expose/ext/agreeAgreement
+    headers:
+      Host: 172.24.100.75:10006
+      Cookie:
+      Token:
+    data:
+      productType: P00005
+  assert: None

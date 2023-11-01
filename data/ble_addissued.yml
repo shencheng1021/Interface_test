@@ -1,0 +1,22 @@
+-
+  name: 新增融信
+  requests:
+    method: post
+    url: http://172.24.100.75:10006/expose/issue/comm/issued
+    headers:
+      Host: 172.24.100.75:10006
+      Content-Type: application/json;charset=UTF-8
+      Cookie:
+      Token:
+    data:
+      issueAmount: '10000'
+      paymentDate: '2024-05-31'
+      quotaSource: TN2022042700010413
+      quotaSourceName: 中建西部建设股份有限公司
+      supplier: TN2022031800004621
+      supplierName: 供应商新101
+      traderName: 核心企业新1
+      traderNo: TN2022022600001213
+      productNo: P00005
+  assert: 签发成功
+

@@ -1,0 +1,20 @@
+-
+  name: 制单审核通过
+  requests:
+    method: post
+    url: http://172.24.100.75:10006/expose/approval/comm/doApproval
+    headers:
+      Host: 172.24.100.75:10006
+      Content-Type: application/json;charset=UTF-8
+      Cookie:
+      Token:
+    data:
+      association: false
+      creditNo:
+      oaIds:
+        -
+      result: 5
+      userId: shencheng
+      opinion: ""
+  assert: 操作成功
+

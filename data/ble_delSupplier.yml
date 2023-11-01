@@ -1,0 +1,13 @@
+-
+  name: 删除供应商
+  requests:
+    method: get
+    url: http://172.24.100.75:10006/expose/cmb/supplier/delete
+    headers:
+      Host: 172.24.100.75:10006
+      Cookie:
+      Token:
+    data:
+      traderNo: TN2022081600018204
+  assert: 删除成功
+

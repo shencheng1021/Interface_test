@@ -1,0 +1,10 @@
+-
+  name: 查询当前登录账号是否为核心企业
+  requests:
+    method: get
+    url: http://172.24.100.75:10006/newsite/identity/check/fkdl
+    headers:
+      Host: 172.24.100.75:10006
+      Cookie:
+      Token:
+  assert: None

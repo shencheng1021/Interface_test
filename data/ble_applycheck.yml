@@ -1,0 +1,31 @@
+-
+  name: 该供应商已完成付款代理准入
+  requests:
+    method: post
+    url: http://172.24.100.75:10006/tjf-upp/website/ApplyCheck
+    headers:
+      Host: 172.24.100.75:10006
+      Content-Type: application/json;charset:utf-8
+      Cookie:
+      Token:
+    data:
+      model:
+        product_no: P00005
+        trader_no: TN2022022600001213
+  assert: True
+
+-
+  name: ApplyCheck接口
+  requests:
+    method: post
+    url: http://172.24.100.75:10006/tjf-upp/website/ApplyCheck
+    headers:
+      Host: 172.24.100.75:10006
+      Content-Type: application/json;charset:utf-8
+      Cookie:
+      Token:
+    data:
+      model:
+        product_no: P00005
+        trader_no: TN2022011200000607
+  assert: False

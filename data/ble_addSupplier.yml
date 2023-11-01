@@ -1,0 +1,27 @@
+-
+  name: 新增供应商已存在
+  requests:
+    method: post
+    url: http://172.24.100.75:10006/expose/supplier/comm/add
+    headers:
+      Host: 172.24.100.75:10006
+      Content-Type: application/json;charset=UTF-8
+      Cookie:
+      Token:
+    data:
+      supplierNumber: TN2022081600018201
+  assert: 供应商已存在,勿重复新增
+
+-
+  name: 新增供应商成功
+  requests:
+    method: post
+    url: http://172.24.100.75:10006/expose/supplier/comm/add
+    headers:
+      Host: 172.24.100.75:10006
+      Content-Type: application/json;charset=UTF-8
+      Cookie:
+      Token:
+    data:
+      supplierNumber: TN2022081600018204
+  assert: 新增供应商成功

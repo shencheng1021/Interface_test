@@ -1,0 +1,13 @@
+-
+  name: 保理E产品Oa关联信息查询
+  requests:
+    method: get
+    url: http://172.24.100.75:10006/expose/approval/comm/oa/list
+    headers:
+      Host: 172.24.100.75:10006
+      Cookie:
+      Token:
+    data:
+      creditNo:
+  assert: 查询成功
+

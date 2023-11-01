@@ -1,0 +1,14 @@
+-
+  name: supplier/list接口
+  requests:
+    method: get
+    url: http://172.24.100.75:10006/expose/cmb/supplier/list
+    headers:
+      Host: 172.24.100.75:10006
+      Cookie:
+      Token:
+    data:
+      pageNum: 1
+      pageSize: 10
+      traderName:
+  assert: None

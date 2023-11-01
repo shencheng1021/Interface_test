@@ -24,6 +24,12 @@ class RequestsUtil:
     def send_request(self,method,url,**kwargs):
         log.logger.info("请求地址:%s" % str(url))
         log.logger.info("请求方式:%s" % str(method))
+        dh=dict(**kwargs)
+        for item in dh.items():
+            if item[0] == 'data' or item[0] =='params' or item[0] =='json':
+                log.logger.info('请求测试数据为：%s' % item[1])
+            if item[0] == 'headers':
+                log.logger.info('请求头为：%s' % item[1])
         try:
             rep=RequestsUtil.session.request(method,url=url,**kwargs)
         except Exception as e:

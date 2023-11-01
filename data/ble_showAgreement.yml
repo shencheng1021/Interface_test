@@ -1,0 +1,12 @@
+-
+  name: 查询是否需要展示数据授权协议
+  requests:
+    method: get
+    url: http://172.24.100.75:10006/expose/ext/showAgreement
+    headers:
+      Host: 172.24.100.75:10006
+      Cookie:
+      Token:
+    data:
+      productType: P00005
+  assert: None
