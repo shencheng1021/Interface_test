@@ -1,0 +1,13 @@
+-
+  name: 融信签收成功
+  requests:
+    method: get
+    url: http://172.24.100.75:10006/expose/cmb/issue/sign
+    headers:
+      Host: 172.24.100.75:10006
+      Cookie:
+      Token:
+    data:
+      creditNo:
+  assert: 签收成功
+

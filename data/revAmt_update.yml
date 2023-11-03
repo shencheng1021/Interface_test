@@ -1,0 +1,15 @@
+-
+  name: 发票修改应付账款金额接口
+  requests:
+    method: get
+    url: http://172.24.100.75:10006/expose/cmb/supplier/revAmt/update
+    headers:
+      Host: 172.24.100.75:10006
+      Cookie:
+      Token:
+    data:
+      creditNo:
+      fileNo:
+      revAmt:
+  assert: 修改成功
+

@@ -12,7 +12,10 @@ import logging
 import requests
 import allure
 
+from common import dir_util
+from common.assert_util import AssertUtil
 from common.logger_util import Logger
+from common.yaml_util import YamlUtil
 
 log=Logger(__name__,CmdLevel=logging.INFO, FileLevel=logging.INFO)
 
@@ -68,3 +71,113 @@ class RequestsUtil:
         result = RequestsUtil().send_request(method, url, headers=headers, json=data)
         result = json.loads(result)
         return result
+
+
+    def upload_file(self,key,filename):
+        # filetype = filename.split('.')[1]
+        # type=''
+        # if filetype == 'pdf':
+        #     type = 'application/pdf'
+        # elif filetype == 'jpg':
+        #     type = 'image/jpeg'
+        # elif filetype == 'png':
+        #     type = 'image/png'
+        # elif filetype == 'xls':
+        #     type = 'application/vnd.ms-excel'
+        # elif filetype == 'xlsx':
+        #     type = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+        # else:
+        #     log.logger.info('上传的文件类型：%s,目前暂无法支持!')
+        #     return False
+
+        caseinfo=YamlUtil().read_testcase_yaml('TFileUploadAction.yml')[0]
+        url = caseinfo['requests']['url']
+        method = caseinfo['requests']['method']
+        token = YamlUtil().read_yaml('token_supplier')
+        caseinfo['requests']['headers']['Cookie'] = 'Token=' + token
+        headers = caseinfo['requests']['headers']
+        data = {}
+        path=dir_util.dir + 'data/'
+        files = [
+            ('file',(filename,open(path+filename,'rb')))
+        ]
+        rep = RequestsUtil().send_request(method, url, headers=headers, data=data, files=files)
+        result = json.loads(rep)
+        YamlUtil().write_yaml({key : result['fileNo']})
+
+    def invoice_vatBatch(self,filenamelsit,caseinfo):
+        url = caseinfo['requests']['url']
+        method = caseinfo['requests']['method']
+        token = YamlUtil().read_yaml('token_supplier')
+        caseinfo['requests']['headers']['Cookie'] = 'Token=' + token
+        headers = caseinfo['requests']['headers']
+        data = {}
+        path = dir_util.dir + 'data/'
+        files = []
+        index=0
+        #上传多个文件时组装files文件流
+        for item in filenamelsit:
+            files.append('')
+            files[index]=('files',(item,open(path+item,'rb')))
+            index=index+1
+        log.logger.info(files)
+        rep = RequestsUtil().send_request(method, url, headers=headers, data=data, files=files)
+        result = json.loads(rep)
+        invoiceList=result['data']    #获取识别的发票列表
+        #将识别的发票信息写入到extract.yml中
+        YamlUtil().write_yaml({'invoiceList': invoiceList})
+        # for invoice,keys in zip(invoiceList,filenamelsit):
+        #     YamlUtil().write_yaml({'invoiceList': {keys: invoice['data']}})
+        return result
+
+    def upload_invoice(self,caseinfo):
+        url = caseinfo['requests']['url']
+        method = caseinfo['requests']['method']
+        token = YamlUtil().read_yaml('token_supplier')
+        caseinfo['requests']['headers']['Cookie'] = 'Token=' + token
+        headers = caseinfo['requests']['headers']
+        data=[]
+        invoiceList=YamlUtil().read_yaml('invoiceList')
+        for inv in invoiceList:
+            item_dict = {
+                'invoiceNo': inv['data']['invoiceNumber'],
+                'invoiceCode': inv['data']['invoiceCode'],
+                'billingDate': inv['data']['billingDate'],
+                'totalAmt': inv['data']['totalAmount'],
+                'invoiceAmt': inv['data']['invoiceAmount'],
+                'taxAmt': inv['data']['taxAmount'],
+                'invoiceImage': inv['data']['fileNo'],
+                'fileNo': inv['data']['fileNo'],
+                'checkCode': inv['data']['checkCode'],
+                'invoiceType': inv['data']['invoiceType'],
+                'creditNo': YamlUtil().read_yaml('creditNo'),
+                'fileName': inv['data']['title'],
+                'revAmt': inv['data']['title'],
+                'checkStatus': '1'
+                }
+            data.append(item_dict)
+        rep=RequestsUtil().send_request(method,url,headers=headers,json=data)
+        resulit=json.loads(rep)
+        return resulit
+
+    def revAmt_update(self,caseinfo,fileNO,revAmt):
+        url = caseinfo['requests']['url']
+        method = caseinfo['requests']['method']
+        token = YamlUtil().read_yaml('token_supplier')
+        caseinfo['requests']['headers']['Cookie'] = 'Token=' + token
+        caseinfo['requests']['headers']['Token'] = token
+        headers = caseinfo['requests']['headers']
+        caseinfo['requests']['data']['creditNo'] = YamlUtil().read_yaml('creditNo')
+        caseinfo['requests']['data']['revAmt'] = revAmt
+        caseinfo['requests']['data']['fileNo'] = fileNO
+        data = caseinfo['requests']['data']
+        rep = RequestsUtil().send_request(method, url, headers=headers, params=data)
+        resulit = json.loads(rep)
+        return resulit
+
+
+if __name__ == '__main__':
+    #RequestsUtil().invoice_vatBatch(['invoice01.jpg','invoice02.jpg'],YamlUtil().read_testcase_yaml('invoice_vatBatch.yml')[0])
+    RequestsUtil().upload_invoice(YamlUtil().read_testcase_yaml('ble_upload_invoice.yml')[0])
+    #RequestsUtil().revAmt_update('b6229fa3b1f14b3cb517d7b7af7673b2','5000')
+

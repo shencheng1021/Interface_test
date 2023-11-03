@@ -65,6 +65,7 @@ class YamlUtil:
             return value
 
 
+
 if __name__ == '__main__':
     text=YamlUtil().read_testcase_yaml('get_token.yml')
     text[0]['request']['data']['accessToken']='233233'

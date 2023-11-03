@@ -1,0 +1,13 @@
+-
+  name: 供应商已推送通过
+  requests:
+    method: get
+    url: http://172.24.100.75:10006/expose/financing/comm/supplierCheck
+    headers:
+      Host: 172.24.100.75:10006
+      Cookie:
+      Token:
+    data:
+      creditNo:
+  assert: 已推送供应商
+

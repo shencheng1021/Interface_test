@@ -1,0 +1,13 @@
+-
+  name: 上传融资发票
+  requests:
+    method: post
+    url: http://172.24.100.75:10006/expose/cmb/supplier/upload/invoice
+    headers:
+      Host: 172.24.100.75:10006
+      Content-Type: application/json;charset=UTF-8
+      Cookie:
+      Token:
+    data:
+  assert: 上传完成
+

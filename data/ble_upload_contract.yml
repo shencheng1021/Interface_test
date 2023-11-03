@@ -1,0 +1,26 @@
+-
+  name: 上传融资合同
+  requests:
+    method: post
+    url: http://172.24.100.75:10006/expose/cmb/supplier/upload/contract
+    headers:
+      Host: 172.24.100.75:10006
+      Content-Type: application/json;charset=UTF-8
+      Cookie:
+      Token:
+    data:
+      - filesMessage: []
+        contractName: 自动化测试
+        contractNo: "111111"
+        contractFile:
+        contractAmt: 50000
+        buyerId: TN2022022200001207
+        buyerName: 眉山中建西部建设有限公司
+        sellerId: TN2022031800004621
+        sellerName: 供应商新101
+        startDt: "2023-10-01 00:00:00"
+        endDt: "2024-11-30 00:00:00"
+        contractDt: "2023-10-01 00:00:00"
+        creditNo:
+  assert: 上传完成
+

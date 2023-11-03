@@ -46,10 +46,10 @@ class GmSsl:
         return rep.json()
 
     @allure.step("获取解密报文中的token，并将token保存到指定yaml文件中")
-    def set_token(self,data):
+    def set_token(self,key,data):
         head=GmSsl().gmssh_decode(data)
         token=head['token']
-        YamlUtil().write_yaml({'token':token})
+        YamlUtil().write_yaml({'token_'+key: token})
 
         #ConfigParser().cset('interfacetoken','token','interface_config',token)
 

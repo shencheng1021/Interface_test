@@ -1,0 +1,10 @@
+-
+  name: 文件上传接口
+  requests:
+    method: post
+    url: http://172.24.100.75:10006/tjf-upp/action/website/TFileUploadAction
+    headers:
+      Host: 172.24.100.75:10006
+      Cookie:
+  assert: 操作成功
+

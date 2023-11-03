@@ -1,0 +1,11 @@
+-
+  name: 发票识别接口
+  requests:
+    method: post
+    url: http://172.24.100.75:10006/personal/ocr/invoice/vatBatch
+    headers:
+      Host: 172.24.100.75:10006
+      Cookie:
+
+  assert: 识别成功
+

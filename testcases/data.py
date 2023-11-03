@@ -11,7 +11,7 @@ import time
 
 import requests
 
-from common import time_util
+from common import time_util, dir_util
 from common.yaml_util import YamlUtil
 
 # data=[{'id': 0, 'txnNo': 'CMB202310071420295230000000795', 'supplierCode': 'TN2022011200000607', 'busCode': 'N39010', 'bu
@@ -63,4 +63,29 @@ from common.yaml_util import YamlUtil
 #     if item[0] == 'headers':
 #         print("请求头为：%s" % item[1])
 
-print(time_util.now_date)
+#print(time_util.now_date)
+# path = dir_util.dir + 'data/'
+filenamelsit=['invoice01.jpg','invoice02.jpg']
+# files = []
+# i=0
+# for item in filenamelsit:
+#     files.append('')
+#     files[i]=('file',(item,open(path+item,'rb')))
+#     i = i+1
+#
+# print(files)
+
+# list=[{'msg': '识别成功', 'code': 200, 'data': {'fileNo': '0496d0ed541d4e5fbb30ab830a17e5b3', 'title': '江苏增值税普通发票', 'invoiceCode': '032002200804', 'invoiceNumber': '06638835', 'invoiceType': 'normal', 'billingDate': '20230202', 'totalAmount': 99120.0, 'invoiceAmount': 98138.61, 'taxAmount': 981.39, 'checkCode': '09525969533197740116'}}, {'msg': '识别成功', 'code': 200, 'data': {'fileNo': '98a469012f714512ae4619ef2e881de6', 'title': '江苏增值税普通发票', 'invoiceCode': '032002200804', 'invoiceNumber': '06638830', 'invoiceType': 'normal', 'billingDate': '20230202', 'totalAmount': 99120.0, 'invoiceAmount': 98138.61, 'taxAmount': 981.39, 'checkCode': '0994071367810251737'}}]
+#
+#
+# for invios,filename in zip(list,filenamelsit):
+    #print(invios['data'].keys(),invios['data'].values())
+    #for i,j in zip(invios['data'].keys(),invios['data'].values()):
+data=YamlUtil().read_yaml('invoiceList')[0]['data']['fileNo']
+print(data)
+
+
+
+#print(list[0]['data'].keys(),list[0]['data'].values())
+
+
