@@ -1,1 +1,1 @@
-{"total":1,"items":[{"uid":"ce178cef23c7fa199b074d5b9b0fe0c4","name":"接口测试","statistic":{"failed":0,"broken":0,"skipped":0,"passed":2,"unknown":0,"total":2}}]}
+{"total":2,"items":[{"uid":"06d26dd92786982760776259f1003681","name":"保理E产品接口自动化测试","statistic":{"failed":0,"broken":0,"skipped":0,"passed":24,"unknown":0,"total":24}},{"uid":"ce178cef23c7fa199b074d5b9b0fe0c4","name":"接口测试","statistic":{"failed":0,"broken":0,"skipped":0,"passed":2,"unknown":0,"total":2}}]}

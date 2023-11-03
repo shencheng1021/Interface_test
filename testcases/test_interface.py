@@ -61,13 +61,13 @@ class TestInterface:
         #assert '登录成功' == result['msg']
     @allure.title("登录接口，获取接口返回的token")
     def test_get_token(self):
-        GetToken().get_token('17754754412')
+        GetToken().get_token('user','17754754412')
 
     @allure.title("查询账户关联的企业列表")
     @pytest.mark.parametrize('caseinfo', YamlUtil().read_testcase_yaml('get_traders.yml'))
     def test_get_traders(self,caseinfo):
         url = caseinfo['requests']['url']
-        caseinfo['requests']['headers']['Cookie'] = "Token="+YamlUtil().read_yaml('token')
+        caseinfo['requests']['headers']['Cookie'] = "Token="+YamlUtil().read_yaml('token_user')
         headers = caseinfo['requests']['headers']
         method = caseinfo['requests']['method']
         log.logger.info("请求头：%s" % headers)
@@ -81,7 +81,7 @@ class TestInterface:
     def test_get_menus(self,caseinfo):
         url=caseinfo['requests']['url']
         method = caseinfo['requests']['method']
-        token=YamlUtil().read_yaml('token')
+        token=YamlUtil().read_yaml('token_user')
         caseinfo['requests']['headers']['Cookie'] = "Token=" + token
         caseinfo['requests']['headers']['Token'] = token
         headers=caseinfo['requests']['headers']

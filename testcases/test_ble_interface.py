@@ -20,6 +20,7 @@ from common.yaml_util import YamlUtil
 from common.get_token_util import GetToken
 
 
+@allure.feature('保理E产品接口自动化测试')
 class TestBle:
 
     @allure.title('查看数据授权协议接口')
@@ -294,9 +295,6 @@ class TestBle:
             fileNo = invoice['data']['fileNo']
             result = RequestsUtil().revAmt_update(caseinfo, fileNo, '5000')
             AssertUtil().assertEqual(caseinfo['assert'], result['msg'])
-
-
-
 
 
 
