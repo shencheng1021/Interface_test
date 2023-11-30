@@ -24,9 +24,10 @@ class GmSsl:
         log.logger.info('请求解密接口开始，解密数据为：%s' % data)
         url = "http://172.24.100.74:9921/decrypt"
         headers = {
-            "Content-Type": "application/json",
+            "Content-Type": "application/x-www-form-urlencoded",
             "Host": "172.24.100.74:9921"
         }
+        data='srcBody='+data
         rep = requests.request("post", url=url,data=data, headers=headers)
         log.logger.info("解密结果为：%s" % rep.json())
         return rep.json()
@@ -38,9 +39,10 @@ class GmSsl:
         log.logger.info('请求加密接口开始，加密数据为：%s' % str(data))
         url='http://172.24.100.74:9921/encrypt'
         headers = {
-            "Content-Type": "application/json",
+            "Content-Type": "application/x-www-form-urlencoded",
             "Host": "172.24.100.74:9921"
         }
+        data='bodystr='+data
         rep = requests.request("post",url=url,data=data,headers=headers)
         log.logger.info('加密结果为：%s' % rep.json())
         return rep.json()
@@ -58,5 +60,5 @@ class GmSsl:
 
 
 if __name__ == '__main__':
-    head='{"head":{"dgtlEnvlp":"0497a2ed84f76fa46c38e87843f15626f69066edea5da538f89204c2ee13699926be9e70a7cc0ed9b854a42fbaa01854918345ec6538003453bb6a65778509cd196dfeaa9fbe3d812fb21e277a02256cb9b6e41def8c77fad182e886da8411f5fadd6b9ee6186141876c47641fced8dac9ab2b0703c8d85b3d0ac9469c60cdc7f7","sign":"96052f105259a7f693bdfa3037d4e25bfbda7be946832e0954fddacca7c2b736"},"body":"e937cfc040b780098eed6371c0e6749a787bc280c86992023de63c6feec1d71365af2c407875b0ba947adfe179808a44f34a2f3c465286d2dd4cc8fcb62b11d1b50f35662506e5411ad23bef53e60a4c0051755a6c3c197e20fabee760cbb6b0653704f90417aa8e2c19549ded3cdc8cf80640ed15e5d43ba35b0f232a150905d122ddd976f831202e6846a4c32bf28ccdec8f6692ebcfee5c16342b65e53826a928385d808d3e2d178b63b059c033082f9c79322e1c3d77eee2dd9b769dd8edc0227fdaae68a9531d223c8d4397b197ef3ee00b43d9cc00b1d1c029037bf491e4e27c1e509995f14bc23de373cb264fe3b1cecd1b2f418cb867f4588bddf63e352720ac56196245fb135f08889ee8391491234412e7cef61bf09735a3758c96"}'
-    GmSsl().set_token(head)
+    data='{"traderNo":"TN2022022600001213","accessToken":"98e8f243-df00-44b5-a321-8370a14d260a","userId":"13475475547","userinfo":"1700698508703","token":"eyJ1c2VySWQiOiIxMzQ3NTQ3NTU0NyIsInRva2VuIjoiN2M3NGQ4ZGZlYzkyNGZkYjg2NDkyNmVjZjYxMTU4ODkifQ==","traderName":"核心企业新1"}'
+    GmSsl().gmssh_encrypt(data)
