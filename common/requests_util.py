@@ -72,7 +72,7 @@ class RequestsUtil:
         result = json.loads(result)
         return result
 
-
+    @allure.step("调用文件上传接口")
     def upload_file(self,key,filename):
         # filetype = filename.split('.')[1]
         # type=''
@@ -105,6 +105,7 @@ class RequestsUtil:
         result = json.loads(rep)
         YamlUtil().write_yaml({key : result['fileNo']})
 
+    @allure.step("调用发票识别接口")
     def invoice_vatBatch(self,filenamelsit,caseinfo):
         url = caseinfo['requests']['url']
         method = caseinfo['requests']['method']
@@ -130,6 +131,7 @@ class RequestsUtil:
         #     YamlUtil().write_yaml({'invoiceList': {keys: invoice['data']}})
         return result
 
+    @allure.step("调用发票上传接口")
     def upload_invoice(self,caseinfo):
         url = caseinfo['requests']['url']
         method = caseinfo['requests']['method']
@@ -160,6 +162,7 @@ class RequestsUtil:
         resulit=json.loads(rep)
         return resulit
 
+    @allure.step('调用修改发票应付账款余额接口')
     def revAmt_update(self,caseinfo,fileNO,revAmt):
         url = caseinfo['requests']['url']
         method = caseinfo['requests']['method']
@@ -175,9 +178,20 @@ class RequestsUtil:
         resulit = json.loads(rep)
         return resulit
 
+    def send_code(self,phone):
+        url='http://172.24.100.75:10016/expose/operation/sendCode'
+        method='get'
+        data = {'phone':phone}
+        headers = {}
+        rep = RequestsUtil().send_request(method, url, headers=headers, params=data)
+
+
+
+
 
 if __name__ == '__main__':
     #RequestsUtil().invoice_vatBatch(['invoice01.jpg','invoice02.jpg'],YamlUtil().read_testcase_yaml('invoice_vatBatch.yml')[0])
-    RequestsUtil().upload_invoice(YamlUtil().read_testcase_yaml('ble_upload_invoice.yml')[0])
+    #RequestsUtil().upload_invoice(YamlUtil().read_testcase_yaml('ble_upload_invoice.yml')[0])
     #RequestsUtil().revAmt_update('b6229fa3b1f14b3cb517d7b7af7673b2','5000')
+    RequestsUtil().send_code('13730870086')
 

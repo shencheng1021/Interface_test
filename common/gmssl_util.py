@@ -24,10 +24,9 @@ class GmSsl:
         log.logger.info('请求解密接口开始，解密数据为：%s' % data)
         url = "http://172.24.100.74:9921/decrypt"
         headers = {
-            "Content-Type": "application/x-www-form-urlencoded",
+            "Content-Type": "application/json;charset=UTF-8",
             "Host": "172.24.100.74:9921"
         }
-        data='srcBody='+data
         rep = requests.request("post", url=url,data=data, headers=headers)
         log.logger.info("解密结果为：%s" % rep.json())
         return rep.json()
@@ -39,10 +38,9 @@ class GmSsl:
         log.logger.info('请求加密接口开始，加密数据为：%s' % str(data))
         url='http://172.24.100.74:9921/encrypt'
         headers = {
-            "Content-Type": "application/x-www-form-urlencoded",
+            "Content-Type": "application/json;charset=UTF-8",
             "Host": "172.24.100.74:9921"
         }
-        data='bodystr='+data
         rep = requests.request("post",url=url,data=data,headers=headers)
         log.logger.info('加密结果为：%s' % rep.json())
         return rep.json()

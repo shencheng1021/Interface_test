@@ -16,7 +16,7 @@ from common.requests_util import RequestsUtil
 from common.yaml_util import YamlUtil
 import allure
 
-@allure.epic("接口测试")
+
 @allure.feature("联动代发产品接口测试")
 class Test_Lddf:
 

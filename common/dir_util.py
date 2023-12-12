@@ -29,5 +29,8 @@ import sys
 
 #获取系统当前路径
 dir = os.path.dirname(__file__).split('common')[0]
+
+#获取测试数据路径
+testdata_dir=dir+'data/'
 #测试数据路径
 #datadir=dir+'data'

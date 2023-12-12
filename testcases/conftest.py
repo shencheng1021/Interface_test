@@ -30,7 +30,7 @@ def run_test_case():
     yield
     log.logger.info('************************test case run completed************************')
 
-
+@allure.step("初始化OA信息")
 @pytest.fixture(scope='function',autouse=False)
 def oa_information_initialization():
     date=time_util.now_date
@@ -42,6 +42,13 @@ def oa_information_initialization():
         "设银行', 0, NULL, 0, "+date+", "+date+", '手动补充数据', NOW(), NOW());"
     MysqlConnection('tjf_manage01').Operate(sql)
     log.logger.info('*******初始化OA信息完成********')
+
+@allure.step("初始化精准营销邀请信息")
+@pytest.fixture(scope='class',autouse=False)
+def pm_initialization():
+    sql="DELETE FROM u_user_invite_record WHERE qr_id = 'dcaa246c98d845d4a7122664efa2ac22' AND customer_mobile = '13722220001'"
+    MysqlConnection('tjf_manage01').Operate(sql)
+    log.logger.info('*******初始化精准营销邀请信息完成********')
 
 
 

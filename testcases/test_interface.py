@@ -20,7 +20,7 @@ from common.get_token_util import GetToken
 log=Logger(__name__,CmdLevel=logging.INFO, FileLevel=logging.INFO)
 
 
-@allure.epic("接口测试")
+
 @allure.feature("砼联数科官网接口测试")
 class TestInterface:
 
