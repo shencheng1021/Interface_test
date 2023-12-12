@@ -1,0 +1,13 @@
+-
+  name: 精准营销客户邀请接口
+  requests:
+    method: post
+    url: http://172.24.100.75:10016/expose/operation/saveInviteRecords
+    headers:
+      Content-Type: application/json;charset=UTF-8
+    data:
+      qrcodeId: dcaa246c98d845d4a7122664efa2ac22
+      phone: 13730870086
+      code: 111111
+  assert: 签发成功
+
