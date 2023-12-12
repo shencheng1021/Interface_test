@@ -20,7 +20,7 @@ from common.yaml_util import YamlUtil
 @pytest.mark.usefixtures('pm_initialization')
 class TestPm:
 
-    @allure.step('精准营销客户邀请接口测试')
+    @allure.title('精准营销客户邀请接口测试')
     @pytest.mark.parametrize('casedata',ExcelUtil().excel_read('pm_phone'))
     def test_saveInviteRecords(self,casedata):
         RequestsUtil().send_code(str(casedata[1]))
