@@ -10,4 +10,5 @@
       busiLiceNo: 91510100MA69MUBX8Q
       txnNo:
       reqCode:
+      authType: "1"
   validate: None

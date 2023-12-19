@@ -1,0 +1,30 @@
+-
+  name: 联动代发经办发起
+  requests:
+    method: post
+    url: http://172.24.100.75:9203/expose/lddf/apply1
+    headers:
+      sign:
+      channelNo: '19902'
+    data:
+      acct: "755915678710501"
+      authAcct: "755915678710606"
+      bbkCode: "75"
+      busMod: S1004
+      busType: "100001"
+      busiLiceNo: 91510100MA69MUBX8Q
+      expectDate: "20231218"
+      expectTime: "000000"
+      receiptAcct: "1241255345345345"
+      receiptAcctName: 他行户1
+      receiptAddr: 北京市
+      receiptBankName: 建设银行成都分行
+      receiptBbCode: "102100099996"
+      receiptEmail: 5650472@qq.com
+      receiptPhoneNum: "17754754414"
+      sysFlag: N
+      totalAmt: 2000.01
+      transCnt: 1
+      transRemark: 测试摘要2
+      usage: ces2
+  assert: None

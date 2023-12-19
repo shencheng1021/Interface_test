@@ -30,6 +30,7 @@ class Test_Lddf:
         YamlUtil().write_yaml({'busMod': result['data'][0]['busMod']})
         AssertUtil().assertEqual('00001',result['data'][0]['busMod'])
         AssertUtil().assertEqual('TN2022011200000607', result['data'][0]['supplierCode'])
+        AssertUtil().assertEqual('S1004', result['data'][1]['busMod'])
         #assert result['data'][0]['busMod'] == '00001'
         #assert result['data'][0]['supplierCode'] == 'TN2022011200000607'
 
@@ -110,6 +111,7 @@ class Test_Lddf:
         '''
         caseinfo['requests']['data']['startDate'] = time.strftime('%Y%m%d',time.localtime(time.time()))
         caseinfo['requests']['data']['endDate'] = time.strftime('%Y%m%d', time.localtime(time.time()))
+        caseinfo['requests']['data']['authType'] = '2'
         result = RequestsUtil().lddf_request(caseinfo)
         i=len(result['data'])
         txnNO=YamlUtil().read_yaml('txnNo')
@@ -129,11 +131,51 @@ class Test_Lddf:
         '''
         caseinfo['requests']['data']['reqCode'] = YamlUtil().read_yaml('reqCode')
         caseinfo['requests']['data']['txnNo'] = YamlUtil().read_yaml('txnNo')
+        caseinfo['requests']['data']['authType'] = '2'
         result = RequestsUtil().lddf_request(caseinfo)
         AssertUtil().assertEqual(YamlUtil().read_yaml('txnNo'),result['data'][0]['txnNo'])
         # assert result['msg'] == '查询完成'
         # assert result['code'] == 200
         # assert result['data'][0]['txnNo'] == YamlUtil().read_yaml('txnNo')
+
+    @allure.title("联动支付经办发起")
+    @pytest.mark.parametrize('caseinfo',YamlUtil().read_testcase_yaml('lddf_apply1.yml'))
+    def test_apply1_08(self,caseinfo):
+        result = RequestsUtil().lddf_request(caseinfo)
+        YamlUtil().write_yaml({'apply1_txnNo': result['data']['txnNo']})
+        AssertUtil().assertEqual('经办发起完成', result['msg'])
+
+    @allure.title("联动支付经办状态查询")
+    @pytest.mark.parametrize('caseinfo', YamlUtil().read_testcase_yaml('lddf_applyInfo_query.yml'))
+    def test_applyInfo_query_09(self, caseinfo):
+        '''
+        description:联动支付经办状态查询
+        '''
+        caseinfo['requests']['data']['startDate'] = time.strftime('%Y%m%d', time.localtime(time.time()))
+        caseinfo['requests']['data']['endDate'] = time.strftime('%Y%m%d', time.localtime(time.time()))
+        caseinfo['requests']['data']['authType'] = '1'
+        result = RequestsUtil().lddf_request(caseinfo)
+        i = len(result['data'])
+        txnNO = YamlUtil().read_yaml('apply1_txnNo')
+        flag = False
+        for i in range(0, i):
+            if result['data'][i]['txnNo'] == txnNO:
+                YamlUtil().write_yaml({'apply1_reqCode': result['data'][i]['reqCode']})
+                flag = True
+        AssertUtil().assertEqual(True, flag)
+
+    @allure.title("联动支付经办明细查询")
+    @pytest.mark.parametrize('caseinfo', YamlUtil().read_testcase_yaml('lddf_applyDetailInfo_query.yml'))
+    def test_applyDetailInfo_query_10(self, caseinfo):
+        '''
+        description:联动支付经办明细查询
+        '''
+        caseinfo['requests']['data']['reqCode'] = YamlUtil().read_yaml('apply1_reqCode')
+        caseinfo['requests']['data']['txnNo'] = YamlUtil().read_yaml('apply1_txnNo')
+        caseinfo['requests']['data']['authType'] = '1'
+        result = RequestsUtil().lddf_request(caseinfo)
+        AssertUtil().assertEqual(YamlUtil().read_yaml('apply1_txnNo'), result['data']['txnNo'])
+        AssertUtil().assertEqual('查询完成', result['msg'])
 
 
 if __name__ == '__main__':
