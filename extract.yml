@@ -1,17 +1,17 @@
-access_token_issuer: dae8a3da-bfb2-4976-a0f8-17e0044c7e5a
-token_issuer: eyJ1c2VySWQiOiIxMzQ3NTQ3NTU0NyIsInRva2VuIjoiZWFhYWJhZjYzMGI2NGI4YWFhNWY4NzI4NzRhMTZmN2MifQ==
-creditNo: credit2023110313572954900001077
+access_token_issuer: ca134442-d199-42e2-9f94-c5fc36e45bb8
+token_issuer: eyJ1c2VySWQiOiIxMzQ3NTQ3NTU0NyIsInRva2VuIjoiMmY2OGYzNDUyMzRhNGNiY2JkYzQzMDg0NzcwNTZlMDAifQ==
+creditNo: credit2023122809162687200001496
 oaid:
-- 3482
-access_token_supplier: 8dcc415d-dca9-4bbf-aae4-634ad868b92b
-token_supplier: eyJ1c2VySWQiOiIxNzc1NDIxMTExMSIsInRva2VuIjoiN2MwMTJlZGQ2NzAyNDFhZWJjOWM3OTVmNTJkMjBkNDIifQ==
-contractNo: 317761f85c9249308958275849ad6f70
+- 3655
+access_token_supplier: 2f98f914-697b-4ef3-b76f-31939689b4d8
+token_supplier: eyJ1c2VySWQiOiIxNzc1NDIxMTExMSIsInRva2VuIjoiZDZhNzhjY2JiOWY3NGNhY2FmOGMxMjdlOGNmNTU2YWUifQ==
+contractNo: 2c86b4d04caa47eb8e843e0d73a99e43
 invoiceList:
 - code: 200
   data:
     billingDate: '20230202'
     checkCode: 09525969533197740116
-    fileNo: bcbf6e0e6da7458c981d20873b982c4a
+    fileNo: 170f4caa24bc44f6827617643d4efafd
     invoiceAmount: 98138.61
     invoiceCode: 032002200804
     invoiceNumber: 06638835
@@ -24,7 +24,7 @@ invoiceList:
   data:
     billingDate: '20230202'
     checkCode: 0994071367810251737
-    fileNo: cb48252a88ec4e099a4fc48b949ff7ab
+    fileNo: 1326c261754d4f31993a1d712936617d
     invoiceAmount: 98138.61
     invoiceCode: 032002200804
     invoiceNumber: 06638830
@@ -33,11 +33,13 @@ invoiceList:
     title: 江苏增值税普通发票
     totalAmount: 99120.0
   msg: 识别成功
-access_token_user: d9d2912a-c98b-4a87-a237-5f35b386677c
-token_user: eyJ1c2VySWQiOiIxNzc1NDc1NDQxMiIsInRva2VuIjoiMzVmZDRhNWNjYmM1NDVhOThlZjVjMzhhOTZkNGQwOGYifQ==
+access_token_user: 81410467-d727-4c34-a754-e09036e53096
+token_user: eyJ1c2VySWQiOiIxNzc1NDc1NDQxMiIsInRva2VuIjoiMDcyYzhlN2U0MzE2NGRlZThmZWEzMjBhMDI3ZDE0NzMifQ==
 busMod: '00001'
 acct: '755915678710501'
 bbkCode: '75'
 authAcct: '755915678710606'
-txnNo: TLSK20231103135738070000001078
-reqCode: B150096104
+txnNo: TLSK20231228091637405000001497
+reqCode: B150102031
+apply1_txnNo: TLSK20231228091638690000001498
+apply1_reqCode: B150102032

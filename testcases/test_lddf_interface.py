@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+#-*-coding:utf-8-*-
 
 """
 @author: shencheng
@@ -141,6 +141,7 @@ class Test_Lddf:
     @allure.title("联动支付经办发起")
     @pytest.mark.parametrize('caseinfo',YamlUtil().read_testcase_yaml('lddf_apply1.yml'))
     def test_apply1_08(self,caseinfo):
+        caseinfo['requests']['data']['expectDate']=time.strftime('%Y%m%d', time.localtime(time.time()))
         result = RequestsUtil().lddf_request(caseinfo)
         YamlUtil().write_yaml({'apply1_txnNo': result['data']['txnNo']})
         AssertUtil().assertEqual('经办发起完成', result['msg'])

@@ -1,4 +1,5 @@
-# -*- coding: utf-8 -*-
+#!/usr/bin/env python
+#-*-coding:utf-8-*-
 
 """
 @author: shencheng
@@ -6,13 +7,13 @@
 @description: test
 @time: 2022/4/13 9:34
 """
-import os
-import time
+#import os
+#import sys
+#sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from common import dir_util
 
-import requests
 
-from common import time_util, dir_util
-from common.yaml_util import YamlUtil
+
 
 # data=[{'id': 0, 'txnNo': 'CMB202310071420295230000000795', 'supplierCode': 'TN2022011200000607', 'busCode': 'N39010', 'bu
 # sMod': '00001', 'totalAmt': 9999.9, 'transCnt': 1, 'successAmt': 9999.9, 'successCnt': 1, 'agreementCode': 'AB0980', 'agreementT
@@ -64,8 +65,10 @@ from common.yaml_util import YamlUtil
 #         print("请求头为：%s" % item[1])
 
 #print(time_util.now_date)
-# path = dir_util.dir + 'data/'
+path = dir_util.dir + 'data/'
+print(path)
 filenamelsit=['invoice01.jpg','invoice02.jpg']
+print(filenamelsit)
 # files = []
 # i=0
 # for item in filenamelsit:
@@ -81,8 +84,8 @@ filenamelsit=['invoice01.jpg','invoice02.jpg']
 # for invios,filename in zip(list,filenamelsit):
     #print(invios['data'].keys(),invios['data'].values())
     #for i,j in zip(invios['data'].keys(),invios['data'].values()):
-data=YamlUtil().read_yaml('invoiceList')[0]['data']['fileNo']
-print(data)
+# data=YamlUtil().read_yaml('invoiceList')[0]['data']['fileNo']
+# print(data)
 
 
 
