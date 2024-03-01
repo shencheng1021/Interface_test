@@ -21,19 +21,16 @@ from common.yaml_util import YamlUtil
 class TestPm:
 
     @allure.title('精准营销客户邀请接口测试')
-    @pytest.mark.parametrize('casedata',ExcelUtil().excel_read('pm_phone'))
-    def test_saveInviteRecords(self,casedata):
-        RequestsUtil().send_code(str(casedata[1]))
-        caseinfo=YamlUtil().read_testcase_yaml('pm_saveInviteRecords.yml')[0]
+    @pytest.mark.parametrize('caseinfo',YamlUtil().read_testcase_yaml('pm_saveInviteRecords.yml'))
+    def test_saveInviteRecords(self,caseinfo):
+        RequestsUtil().send_code(caseinfo['requests']['data']['phone'])
         url=caseinfo['requests']['url']
         method=caseinfo['requests']['method']
         headers=caseinfo['requests']['headers']
-        caseinfo['requests']['data']['phone']=str(casedata[1])
         data=json.dumps(caseinfo['requests']['data'])
         rep=RequestsUtil().send_request(method,url,headers=headers,data=data)
         result = json.loads(rep)
-        AssertUtil().assertEqual(casedata[2],result['msg'])
-
+        AssertUtil().assertEqual(caseinfo['assert'],result['msg'])
 
 
 if __name__ == '__main__':

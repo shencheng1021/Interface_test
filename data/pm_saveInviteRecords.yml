@@ -6,8 +6,25 @@
     headers:
       Content-Type: application/json;charset=UTF-8
     data:
+      busiLiceNo: 91110108MA01EBFH11
+      traderName: 北京妙树托育服务有限公司11
       qrcodeId: dcaa246c98d845d4a7122664efa2ac22
-      phone: 13730870086
+      phone: 13730870022
       code: 111111
-  assert: 签发成功
+  assert: 注册成功
+
+-
+  name: 精准营销客户邀请接口
+  requests:
+    method: post
+    url: http://172.24.100.75:10016/expose/operation/saveInviteRecords
+    headers:
+      Content-Type: application/json;charset=UTF-8
+    data:
+      busiLiceNo: 91110108MA01EBFH11
+      traderName: 北京妙树托育服务有限公司11
+      qrcodeId: dcaa246c98d845d4a7122664efa2ac22
+      phone: 13730870022
+      code: 111111
+  assert: 邀请无效，该企业已被邀请至该产品,当前手机号已加入企业登陆权限
 

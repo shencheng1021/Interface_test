@@ -46,12 +46,6 @@ def oa_information_initialization():
 @allure.step("初始化精准营销邀请信息")
 @pytest.fixture(scope='class',autouse=False)
 def pm_initialization():
-    sql="DELETE FROM u_user_invite_record WHERE qr_id = 'dcaa246c98d845d4a7122664efa2ac22' AND customer_mobile = '13722220001'"
+    sql="DELETE FROM u_user_invite_record WHERE qr_id = 'dcaa246c98d845d4a7122664efa2ac22' AND customer_mobile = '13730870022' AND busi_lice_no = '91110108MA01EBFH11'"
     MysqlConnection('tjf_manage01').Operate(sql)
     log.logger.info('*******初始化精准营销邀请信息完成********')
-
-
-
-
-
-
